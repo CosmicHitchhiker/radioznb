@@ -1,0 +1,34 @@
+body {
+  align: center;
+}
+.player {
+  text-align: center;
+  margin: 40px 80px;
+  max-width: 500px;
+}
+
+.menu button {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  float: left;
+  font: normal 105% arial, sans-serif;
+  letter-spacing: 0em;
+  outline: none;
+  padding: 10px;
+  text-align: center;
+  transition: 0.3s;
+  width: 25%;
+}
+
+.menu .active {
+  background-color: white;
+  color: black;
+  opacity: 1;
+  border-radius: 10px/20px;
+  border-bottom: none;
+}
+
+.menubutton:hover {
+  color: #888;
+}
