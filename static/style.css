@@ -1,6 +1,15 @@
-body {
-  align: center;
+html{
+  -ms-text-size-adjust:100%;
+  -webkit-text-size-adjust:100%;
+  text-align: center;
 }
+
+.pages{
+  max-width: 1200px;
+  width: 95%;
+  margin:auto;
+}
+
 .player {
   text-align: center;
   margin: 40px 80px;
@@ -8,27 +17,46 @@ body {
 }
 
 .menu button {
+  position: relative;
   background-color: inherit;
-  border: none;
   cursor: pointer;
-  float: left;
   font: normal 105% arial, sans-serif;
   letter-spacing: 0em;
   outline: none;
   padding: 10px;
   text-align: center;
   transition: 0.3s;
-  width: 25%;
+  width: 24%;
+  text-transform: lowercase;
+  border-radius: 15px 15px 0px 0px;
+  border-color: black;
+  height: 60px;
+  min-width: 120px;
+  max-width: 280px;
 }
 
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
 .menu .active {
   background-color: white;
   color: black;
-  opacity: 1;
-  border-radius: 10px/20px;
   border-bottom: none;
 }
 
-.menubutton:hover {
+.menu button:hover {
   color: #888;
+}
+
+.tab {
+  background-color: white;
+  color: rgba(0, 0, 0, 1);
+  display: none;
+  margin: auto;
+  margin-bottom: 110px;
+  padding: 20px 20px 0px 30px;
+  text-align: left;
+  height: 100%;
+  width: 80%;
 }

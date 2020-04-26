@@ -15,23 +15,26 @@
       <img src="static/radio.png" alt="radio" style="width:100%;height:100%;">
     </div>
     </center>
-    <div class="menu">
-      <button class="menubutton" onclick="openPage(event, 'schedule')" id="defaultOpen">программа на неделю</button>
-      <button class="menubutton" onclick="openPage(event, 'regulars')">регулярные передачи</button>
-      <button class="menubutton" onclick="openPage(event, 'news')">анонсы всякие</button>
-      <button class="menubutton" onclick="openPage(event, 'aboutus')">кто мы и где</button>
-    </div>
-    <div id="schedule" class="tab">
+    <div class="pages" align="center">
+      <div class="menu">
+        <button class="tablink" onclick="openPage(event, 'schedule')">программа на неделю</button>
+        <button class="tablink" onclick="openPage(event, 'regulars')">регулярные передачи</button>
+        <button class="tablink" onclick="openPage(event, 'news')">анонсы всякие</button>
+        <button class="tablink" onclick="openPage(event, 'aboutus')">кто мы и где</button>
+      </div>
+      <div id="schedule" class="tab">
+        <p>hfigh<p>
+      </div>
+      <div id="regulars" class="tab">
 
-    </div>
-    <div id="regulars" class="tab">
+      </div>
+      <div id="news" class="tab">
 
-    </div>
-    <div id="news" class="tab">
+      </div>
+      <div id="aboutus" class="tab">
 
+      </div>
     </div>
-    <div id="aboutus" class="tab">
-
-    </div>
+    <script src="js/open_tabs.js"></script>
   </body>
 </html>
