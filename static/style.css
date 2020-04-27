@@ -7,7 +7,7 @@ html{
 .pages{
   max-width: 1200px;
   width: 95%;
-  margin:auto;
+  margin: auto;
 }
 
 .player {
@@ -25,11 +25,11 @@ html{
   outline: none;
   padding: 10px;
   text-align: center;
-  transition: 0.3s;
   width: 24%;
   text-transform: lowercase;
   border-radius: 15px 15px 0px 0px;
   border-color: black;
+  border-bottom: none;
   height: 60px;
   min-width: 120px;
   max-width: 280px;
@@ -38,11 +38,13 @@ html{
 .menu {
   display: flex;
   justify-content: space-between;
+  margin-bottom: -2px;
 }
 .menu .active {
   background-color: white;
   color: black;
-  border-bottom: none;
+  font-weight: bold;
+  border-bottom: 2px solid white;
 }
 
 .menu button:hover {
@@ -50,13 +52,24 @@ html{
 }
 
 .tab {
-  background-color: white;
   color: rgba(0, 0, 0, 1);
   display: none;
   margin: auto;
-  margin-bottom: 110px;
-  padding: 20px 20px 0px 30px;
+  margin-bottom: 20px;
+  padding: 0px;
   text-align: left;
-  height: 100%;
-  width: 80%;
+  border-top: 2px solid black;
+}
+
+.upperblock{
+  margin-top: -2px;
+  padding: 15px 15px 15px 30px;
+  border: 2px solid black;
+  border-top: none;
+}
+
+.bottomblock{
+  width: inherit;
+  margin-top: 100px;
+  border: 2px solid black;
 }
