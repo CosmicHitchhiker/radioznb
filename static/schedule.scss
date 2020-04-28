@@ -1,4 +1,4 @@
-@import '../../../../../codyhouse-framework/main/assets/css/style.scss'; // ⚠️ make sure to import the CodyHouse framework
+@import './codyhouse-framework-master/main/assets/css/style.scss'; // ⚠️ make sure to import the CodyHouse framework
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600'); // custom font
 
 // --------------------------------
@@ -9,10 +9,10 @@
 
 :root {
   // colors
-  @include defineColorHSL(--cd-color-event-1, 0, 25%, 46%);   // Smalt Blue
-  @include defineColorHSL(--cd-color-event-2, 110, 23%, 26%);   // Martinique
-  @include defineColorHSL(--cd-color-event-3, 120, 10%, 68%);   // Edward
-  @include defineColorHSL(--cd-color-event-4, 80, 10%, 68%);    // Rajah
+  @include defineColorHSL(--cd-color-event-1, 2°, 0%, 69%);   // Smalt Blue
+  @include defineColorHSL(--cd-color-event-2, 2°, 0%, 69%);   // Martinique
+  @include defineColorHSL(--cd-color-event-3, 2°, 0%, 69%);   // Edward
+  @include defineColorHSL(--cd-color-event-4, 2°, 0%, 69%);    // Rajah
   @include defineColorHSL(--cd-color-text, 0, 0%, 13%);         // Black
   @include defineColorHSL(--cd-color-border, 0, 0%, 92%);       // Grey
 
@@ -53,6 +53,8 @@ a {
   	}
   }
 }
+
+
 
 .cd-schedule__timeline { // events time
 	display: none;
@@ -263,6 +265,23 @@ a {
     	opacity: 0;
     }
   }
+  .revealing-section {
+  position: sticky; // bottom value will be set using JS
+  min-height: 100vh;
+  --reavealing-section-overlay-opacity: 1; // overlay layer opacity - modified using JS
+
+  &::after { // overlay layer
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    background-color: var(--color-black);
+    opacity: var(--reavealing-section-overlay-opacity);
+  }
+}
 }
 
 .cd-schedule__name, // event name in the schedule template
@@ -270,7 +289,7 @@ a {
 .cd-schedule-modal__name, // event name in the modal element
 .cd-schedule-modal__date { // event date in the modal element
 	display: block;
-	color: var(--color-white);
+	color: var(--color-black);
 	font-weight: bold;
 	@include fontSmooth;
 }
@@ -477,7 +496,7 @@ a {
     left: 50%;
     width: 2px;
     height: 22px;
-    background: var(--color-white);
+    background: var(--color-black);
     backface-visibility: hidden;
   }
 

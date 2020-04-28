@@ -13,6 +13,7 @@ html{
 .player {
   text-align: center;
   margin: 40px 80px;
+  height: 80%
   max-width: 500px;
 }
 
@@ -49,6 +50,7 @@ html{
 
 .menu button:hover {
   color: #888;
+  transition: 0.3s;
 }
 
 .tab {
@@ -64,7 +66,6 @@ html{
 .upperblock{
   margin-top: -2px;
   padding: 15px 15px 15px 30px;
-  border: 2px solid black;
   border-top: none;
 }
 
