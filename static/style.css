@@ -2,6 +2,8 @@ html{
   -ms-text-size-adjust:100%;
   -webkit-text-size-adjust:100%;
   text-align: center;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
 }
 
 .pages{
@@ -28,12 +30,18 @@ html{
   text-align: center;
   width: 24%;
   text-transform: lowercase;
-  border-radius: 15px 15px 0px 0px;
-  border-color: black;
   border-bottom: none;
   height: 60px;
   min-width: 120px;
   max-width: 280px;
+}
+
+.menu-centered button{
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .menu {

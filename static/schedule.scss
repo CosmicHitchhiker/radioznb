@@ -24,6 +24,11 @@
   --schedule-rows-height: 70px;
 }
 
+html {
+  // you can apply this to the container of your scrolling section
+  scroll-behavior: smooth;
+}
+
 body {
 	color: var(--cd-color-text);
 }
