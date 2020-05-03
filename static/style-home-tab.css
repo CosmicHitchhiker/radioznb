@@ -1,0 +1,97 @@
+.home-content {
+  width: 100%;
+  border: 1px solid green;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.timeline {
+  width: 34%;
+  height: 100%;
+  border: 1px solid red;
+
+}
+
+.news {
+  width: 66%;
+  height: 100%;
+  border: 1px solid blue;
+}
+
+
+/* ----------------------------news block----------------------------- */
+.newsBox {
+    width: 90%;
+    border:1px solid #bbb;
+    margin: auto;
+}
+.titleText {
+	border-top:1px dotted #bbb;
+    background-color:#fdfdfd;
+    padding:10px;
+
+}
+
+.titleText label{
+  color:#444;
+  margin:0;
+}
+
+.contentText {
+    padding:10px;
+    border-top:1px dotted #bbb;
+}
+
+.nadd {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.form-control, textarea {
+    width: 100%;
+    padding: 12px;
+  	border: 1px solid yellow; /* Gray border */
+  	border-radius: 4px; /* Rounded borders */
+ 	box-sizing: border-box; /* Make sure that padding and width stays in place */
+	margin-top: 6px; /* Add a top margin */
+  	margin-bottom: 16px; /* Bottom margin */
+  	resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+} 
+
+.btn {
+  width: 30%;
+  background-color: #3685B5;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0471A6;
+}
+
+.newsFeed {
+    padding:0;
+    list-style:none;
+    overflow:auto;
+}
+.newsFeed li {
+    margin:0;
+    margin-top:10px;
+}
+.newsFeed li > div {
+    display:table-cell;
+}
+
+.contentText p {
+    margin:0;
+}
+
+.sub-text {
+    color:#aaa;
+    font-size:11px;
+}
+

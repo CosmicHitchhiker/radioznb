@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/style.css">
     <link rel="stylesheet" href="static/schedule.css">
+    <link rel="stylesheet" href="static/style-home-tab.css">
     <script>document.getElementsByTagName("html")[0].className += " js";</script>
   </head>
 
@@ -26,7 +27,14 @@
       </div>
       <div id="home" class="tab">
         <div class="upperblock">
-          <div class="cd-schedule cd-schedule--loading margin-top-lg margin-bottom-lg js-cd-schedule">
+          <div class="home-content">
+            <div class="timeline">
+            </div>
+            <div class="news">
+            </div>
+          </div>
+
+          <!--<div class="cd-schedule cd-schedule--loading margin-top-lg margin-bottom-lg js-cd-schedule">
             <div class="cd-schedule__timeline">
               <ul>
                 <li><span>09:00</span></li>
@@ -63,7 +71,7 @@
                 <li><span>00:30</span></li>
                 <li><span>01:00</span></li>
               </ul>
-            </div> <!-- .cd-schedule__timeline -->
+            </div> 
 
             <div class="cd-schedule__events">
               <ul>
@@ -249,7 +257,7 @@
             </div>
 
             <div class="cd-schedule__cover-layer"></div>
-          </div>
+          </div> -->
         </div>
         <div class="bottomblock">
           подвал
@@ -286,5 +294,9 @@
     <script src="js/util.js"></script>
     <script src="js/schedule.js"></script>
     <script src="js/smoothscroll.js"></script>
+    <script src="js/add_news.js"></script>
+    <script src="js/news.json"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
   </body>
 </html>
