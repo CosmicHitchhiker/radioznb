@@ -23,7 +23,7 @@
 /* ----------------------------news block----------------------------- */
 .newsBox {
     width: 90%;
-    border:1px solid #bbb;
+    border:1px solid orange;
     margin: auto;
 }
 .titleText {
@@ -43,26 +43,33 @@
     border-top:1px dotted #bbb;
 }
 
+#newsForm {
+    background-image: url("../images/form back.jpg");
+    background-position: center; /* Center the image */
+    background-size: cover;
+
+}
+
 .nadd {
-  background-color: #f2f2f2;
   padding: 20px;
 }
 
 .form-control, textarea {
     width: 100%;
     padding: 12px;
-  	border: 1px solid yellow; /* Gray border */
+  	border: 1px solid grey; /* Gray border */
   	border-radius: 4px; /* Rounded borders */
- 	box-sizing: border-box; /* Make sure that padding and width stays in place */
-	margin-top: 6px; /* Add a top margin */
+  	box-sizing: border-box; /* Make sure that padding and width stays in place */
+	  margin-top: 6px; /* Add a top margin */
   	margin-bottom: 16px; /* Bottom margin */
-  	resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  	resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+
 } 
 
 .btn {
   width: 30%;
-  background-color: #3685B5;
-  color: white;
+  background-color: #C3A29E;
+  color: #181818;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
@@ -70,7 +77,9 @@
 }
 
 .btn:hover {
-  background-color: #0471A6;
+  background-color: #E8DBC5;
+  color: black;
+
 }
 
 .newsFeed {
