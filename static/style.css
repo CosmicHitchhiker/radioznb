@@ -14,9 +14,10 @@ html{
 
 .player {
   text-align: center;
-  margin: 40px 80px;
-  height: 80%
-  max-width: 500px;
+  position: relative;
+  margin: auto;
+  height: 75%;
+  max-width: 600px;
 }
 
 .menu button {
@@ -32,7 +33,6 @@ html{
   text-transform: lowercase;
   border-bottom: none;
   height: 60px;
-  min-width: 120px;
   max-width: 280px;
 }
 
@@ -61,6 +61,31 @@ html{
   transition: 0.3s;
 }
 
+.demobuttons{
+  position: relative;
+  max-width: 700px;
+  margin: auto;
+}
+
+.demobutton .r{
+  width: auto;
+  height: auto;
+  max-width: 120px;
+  max-height: 120px;
+  min-width: 50px;
+  min-height: 50px;
+}
+
+.demobutton .d{
+  width: auto;
+  height: auto;
+  max-width: 150px;
+}
+.demobutton:hover{
+opacity: 0.4;
+transition: 0.3s;
+}
+
 .tab {
   color: rgba(0, 0, 0, 1);
   display: none;
@@ -68,7 +93,6 @@ html{
   margin-bottom: 20px;
   padding: 0px;
   text-align: left;
-  border-top: 2px solid black;
 }
 
 .upperblock{
