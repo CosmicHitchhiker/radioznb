@@ -6,17 +6,61 @@
     <meta name="description" content="website of an online radio">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/style.css">
-    <link rel="stylesheet" href="static/schedule.css">
-    <link rel="stylesheet" href="static/style-home-tab.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/schedule.css">
+    <link rel="stylesheet" href="static/css/style-home-tab.css">
+    <link rel="stylesheet" href="static/css/waves-animation.css">
+    <!-- favicons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="static/favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="180x180" href="static/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="static/favicons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="static/favicons/android-chrome-512x512.png">
     <script>document.getElementsByTagName("html")[0].className += " js";</script>
   </head>
 
   <body onload="load_news()">
     <center>
-    <div class=player>
-      <img src="static/radio.png" alt="radio" style="width:100%;height:100%;">
-    </div>
+      <div class="player-table">
+        <div class="lwaves">
+          <div class="lwave-one">
+            <span><img class="lwave-one-1" src="static/images/waves/lwave-11.png"></img></span>
+            <span><img class="lwave-two-1" src="static/images/waves/lwave-12.png"></img></span>
+            <span><img class="lwave-three-1" src="static/images/waves/lwave-13.png"></img></span>
+          </div>
+          <div class="lwave-two">
+            <span><img class="lwave-one-2" src="static/images/waves/lwave-21.png"></img></span>
+            <span><img class="lwave-two-2" src="static/images/waves/lwave-22.png"></img></span>
+            <span><img class="lwave-three-2" src="static/images/waves/lwave-23.png"></img></span>
+          </div>
+          <div class="lwave-three">
+            <span><img class="lwave-one-3" src="static/images/waves/lwave-31.png"></img></span>
+            <span><img class="lwave-two-3" src="static/images/waves/lwave-32.png"></img></span>
+            <span><img class="lwave-three-3" src="static/images/waves/lwave-33.png"></img></span>
+          </div>
+        </div>
+        <div class="player">
+          <img class="player-image" src="static/images/RADIOsyt.jpg" alt="radio">
+        </div>
+        <div class="rwaves">
+          <div class="rwave-one">
+            <span><img class="rwave-three-1" src="static/images/waves/rwave-13.png"></img></span>
+            <span><img class="rwave-two-1" src="static/images/waves/rwave-12.png"></img></span>
+            <span><img class="rwave-one-1" src="static/images/waves/rwave-11.png"></img></span>
+        </div>
+        <div class="rwave-two">
+            <span><img class="rwave-three-2" src="static/images/waves/rwave-23.png"></img></span>
+            <span><img class="rwave-two-2" src="static/images/waves/rwave-22.png"></img></span>
+            <span><img class="rwave-one-2" src="static/images/waves/rwave-21.png"></img></span>
+        </div>
+        <div class="rwave-three">
+            <span><img class="rwave-three-3" src="static/images/waves/rwave-33.png"></img></span>
+            <span><img class="rwave-two-3" src="static/images/waves/rwave-32.png"></img></span>
+            <span><img class="rwave-one-3" src="static/images/waves/rwave-31.png"></img></span>
+        </div>
+        </div>
+      </div>
     </center>
     <div class="pages" align="center">
       <div class="menu">
@@ -300,13 +344,13 @@
       </div>
       </div>
     </div>
-    <script src="js/open_tabs.js"></script>
-    <script src="js/util.js"></script>
-    <script src="js/schedule.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/add_news.js"></script> 
-    <script src="js/open_form.js"></script> 
-    <script type="text/javascript" src="js/news.json"></script> 
+    <script src="static/js/open_tabs.js"></script>
+    <script src="static/js/util.js"></script>
+    <script src="static/js/schedule.js"></script>
+    <script src="static/js/smoothscroll.js"></script>
+    <script src="static/js/add_news.js"></script> 
+    <script src="static/js/open_form.js"></script> 
+    <script type="text/javascript" src="static/js/news.json"></script> 
 
   </body>
 </html>
