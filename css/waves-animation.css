@@ -103,17 +103,6 @@
 }
 
 
-.player-table {
-  /* display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: static; */
-  height: 68%;
-  /*border: 1px solid blue;*/
-}
-
-
 /* .player {
   width: 40%;
   margin: 40px 0px;

@@ -1,4 +1,4 @@
-var audio = $("#sound");
+var audio = $("#player-sound");
 var flag = 0;
 var controlling_volume = 0;
 var stream_url = "https://c18.radioboss.fm:18158/stream?cb=";
@@ -33,62 +33,49 @@ $("#player-stop-button").mouseenter(function() {
   $("#player-stop-button").css("height", "15%");
 });
 
-// $("#volume-dot").mousedown(function() {
-//   $("#volume-dot").css("height", "75%");
-// }).mouseup(function() {
-//   $("#volume-dot").css("height", "70%");
-// });
-
-$("#volume-control").click(function(e) {
-  var pos = e.pageX - $("#volume-control").offset().left;
-  var width_dot = $("#volume-dot").width();
-  var width_line = $("#volume-control").width();
+$("#player-volume-control").click(function(e) {
+  var pos = e.pageX - $("#player-volume-control").offset().left;
+  var width_dot = $("#player-volume-dot").width();
+  var width_line = $("#player-volume-control").width();
   var max_pos = width_line - width_dot;
   var des_pos = pos-width_dot/2
   if (des_pos < 0) des_pos = 0;
   if (des_pos > max_pos) des_pos = max_pos;
-  $("#volume-dot").css("left", des_pos);
+  $("#player-volume-dot").css("left", des_pos);
   audio.prop("volume", des_pos/max_pos);
 });
 
-$("#volume-dot").mousedown(function() {
+$("#player-volume-dot").mousedown(function() {
   controlling_volume = 1;
-  var pos = e.pageX - $("#volume-control").offset().left;
-  var width_dot = $("#volume-dot").width();
-  var width_line = $("#volume-control").width();
+  var pos = e.pageX - $("#player-volume-control").offset().left;
+  var width_dot = $("#player-volume-dot").width();
+  var width_line = $("#player-volume-control").width();
   var max_pos = width_line - width_dot;
   var des_pos = pos-width_dot/2
   if (des_pos < 0) des_pos = 0;
   if (des_pos > max_pos) des_pos = max_pos;
-  $("#volume-dot").css("left", des_pos);
+  $("#player-volume-dot").css("left", des_pos);
   audio.prop("volume", des_pos/max_pos);
 });
 
-$("#volume-dot").mouseup(function() {
+$("#player-volume-dot").mouseup(function() {
   controlling_volume = 0;
 });
 
-$("#volume-dot").mouseleave(function() {
+$("#player-volume-dot").mouseleave(function() {
   controlling_volume = 0;
 });
 
-$("#volume-control").mousemove(function(e) {
+$("#player-volume-control").mousemove(function(e) {
   if (controlling_volume == 1) {
-    var pos = e.pageX - $("#volume-control").offset().left;
-    var width_dot = $("#volume-dot").width();
-    var width_line = $("#volume-control").width();
+    var pos = e.pageX - $("#player-volume-control").offset().left;
+    var width_dot = $("#player-volume-dot").width();
+    var width_line = $("#player-volume-control").width();
     var max_pos = width_line - width_dot;
     var des_pos = pos-width_dot/2
     if (des_pos < 0) des_pos = 0;
     if (des_pos > max_pos) des_pos = max_pos;
-    $("#volume-dot").css("left", des_pos);
+    $("#player-volume-dot").css("left", des_pos);
     audio.prop("volume", des_pos/max_pos);
   }
 });
-
-/*$("#container").mouseenter(function() {
-  audio.trigger('play');
-}).mouseleave(function() {
-  audio.trigger('pause');
-  audio.prop("currentTime",audio.prop("duration"));
-});*/

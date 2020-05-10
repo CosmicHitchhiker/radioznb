@@ -1,0 +1,24 @@
+html{
+  -ms-text-size-adjust:100%;
+  -webkit-text-size-adjust:100%;
+  text-align: center;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
+.player {
+  text-align: center;
+  position: relative;
+  margin: auto;
+  height: 68%;
+  max-width: 600px;
+
+}
+
+.demobutts{
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  /* height: 16%; */
+  max-height: 16%;
+}

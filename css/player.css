@@ -1,8 +1,4 @@
-body {
-  background-color: #ffffff;
-}
-
-.main-player {
+.player-main {
   display: flex;
   justify-content: center;
   margin: auto;
@@ -38,7 +34,7 @@ margin: 0 auto;*/
   height: 15%;
 }
 
-#volume-control {
+#player-volume-control {
   position: absolute;
   top: 75%;
   left: 50%;
@@ -46,7 +42,7 @@ margin: 0 auto;*/
   height: 5%;
 }
 
-#volume-line {
+#player-volume-line {
   position: absolute;
   top: 30%;
   left: 0%;
@@ -54,13 +50,13 @@ margin: 0 auto;*/
   width: 100%;
 }
 
-#volume-dot {
+#player-volume-dot {
   position: absolute;
   top: 0%;
   left: 90%;
   height: 100%;
 }
 
-audio {
+#player-sound {
   display: none;
 }
