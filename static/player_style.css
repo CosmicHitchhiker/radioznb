@@ -43,22 +43,22 @@ margin: 0 auto;*/
   top: 75%;
   left: 50%;
   width: 35%;
-  height: 10%;
+  height: 5%;
 }
 
 #volume-line {
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 0%;
-  height: 20%;
+  height: 40%;
   width: 100%;
 }
 
 #volume-dot {
   position: absolute;
-  top: 25%;
-  left: 5%;
-  height: 50%;
+  top: 0%;
+  left: 90%;
+  height: 100%;
 }
 
 audio {
