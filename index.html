@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/player.css">
     <link rel="stylesheet" href="css/demobutts.css">
-
     <!-- favicons -->
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
@@ -21,7 +20,7 @@
   </head>
 
   <body>
-      <div class="player">
+    <div class="player">
         <div class="player-main">
           <img src="images/RADIOsyt.jpg" alt="радио" class="player-image">
           <img src="images/play.png?raw=true" alt="радио" id="player-play-button">
@@ -31,8 +30,10 @@
             <img src=images/pointer.png id="player-volume-dot">
           </div>
         </div>
-      </div>
-    </div>
+        <div class="player-title">
+    		<img id="player-title-image" border="0" alt="Zimy ne budet" src="images/name.png">
+    	</div>
+    </div>  
     <div class="demobutts">
       <div class="demobutts-menu">
         <a href="https://vk.com/znb_radio" target="_blank">
@@ -41,6 +42,9 @@
         <a href="https://www.facebook.com/100780934922627/" target="_blank">
           <img class="demobutts-button demobutts-round" border="0" alt="FB" src="images/fb.png">
         </a>
+        <a href="https://t.me/radiochata" target="_blank">
+          <img class="demobutts-button demobutts-long" border="0" alt="TG_chat" src="images/chat.png">
+        </a>
         <a href="https://t.me/radi0ZnB" target="_blank">
           <img class="demobutts-button demobutts-round" border="0" alt="TG" src="images/tg.png" >
         </a>
@@ -48,9 +52,6 @@
           <img class="demobutts-button demobutts-round" border="0" alt="M3U_player" src="images/m3u.png">
         </a>
       </div>
-      <a href="https://t.me/radiochata" target="_blank">
-        <img class="demobutts-button demobutts-long" border="0" alt="TG_chat" src="images/chat.png">
-      </a>
     </div>
 
     <audio src="http://c22.radioboss.fm:8033/stream" id="player-sound" preload="none" controls>

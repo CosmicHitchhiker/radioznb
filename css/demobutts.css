@@ -1,20 +1,24 @@
 .demobutts-menu {
   display: flex;
   justify-content: space-between;
-  margin-bottom: -2px;
-  margin-top: -10px;
+  margin-top: 7%;
+/*flex-wrap: wrap;*/
+  width: 100%;
+  position: static;
+}
+
+.demobutts-menu > a {
+  height: 68px;
 }
 
 .demobutts-round {
-  height: 50%;
-  max-width: 100px;
-  max-height: 100px;
-  min-height: 1%;
+  height: 100%;
+  margin: auto;
 }
 
 .demobutts-long {
-  height: 50%;
-  max-width: 380px;
+  height: 100%;
+  margin: auto;
 }
 
 .demobutts-button:hover{
