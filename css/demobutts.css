@@ -1,13 +1,25 @@
-.demobutts-menu {
+.demobutts-menu-left, .demobutts-menu-right, .demobutts-menu-center {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 7%;
 /*flex-wrap: wrap;*/
-  width: 100%;
+  width: 50%;
   position: static;
 }
 
-.demobutts-menu > a {
+.demobutts-menu-center {
+/* flex-grow: 2;
+*/}
+
+.demobutts-menu-left > a {
+  height: 68px;
+}
+
+.demobutts-menu-right > a {
+  height: 68px;
+}
+
+.demobutts-menu-center > a {
   height: 68px;
 }
 
