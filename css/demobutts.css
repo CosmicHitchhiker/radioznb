@@ -1,6 +1,8 @@
 .demobutts-menu-left, .demobutts-menu-right, .demobutts-menu-center {
   display: flex;
+  display: -webkit-flex;
   justify-content: space-around;
+  -webkit-justify-content: space-around;
   margin-top: 7%;
 /*flex-wrap: wrap;*/
   width: 50%;

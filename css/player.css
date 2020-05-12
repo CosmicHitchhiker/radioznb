@@ -1,6 +1,7 @@
 .player-main {
   display: flex;
   justify-content: center;
+  -webkit-justify-content: center;
   margin: auto;
 /* max-height: 100%;
   max-width: 100%;*/
@@ -9,7 +10,7 @@
   width: 5000px;*/
 }
 
-.player-image {           
+.player-image {
   margin: 0 auto;
   position: relative;
   max-width: 77%;

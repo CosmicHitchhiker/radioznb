@@ -119,6 +119,7 @@
   /*border: 1px solid yellow;*/
 	width: 30%;
 	display: flex;
+  display: -webkit-flex;
 	flex-direction: row;
 	align-items: center;
 	margin-top: 13%;

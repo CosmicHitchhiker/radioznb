@@ -2,26 +2,31 @@ html{
   -ms-text-size-adjust:100%;
   -webkit-text-size-adjust:100%;
   text-align: center;
+  -webkit-text-align: center;
   scroll-behavior: smooth;
   overflow-y: scroll;
 }
 
 .player {
   text-align: center;
+  -webkit-text-align: center;
   position: relative;
   margin: auto;
   max-width: 600px;
-  min-width: 300px;  
+  min-width: 300px;
 }
 
 .demobutts{
   text-align: center;
+  -webkit-text-align: center;
   position: relative;
   max-width: 700px;
   min-width: 300px;
   margin: auto;
   display: flex;
+  display: -webkit-flex;
   justify-content: center;
+  -webkit-justify-content: center;
  /* border: 1px solid yellow;
 */
 }

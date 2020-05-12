@@ -20,7 +20,7 @@
 
 /* for mobile phones */
 @media only screen and (max-width: 520px) {
-  .player-image {           
+  .player-image {
     max-width: 68%;
   }
 
@@ -57,7 +57,7 @@
     order: 1;
     width: 100%;
     margin-top: 2%;
-  }  
+  }
 
   .demobutts-long {
     width: 50%;
@@ -90,7 +90,7 @@
   .demobutts-menu-center > a {
     height: 60px;
   }
-  
+
   .demobutts-long {
     width: 70%;
   }
