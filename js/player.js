@@ -8,7 +8,7 @@ $("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
 $("#player-play-button").click(function() {
   if (is_music_on == 0) {
-    audio.attr('src', stream_url2 + new Date().getTime());
+    audio.attr('src', stream_url + new Date().getTime());
     audio.trigger('play');
     is_music_on = 1;
   }
