@@ -1,12 +1,12 @@
 .demobutts-menu-left, .demobutts-menu-right, .demobutts-menu-center {
   display: flex;
   display: -webkit-flex;
-  justify-content: space-around;
-  -webkit-justify-content: space-around;
-  margin-top: 7%;
+  justify-content: space-evenly;
+  -webkit-justify-content: space-evenly;
 /*flex-wrap: wrap;*/
-  width: 50%;
-  position: static;
+  width: 60%;
+  position: relative;
+  bottom: 15%;
 }
 
 .demobutts-menu-center {
@@ -14,15 +14,15 @@
 */}
 
 .demobutts-menu-left > a {
-  height: 68px;
+  height: 98px;
 }
 
 .demobutts-menu-right > a {
-  height: 68px;
+  height: 98px;
 }
 
 .demobutts-menu-center > a {
-  height: 68px;
+  height: 98px;
 }
 
 .demobutts-round {
@@ -33,6 +33,7 @@
 .demobutts-long {
   height: 100%;
   margin: auto;
+  width: 100%;
 }
 
 .demobutts-button:hover{

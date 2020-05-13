@@ -2,18 +2,15 @@
   display: flex;
   justify-content: center;
   -webkit-justify-content: center;
-  margin: auto;
-/* max-height: 100%;
-  max-width: 100%;*/
+  margin: 7% auto auto;
   position: relative;
-/*  height: 5000px;
-  width: 5000px;*/
+
 }
 
 .player-image {
   margin: 0 auto;
   position: relative;
-  max-width: 77%;
+  max-width: 80%;
   top: 0;
   left: 0;
 }
@@ -61,12 +58,14 @@
 
 .player-title {
   width: 100%;
-  margin-left: -7px;
-  margin-top: 10px;
+  height: 14%;
 }
 
 #player-title-image {
-  max-width: 73%;
+/*  max-width: 73%;
   max-height: 55px;
-  margin: auto;
+*/ 
+    width: 77%;
+    margin: 2% auto auto -10px;
+
 }
