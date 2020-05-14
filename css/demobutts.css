@@ -3,15 +3,13 @@
   display: -webkit-flex;
   justify-content: space-evenly;
   -webkit-justify-content: space-evenly;
-/*flex-wrap: wrap;*/
   width: 60%;
   position: relative;
   bottom: 15%;
 }
 
 .demobutts-menu-center {
-/* flex-grow: 2;
-*/}
+}
 
 .demobutts-menu-left > a {
   height: 98px;

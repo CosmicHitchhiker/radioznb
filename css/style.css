@@ -16,6 +16,7 @@ html{
   max-width: 800px;
   min-width: 300px;
   border: 1px solid white;
+  -webkit-border: 1px solid white;
   height: 87%;
 }
 
@@ -31,5 +32,9 @@ html{
   justify-content: center;
   -webkit-justify-content: center;
   align-items: flex-end;
+  -webkit-align-items: flex-end;
+}
 
+@viewport {
+  user-zoom: fixed;
 }

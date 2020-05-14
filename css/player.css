@@ -1,5 +1,6 @@
 .player-main {
   display: flex;
+  display: -webkit-flex;
   justify-content: center;
   -webkit-justify-content: center;
   margin: 7% auto auto;
@@ -10,7 +11,7 @@
 .player-image {
   margin: 0 auto;
   position: relative;
-  max-width: 80%;
+  max-width: 73%;
   top: 0;
   left: 0;
 }
@@ -65,7 +66,7 @@
 /*  max-width: 73%;
   max-height: 55px;
 */ 
-    width: 77%;
+    width: 70%;
     margin: 2% auto auto -10px;
 
 }
