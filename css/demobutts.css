@@ -1,20 +1,39 @@
-.demobutts-menu {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: -2px;
-  margin-top: -10px;
+.demobutts-button img {
+  height: 100%;
+  width: 100%;
 }
 
 .demobutts-round {
-  height: 50%;
-  max-width: 100px;
-  max-height: 100px;
-  min-height: 1%;
+  position: absolute;
+  top: 0%;
+  left: 4%;
+  height: 100%;
+  width: 44%;
+}
+
+.demobutts-round:nth-of-type(1) {
+  left: 52%;
+}
+.demobutts-submenu {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 25%;
+  height: 100%;
+}
+
+.demobutts-submenu:nth-of-type(2){
+  left: 75%;
 }
 
 .demobutts-long {
-  height: 50%;
-  max-width: 380px;
+  position: absolute;
+  left: 25%;
+  top: 0%;
+  width: 50%;
+  height: 100%;
+  /* height: 50%;
+  max-width: 380px; */
 }
 
 .demobutts-button:hover{

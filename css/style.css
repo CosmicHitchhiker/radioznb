@@ -6,19 +6,46 @@ html{
   overflow-y: scroll;
 }
 
-.player {
-  text-align: center;
-  position: relative;
-  margin: auto;
-  height: 68%;
-  max-width: 600px;
-
+:root {
+  --wide-player-height: 80vh;
+  --tablet-player-height: 67vh;
+  --mobile-player-height: 50vw;
+  --current-player-height: var(--wide-player-height);
+  --buttons-height: 15vh;
+  --all-buttons-height: var(--buttons-height);
+  --buttons-top: calc(97vh - var(--all-buttons-height));
+  --buttons-width: calc(9 * var(--buttons-height));
 }
 
-.demobutts{
-  position: relative;
+.player {
+  /* text-align: center; */
+  /* position: relative;
+  margin: auto;
+  height: 68%;
+  max-width: 600px; */
+  position: absolute;
+  top: 0%;
+  left: calc((100% - var(--current-player-height)) / 2);
+  /* left: calc(20% + 5%); */
+  width: var(--current-player-height);
+  height: var(--current-player-height);
+  margin: auto;
+}
+
+@media only screen and (max-aspect-ratio: 1/1) {
+  :root {
+    --current-player-height: var(--mobile-player-height);
+  }
+}
+
+.demobutts {
+  /* position: relative;
   max-width: 600px;
   margin: auto;
-  /* height: 16%; */
-  max-height: 16%;
+  max-height: 16%; */
+  position: absolute;
+  top: var(--buttons-top);
+  left: calc((100% - var(--buttons-width)) / 2);
+  width: var(--buttons-width);
+  height: var(--all-buttons-height);
 }
