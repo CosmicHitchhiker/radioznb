@@ -40,3 +40,43 @@
 opacity: 0.4;
 transition: 0.3s;
 }
+
+@media only screen and (max-aspect-ratio: 3/2) and (min-aspect-ratio: 2/3){
+  .demobutts-long {
+    top: 55%;
+    left: 5%;
+    height: 45%;
+    width: 90%;
+  }
+
+  .demobutts-submenu {
+    top: 0%;
+    height: 50%;
+    width: 50%;
+  }
+
+  .demobutts-submenu:nth-of-type(2){
+    left: 50%;
+  }
+}
+
+@media only screen and (max-aspect-ratio: 4/5) {
+  .demobutts-long {
+    top: 66%;
+    left: 5%;
+    height: 33%;
+    width: 90%;
+  }
+
+  .demobutts-submenu {
+    top: 0%;
+    left: 15%;
+    height: 33%;
+    width: 70%;
+  }
+
+  .demobutts-submenu:nth-of-type(2){
+    left: 15%;
+    top: 33%;
+  }
+}

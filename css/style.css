@@ -9,7 +9,7 @@ html{
 :root {
   --wide-player-height: 80vh;
   --tablet-player-height: 67vh;
-  --mobile-player-height: 50vw;
+  --mobile-player-height: 50vh;
   --current-player-height: var(--wide-player-height);
   --buttons-height: 15vh;
   --all-buttons-height: var(--buttons-height);
@@ -32,9 +32,19 @@ html{
   margin: auto;
 }
 
-@media only screen and (max-aspect-ratio: 1/1) {
+@media only screen and (max-aspect-ratio: 4/5) {
   :root {
     --current-player-height: var(--mobile-player-height);
+    --all-buttons-height: calc(3 * var(--buttons-height));
+    --buttons-width: 90vw;
+  }
+}
+
+@media only screen and (max-aspect-ratio: 3/2) and (min-aspect-ratio: 4/5){
+  :root {
+    --current-player-height: var(--tablet-player-height);
+    --all-buttons-height: calc(2 * var(--buttons-height));
+    --buttons-width: calc(5 * var(--buttons-height));
   }
 }
 
