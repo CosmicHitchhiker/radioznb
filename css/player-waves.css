@@ -703,3 +703,18 @@
   left: 0%;
   top: 25%;
 }
+
+
+
+/* Tablet version -------------------------------------------*/
+@media only screen and (max-aspect-ratio: 3/2) and (min-aspect-ratio: 2/3) {
+
+}
+
+
+/* Mobile version -------------------------------------------*/
+@media only screen and (max-aspect-ratio: 4/5) {
+  .waves {
+    visibility: hidden;
+  }
+}
