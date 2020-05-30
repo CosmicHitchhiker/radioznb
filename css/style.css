@@ -18,18 +18,29 @@ html{
 }
 
 .player {
-  /* text-align: center; */
-  /* position: relative;
-  margin: auto;
-  height: 68%;
-  max-width: 600px; */
   position: absolute;
   top: 0%;
   left: calc((100% - var(--current-player-height)) / 2);
-  /* left: calc(20% + 5%); */
   width: var(--current-player-height);
   height: var(--current-player-height);
   margin: auto;
+}
+
+.demobutts {
+  position: absolute;
+  top: var(--buttons-top);
+  left: calc((100% - var(--buttons-width)) / 2);
+  width: var(--buttons-width);
+  height: var(--all-buttons-height);
+}
+
+.waves {
+  display: none;
+  width: 100%;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  height: var(--current-player-height);
 }
 
 @media only screen and (max-aspect-ratio: 4/5) {
@@ -46,16 +57,4 @@ html{
     --all-buttons-height: calc(2 * var(--buttons-height));
     --buttons-width: calc(5 * var(--buttons-height));
   }
-}
-
-.demobutts {
-  /* position: relative;
-  max-width: 600px;
-  margin: auto;
-  max-height: 16%; */
-  position: absolute;
-  top: var(--buttons-top);
-  left: calc((100% - var(--buttons-width)) / 2);
-  width: var(--buttons-width);
-  height: var(--all-buttons-height);
 }

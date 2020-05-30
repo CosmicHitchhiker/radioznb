@@ -378,14 +378,6 @@
   0%, 100% {transform: skew(-4deg, 4deg);}
 }
 
-.waves {
-  display: none;
-  width: 100%;
-  position: absolute;
-  left: 0%;
-  top: 0%;
-  height: var(--current-player-height);
-}
 
 /* left waves --------------------------------------------- */
 .lwaves {
@@ -394,7 +386,7 @@
   display: -ms-flexbox;  /* TWEENER - IE 10 */
   display: -webkit-flexbox; /* NEW - Chrome */
   display: -webkit-flex; /* NEW - Chrome */
-  display: flex;         /* NEW, Spec - Opera 12.1, Firefox 20+ */ 
+  display: flex;         /* NEW, Spec - Opera 12.1, Firefox 20+ */
 
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
@@ -412,8 +404,8 @@
 
   -webkit-justify-content: flex-end;
   -moz-justify-content: flex-end;
-  -ms-justify-content: flex-end; 
-  -o-justify-content: flex-end; 
+  -ms-justify-content: flex-end;
+  -o-justify-content: flex-end;
   justify-content: flex-end;
 
   position: absolute;
@@ -437,7 +429,7 @@
   height: calc(var(--current-player-height) / 2);
   width: calc(var(--current-player-height) / 2.2);
   position: absolute;
-  bottom: 0%;  
+  bottom: 0%;
   right: calc(var(--current-player-height) / 12);
   animation:  turn-2 4s linear 0s  infinite;
 }
@@ -445,7 +437,7 @@
   height: calc(var(--current-player-height) / 2);
   width: calc(var(--current-player-height) / 2.2);
   position: absolute;
-  bottom: 0%;  
+  bottom: 0%;
   right: calc(var(--current-player-height) / 12);
   animation:  turn-1 4s linear 0s  infinite;
 }
@@ -552,7 +544,7 @@
   display: -ms-flexbox;  /* TWEENER - IE 10 */
   display: -webkit-flexbox; /* NEW - Chrome */
   display: -webkit-flex; /* NEW - Chrome */
-  display: flex;         /* NEW, Spec - Opera 12.1, Firefox 20+ */  
+  display: flex;         /* NEW, Spec - Opera 12.1, Firefox 20+ */
 
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
@@ -570,8 +562,8 @@
 
   -webkit-justify-content: flex-start;
   -moz-justify-content: flex-start;
-  -ms-justify-content: flex-start; 
-  -o-justify-content: flex-start; 
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
   justify-content: flex-start;
 
   position: absolute;
@@ -595,7 +587,7 @@
   height: calc(var(--current-player-height) / 2);
   width: calc(var(--current-player-height) / 2.2);
   position: absolute;
-  bottom: 0%;  
+  bottom: 0%;
   left: calc(var(--current-player-height) / 12);
   -webkit-animation:  turn-1 4s linear 0s  infinite;
   -moz-animation:  turn-1 4s linear 0s  infinite;
@@ -713,7 +705,7 @@
 
 
 /* Mobile version -------------------------------------------*/
-@media only screen and (max-aspect-ratio: 4/5) {
+@media only screen and (max-aspect-ratio: 9/7) {
   .waves {
     visibility: hidden;
   }
