@@ -707,6 +707,6 @@
 /* Mobile version -------------------------------------------*/
 @media only screen and (max-aspect-ratio: 9/7) {
   .waves {
-    visibility: hidden;
+    display: none;
   }
 }

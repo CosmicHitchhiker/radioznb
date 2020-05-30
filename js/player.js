@@ -12,7 +12,7 @@ $("#player-play-button").click(function() {
     audio.trigger('play');
     is_music_on = 1;
   };
-  $("#waves").css("display", "initial");
+  $("#waves").css("visibility", "visible");
 });
 
 // $("#player-play-button").mouseenter(function() {
@@ -26,7 +26,7 @@ $("#player-stop-button").click(function() {
     audio.trigger('pause');
     is_music_on = 0;
   };
-  $("#waves").css("display", "none");
+  $("#waves").css("visibility", "hidden");
 });
 
 // $("#player-stop-button").mouseenter(function() {
