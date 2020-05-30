@@ -1,5 +1,5 @@
 var audio = $("#player-sound");
-var flag = 0;
+var is_music_on = 0;
 var controlling_volume = 0;
 var stream_url = "https://c18.radioboss.fm:18158/stream?cb=";
 var stream_url2 = "http://c28.radioboss.fm:8068/stream?cb=";
@@ -7,12 +7,12 @@ var stream_url2 = "http://c28.radioboss.fm:8068/stream?cb=";
 $("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
 $("#player-play-button").click(function() {
-  if (flag == 0) {
-    audio.attr('src', stream_url2 + new Date().getTime());
+  if (is_music_on == 0) {
+    audio.attr('src', stream_url + new Date().getTime());
     audio.trigger('play');
-    flag = 1;
-  }; 
-  $("#waves").css("display", "initial"); 
+    is_music_on = 1;
+  };
+  $("#waves").css("display", "initial");
 });
 
 $("#player-play-button").mouseenter(function() {
@@ -22,9 +22,9 @@ $("#player-play-button").mouseenter(function() {
 });
 
 $("#player-stop-button").click(function() {
-  if (flag == 1) {
+  if (is_music_on == 1) {
     audio.trigger('pause');
-    flag = 0;
+    is_music_on = 0;
   };
   $("#waves").css("display", "none"); 
 });
@@ -47,7 +47,7 @@ $("#player-volume-control").click(function(e) {
   audio.prop("volume", des_pos/max_pos);
 });
 
-$("#player-volume-dot").mousedown(function() {
+$("#player-volume-dot").mousedown(function(e) {
   controlling_volume = 1;
   var pos = e.pageX - $("#player-volume-control").offset().left;
   var width_dot = $("#player-volume-dot").width();
@@ -60,15 +60,15 @@ $("#player-volume-dot").mousedown(function() {
   audio.prop("volume", des_pos/max_pos);
 });
 
-$("#player-volume-dot").mouseup(function() {
+$("html").mouseup(function() {
   controlling_volume = 0;
 });
 
-$("#player-volume-dot").mouseleave(function() {
-  controlling_volume = 0;
-});
+// $("#player-volume-control").mouseleave(function() {
+//   controlling_volume = 0;
+// });
 
-$("#player-volume-control").mousemove(function(e) {
+$("html").mousemove(function(e) {
   if (controlling_volume == 1) {
     var pos = e.pageX - $("#player-volume-control").offset().left;
     var width_dot = $("#player-volume-dot").width();
