@@ -11,7 +11,8 @@ $("#player-play-button").click(function() {
     audio.attr('src', stream_url + new Date().getTime());
     audio.trigger('play');
     is_music_on = 1;
-  }
+  $("#waves").css("display", "initial"); 
+  }; 
 });
 
 $("#player-play-button").mouseenter(function() {
@@ -24,7 +25,8 @@ $("#player-stop-button").click(function() {
   if (is_music_on == 1) {
     audio.trigger('pause');
     is_music_on = 0;
-  }
+  };
+  $("#waves").css("display", "none"); 
 });
 
 $("#player-stop-button").mouseenter(function() {

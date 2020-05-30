@@ -8,33 +8,55 @@ html{
   max-height: 100%
 }
 
+:root {
+  --wide-player-height: 80vh;
+  --tablet-player-height: 67vh;
+  --mobile-player-height: 50vh;
+  --current-player-height: var(--wide-player-height);
+  --buttons-height: 15vh;
+  --all-buttons-height: var(--buttons-height);
+  --buttons-top: calc(97vh - var(--all-buttons-height));
+  --buttons-width: calc(9 * var(--buttons-height));
+}
+
 .player {
-  text-align: center;
-  -webkit-text-align: center;
-  position: relative;
+  position: absolute;
+  top: 0%;
+  left: calc((100% - var(--current-player-height)) / 2);
+  width: var(--current-player-height);
+  height: var(--current-player-height);
   margin: auto;
-  max-width: 800px;
-  min-width: 300px;
-  border: 1px solid white;
-  -webkit-border: 1px solid white;
-  height: 87%;
 }
 
-.demobutts{
-  text-align: center;
-  -webkit-text-align: center;
-  position: relative;
-  max-width: 900px;
-  min-width: 300px;
-  margin: auto;
-  display: flex;
-  display: -webkit-flex;
-  justify-content: center;
-  -webkit-justify-content: center;
-  align-items: flex-end;
-  -webkit-align-items: flex-end;
+.demobutts {
+  position: absolute;
+  top: var(--buttons-top);
+  left: calc((100% - var(--buttons-width)) / 2);
+  width: var(--buttons-width);
+  height: var(--all-buttons-height);
 }
 
-@viewport {
-  user-zoom: fixed;
+.waves {
+  display: none;
+  width: 100%;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  height: var(--current-player-height);
+}
+
+@media only screen and (max-aspect-ratio: 4/5) {
+  :root {
+    --current-player-height: var(--mobile-player-height);
+    --all-buttons-height: calc(3 * var(--buttons-height));
+    --buttons-width: 90vw;
+  }
+}
+
+@media only screen and (max-aspect-ratio: 3/2) and (min-aspect-ratio: 4/5){
+  :root {
+    --current-player-height: var(--tablet-player-height);
+    --all-buttons-height: calc(2 * var(--buttons-height));
+    --buttons-width: calc(5 * var(--buttons-height));
+  }
 }
