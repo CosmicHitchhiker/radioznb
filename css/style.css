@@ -7,8 +7,8 @@ html{
 }
 
 :root {
-  --wide-player-height: 80vh;
-  --tablet-player-height: 67vh;
+  --wide-player-height: 75vh;
+  --tablet-player-height: 63vh;
   --mobile-player-height: 50vh;
   --current-player-height: var(--wide-player-height);
   --buttons-height: 15vh;
@@ -47,7 +47,7 @@ html{
   :root {
     --current-player-height: var(--mobile-player-height);
     --all-buttons-height: calc(3 * var(--buttons-height));
-    --buttons-width: 90vw;
+    --buttons-width: calc(3.6 * var(--buttons-height));
   }
 }
 

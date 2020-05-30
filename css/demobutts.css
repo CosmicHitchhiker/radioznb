@@ -14,6 +14,7 @@
 .demobutts-round:nth-of-type(1) {
   left: 52%;
 }
+
 .demobutts-submenu {
   position: absolute;
   left: 0%;
@@ -70,13 +71,25 @@ transition: 0.3s;
 
   .demobutts-submenu {
     top: 0%;
-    left: 15%;
-    height: 33%;
-    width: 70%;
+    left: 10%;
+    height: 30%;
+    width: 80%;
   }
 
   .demobutts-submenu:nth-of-type(2){
-    left: 15%;
+    left: 10%;
     top: 33%;
+  }
+
+  .demobutts-round {
+    position: absolute;
+    top: 0%;
+    left: 5%;
+    height: 100%;
+    width: 37%;
+  }
+
+  .demobutts-round:nth-of-type(1) {
+    left: 57%;
   }
 }
