@@ -13,6 +13,8 @@ $("#player-play-button").click(function() {
     is_music_on = 1;
   };
   $("#waves").css("visibility", "visible");
+  $("#player-play-button").css("opacity", "55%");
+  $("#player-stop-button").css("opacity", "100%");
 });
 
 // $("#player-play-button").mouseenter(function() {
@@ -27,6 +29,8 @@ $("#player-stop-button").click(function() {
     is_music_on = 0;
   };
   $("#waves").css("visibility", "hidden");
+  $("#player-stop-button").css("opacity", "55%");
+  $("#player-play-button").css("opacity", "100%");
 });
 
 // $("#player-stop-button").mouseenter(function() {

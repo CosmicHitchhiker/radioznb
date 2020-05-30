@@ -25,13 +25,6 @@
   height: 22%;
 }
 
-#player-play-button:hover {
-  position: absolute;
-  top: 53.5%;
-  left: 42.5%;
-  height: 25%;
-}
-
 #player-stop-button {
   position: absolute;
   top: 54%;
@@ -43,6 +36,13 @@
   position: absolute;
   top: 52.5%;
   left: 64.5%;
+  height: 25%;
+}
+
+#player-play-button:hover {
+  position: absolute;
+  top: 53.5%;
+  left: 42.5%;
   height: 25%;
 }
 
@@ -71,4 +71,39 @@
 
 #player-sound {
   display: none;
+}
+
+@media only screen and (max-aspect-ratio: 3/2) {
+  #player-volume-control{
+    display: none;
+  }
+
+  #player-play-button {
+    position: absolute;
+    top: 60%;
+    left: 44%;
+    height: 22%;
+  }
+
+  #player-stop-button {
+    position: absolute;
+    top: 59%;
+    left: 66%;
+    height: 22%;
+  }
+
+  #player-stop-button:hover {
+    position: absolute;
+    top: 59%;
+    left: 66%;
+    height: 22%;
+  }
+
+  #player-play-button:hover {
+    position: absolute;
+    top: 60%;
+    left: 44%;
+    height: 22%;
+  }
+
 }
