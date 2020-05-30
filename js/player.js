@@ -15,25 +15,25 @@ $("#player-play-button").click(function() {
   $("#waves").css("display", "initial");
 });
 
-$("#player-play-button").mouseenter(function() {
-    $("#player-play-button").css("height", "17%");
-}).mouseleave(function() {
-  $("#player-play-button").css("height", "15%");
-});
+// $("#player-play-button").mouseenter(function() {
+//     $("#player-play-button").css("height", "17%");
+// }).mouseleave(function() {
+//   $("#player-play-button").css("height", "15%");
+// });
 
 $("#player-stop-button").click(function() {
   if (is_music_on == 1) {
     audio.trigger('pause');
     is_music_on = 0;
   };
-  $("#waves").css("display", "none"); 
+  $("#waves").css("display", "none");
 });
 
-$("#player-stop-button").mouseenter(function() {
-    $("#player-stop-button").css("height", "17%");
-}).mouseleave(function() {
-  $("#player-stop-button").css("height", "15%");
-});
+// $("#player-stop-button").mouseenter(function() {
+//     $("#player-stop-button").css("height", "17%");
+// }).mouseleave(function() {
+//   $("#player-stop-button").css("height", "15%");
+// });
 
 $("#player-volume-control").click(function(e) {
   var pos = e.pageX - $("#player-volume-control").offset().left;
