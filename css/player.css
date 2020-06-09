@@ -20,36 +20,36 @@
 
 #player-play-button {
   position: absolute;
-  top: 55%;
-  left: 44%;
-  height: 22%;
+  top: 77.5%;
+  left: 50%;
+  height: 15%;
 }
 
 #player-stop-button {
   position: absolute;
-  top: 54%;
+  top: 77%;
   left: 66%;
-  height: 22%;
+  height: 15%;
 }
 
 #player-stop-button:hover {
   position: absolute;
-  top: 52.5%;
-  left: 64.5%;
-  height: 25%;
+  top: 76.5%;
+  left: 65.5%;
+  height: 17%;
 }
 
 #player-play-button:hover {
   position: absolute;
-  top: 53.5%;
-  left: 42.5%;
-  height: 25%;
+  top: 77%;
+  left: 49.5%;
+  height: 17%;
 }
 
 #player-volume-control {
   position: absolute;
-  top: 82%;
-  left: 45%;
+  top: 71%;
+  left: 46%;
   width: 40%;
   height: 5%;
 }
@@ -73,8 +73,38 @@
   display: none;
 }
 
+#player-screen {
+  position: absolute;
+  top: 51%;
+  left: 44%;
+  height: 18%;
+  width: 43%;
+}
+
+#player-screen-text {
+  visibility: hidden;
+  position: absolute;
+  top: 58%;
+  left: 47%;
+  width: 39%;
+}
+#container {
+position: absolute;
+top: 58%;
+left: 47%;
+width: 39%;
+}
+
 @media only screen and (max-aspect-ratio: 3/2) {
   #player-volume-control{
+    display: none;
+  }
+
+  #player-screen{
+    display: none;
+  }
+
+  #player-screen-text {
     display: none;
   }
 

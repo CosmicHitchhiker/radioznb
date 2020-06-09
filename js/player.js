@@ -13,6 +13,7 @@ $("#player-play-button").click(function() {
     is_music_on = 1;
   };
   $("#waves").css("visibility", "visible");
+  setTimeout(function(){$("#player-screen-text").css("visibility", "visible")}, 5000);
   $("#player-play-button").css("opacity", "55%");
   $("#player-stop-button").css("opacity", "100%");
 });
@@ -29,6 +30,7 @@ $("#player-stop-button").click(function() {
     is_music_on = 0;
   };
   $("#waves").css("visibility", "hidden");
+  $("#player-screen-text").css("visibility", "hidden");
   $("#player-stop-button").css("opacity", "55%");
   $("#player-play-button").css("opacity", "100%");
 });
