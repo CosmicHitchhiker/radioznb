@@ -1,0 +1,40 @@
+.tab {
+  position: absolute;
+  top: 100%;
+  left: calc((100% - var(--buttons-width)) / 2);
+  width: var(--buttons-width);
+  color: rgba(0, 0, 0, 1);
+  display: none;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 0px;
+  text-align: left;
+/*  border-top: 2px solid black;*/
+  font: normal 105% arial, sans-serif;
+  min-height: var(--tab-min-height);
+  border: 1px solid grey;
+}
+
+.tab-uppersection {
+  padding: 100px 70px;
+  padding-top: calc(var(--buttons-height) / 2);
+  border-top: none;
+  min-height: calc(var(--tab-min-height)*0.7);
+  border: 1px solid green;
+}
+
+.tab-bottomsection {
+  position: absolute;
+  bottom: 0;
+  left: -2px;
+  width: inherit;
+  margin-top: 50px;
+  border: 2px solid black;
+  height: calc(var(--tab-min-height)*0.1 - 5px);
+}
+
+.tab-anchor {
+  visibility: hidden;
+  position: absolute;
+  top: calc(100% - var(--buttons-height) / 2);
+}

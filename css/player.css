@@ -20,30 +20,30 @@
 
 #player-play-button {
   position: absolute;
-  top: 55%;
-  left: 44%;
-  height: 22%;
+  top: 57%;
+  left: 47%;
+  height: 19%;
 }
 
 #player-stop-button {
   position: absolute;
-  top: 54%;
-  left: 66%;
-  height: 22%;
+  top: 56%;
+  left: 68%;
+  height: 19%;
 }
 
 #player-stop-button:hover {
   position: absolute;
-  top: 52.5%;
-  left: 64.5%;
-  height: 25%;
+  top: 54.5%;
+  left: 66.5%;
+  height: 21%;
 }
 
 #player-play-button:hover {
   position: absolute;
-  top: 53.5%;
-  left: 42.5%;
-  height: 25%;
+  top: 55.5%;
+  left: 45.5%;
+  height: 21%;
 }
 
 #player-volume-control {
@@ -105,5 +105,4 @@
     left: 44%;
     height: 22%;
   }
-
 }

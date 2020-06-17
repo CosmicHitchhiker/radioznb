@@ -412,33 +412,38 @@
   left: 0%;
   height: var(--current-player-height);
   width: calc((100% - var(--current-player-height)) / 2);
-
   flex-shrink: 0;
   -webkit-flex-shrink: 0;
 }
 
 
 .lwave-one {
-  height: calc(var(--current-player-height) / 2);
-  width: calc(var(--current-player-height) / 2.2);
+  height: var(--big-wave-height);
+  width:  var(--waves-width);
   position: absolute;
-  bottom: 0%;
-  right: calc(var(--current-player-height) / 12);
+  bottom: calc(var(--big-wave-height) / 6);
+  right: calc(var(--big-wave-height) / 3);
 }
 .lwave-two {
-  height: calc(var(--current-player-height) / 2);
-  width: calc(var(--current-player-height) / 2.2);
+  height: var(--big-wave-height);
+  width: var(--waves-width);
   position: absolute;
-  bottom: 0%;
-  right: calc(var(--current-player-height) / 12);
-  animation:  turn-2 4s linear 0s  infinite;
+  bottom: calc(var(--big-wave-height) / 6);
+  right:  calc(var(--big-wave-height) / 3);
+  -webkit-animation:  turn-2 4s linear 0s infinite;
+  -moz-animation:  turn-2 4s linear 0s infinite;
+  -o-animation:  turn-2 4s linear 0s infinite;
+  animation:  turn-2 4s linear 0s infinite;
 }
 .lwave-three {
-  height: calc(var(--current-player-height) / 2);
-  width: calc(var(--current-player-height) / 2.2);
+  height: var(--big-wave-height);
+  width: var(--waves-width);
   position: absolute;
-  bottom: 0%;
-  right: calc(var(--current-player-height) / 12);
+  bottom: calc(var(--big-wave-height) / 6);
+  right:  calc(var(--big-wave-height) / 3);
+  -webkit-animation:  turn-1 4s linear 0s  infinite;
+  -moz-animation:  turn-1 4s linear 0s  infinite;
+  -o-animation:  turn-1 4s linear 0s  infinite;
   animation:  turn-1 4s linear 0s  infinite;
 }
 
@@ -448,30 +453,29 @@
   -moz-animation: fade-away-11 4s linear 0s  infinite;
   -o-animation: fade-away-11 4s linear 0s  infinite;
   animation: fade-away-11 4s linear 0s  infinite;
-
-  height: calc(var(--current-player-height) / 2);
+  height: var(--big-wave-height);
   position: absolute;
-  right: 48%;
+  right: 50%;
 }
 .lwave-two-1 {
   -webkit-animation: fade-away-12 4s linear 0s  infinite;
   -moz-animation: fade-away-12 4s linear 0s  infinite;
   -o-animation: fade-away-12 4s linear 0s  infinite;
   animation: fade-away-12 4s linear 0s  infinite;
-  height: calc(var(--current-player-height) / 2.8);
+  height: var(--mid-wave-height);
   position: absolute;
-  right: 23%;
-  top: 12%;
+  right: 25%;
+  top: var(--mid-wave-indent);
 }
 .lwave-three-1 {
   -webkit-animation: fade-away-13 4s linear 0s  infinite;
   -moz-animation: fade-away-13 4s linear 0s  infinite;
   -o-animation: fade-away-13 4s linear 0s  infinite;
   animation: fade-away-13 4s linear 0s  infinite;
-  height: calc(var(--current-player-height) / 4.2);
+  height: var(--lit-wave-height);
   position: absolute;
   right: 0%;
-  top: 25%;
+  top: var(--lit-wave-indent);
 }
 
 
@@ -480,29 +484,29 @@
   -moz-animation: fade-away-21 4s linear 0s  infinite;
   -o-animation: fade-away-21 4s linear 0s  infinite;
   animation: fade-away-21 4s linear 0s  infinite;
-  height: calc(var(--current-player-height) / 2);
+  height: var(--big-wave-height);
   position: absolute;
-  right: 45%;
+  right: 50%;
 }
 .lwave-two-2 {
   -webkit-animation: fade-away-22 4s linear 0s  infinite;
   -moz-animation: fade-away-22 4s linear 0s  infinite;
   -o-animation: fade-away-22 4s linear 0s  infinite;
   animation: fade-away-22 4s linear 0s  infinite;
-  height: calc(var(--current-player-height) / 2.8);
+  height: var(--mid-wave-height);
   position: absolute;
-  right: 23%;
-  top: 14%;
+  right: 25%;
+  top: var(--mid-wave-indent);
 }
 .lwave-three-2 {
   -webkit-animation: fade-away-23 4s linear 0s  infinite;
   -moz-animation: fade-away-23 4s linear 0s  infinite;
   -o-animation: fade-away-23 4s linear 0s  infinite;
   animation: fade-away-23 4s linear 0s  infinite;
-  height: calc(var(--current-player-height) / 4.2);
+  height: var(--lit-wave-height);
   position: absolute;
   right: 0%;
-  top: 26%;
+  top: var(--lit-wave-indent);
 }
 
 
@@ -511,29 +515,29 @@
   -moz-animation: fade-away-31 4s linear 0s  infinite;
   -o-animation: fade-away-31 4s linear 0s  infinite;
   animation: fade-away-31 4s linear 0s  infinite;
-  height: calc(var(--current-player-height) / 2);
+  height: var(--big-wave-height);
   position: absolute;
-  right: 45%;
+  right: 50%;
 }
 .lwave-two-3 {
   -webkit-animation: fade-away-32 4s linear 0s  infinite;
   -moz-animation: fade-away-32 4s linear 0s  infinite;
   -o-animation: fade-away-32 4s linear 0s  infinite;
   animation: fade-away-32 4s linear 0s  infinite;
-  height: calc(var(--current-player-height) / 2.85);
+  height: var(--mid-wave-height);
   position: absolute;
-  right: 22%;
-  top: 14%;
+  right: 25%;
+  top: var(--mid-wave-indent);
 }
 .lwave-three-3 {
   -webkit-animation: fade-away-33 4s linear 0s  infinite;
   -moz-animation: fade-away-33 4s linear 0s  infinite;
   -o-animation: fade-away-33 4s linear 0s  infinite;
   animation: fade-away-33 4s linear 0s  infinite;
-  height: calc(var(--current-player-height) / 4.4);
+  height: var(--lit-wave-height);
   position: absolute;
   right: 0%;
-  top: 28%;
+  top: var(--lit-wave-indent);
 }
 
 
@@ -577,29 +581,29 @@
 
 
 .rwave-one {
-  height: calc(var(--current-player-height) / 2);
-  width: calc(var(--current-player-height) / 2.2);
+  height: var(--big-wave-height);
+  width:  var(--waves-width);
   position: absolute;
-  bottom: 0%;
-  left: calc(var(--current-player-height) / 12);
+  bottom: calc(var(--big-wave-height) / 6);
+  left: calc(var(--big-wave-height) / 3);
 }
 .rwave-two {
-  height: calc(var(--current-player-height) / 2);
-  width: calc(var(--current-player-height) / 2.2);
+  height: var(--big-wave-height);
+  width:  var(--waves-width);
   position: absolute;
-  bottom: 0%;
-  left: calc(var(--current-player-height) / 12);
+  bottom: calc(var(--big-wave-height) / 6);
+  left: calc(var(--big-wave-height) / 3);
   -webkit-animation:  turn-1 4s linear 0s  infinite;
   -moz-animation:  turn-1 4s linear 0s  infinite;
   -o-animation:  turn-1 4s linear 0s  infinite;
   animation:  turn-1 4s linear 0s  infinite;
 }
 .rwave-three {
-  height: calc(var(--current-player-height) / 2);
-  width: calc(var(--current-player-height) / 2.2);
+  height: var(--big-wave-height);
+  width: var(--waves-width);
   position: absolute;
-  bottom: 0%;
-  left: calc(var(--current-player-height) / 12);
+  bottom: calc(var(--big-wave-height) / 6);
+  left: calc(var(--big-wave-height) / 3);
   -webkit-animation:  turn-2 4s linear 0s  infinite;
   -moz-animation:  turn-2 4s linear 0s  infinite;
   -o-animation:  turn-2 4s linear 0s  infinite;
@@ -611,29 +615,29 @@
   -moz-animation: fade-away-11 4s linear 0s  infinite;
   -o-animation: fade-away-11 4s linear 0s  infinite;
   animation: fade-away-11 4s linear 0s  infinite;
-  height: calc(var(--current-player-height) / 2);
+  height: var(--big-wave-height);
   position: absolute;
-  left: 45%;
+  left: 50%;
 }
 .rwave-two-1 {
   -webkit-animation: fade-away-12 4s linear 0s  infinite;
   -moz-animation: fade-away-12 4s linear 0s  infinite;
   -o-animation: fade-away-12 4s linear 0s  infinite;
   animation: fade-away-12 4s linear 0s  infinite;
-  height: calc(var(--current-player-height) / 2.8);
+  height: var(--mid-wave-height);
   position: absolute;
-  left: 20%;
-  top: 12%;
+  left: 25%;
+  top: var(--mid-wave-indent);
 }
 .rwave-three-1 {
   -webkit-animation: fade-away-13 4s linear 0s  infinite;
   -moz-animation: fade-away-13 4s linear 0s  infinite;
   -o-animation: fade-away-13 4s linear 0s  infinite;
   animation: fade-away-13 4s linear 0s  infinite;
-  height: calc(var(--current-player-height) / 4.2);
+  height: var(--lit-wave-height);
   position: absolute;
   left: 0%;
-  top: 25%;
+  top: var(--lit-wave-indent);
 }
 
 .rwave-one-2 {
@@ -641,28 +645,28 @@
   -moz-animation: fade-away-21 4s linear 0s  infinite;
   -o-animation: fade-away-21 4s linear 0s  infinite;
   animation: fade-away-21 4s linear 0s  infinite;
-  height: calc(var(--current-player-height) / 2);
+  height: var(--big-wave-height);
   position: absolute;
-  left: 45%;
+  left: 50%;
 }
 .rwave-two-2 {
   -moz-animation: fade-away-22 4s linear 0s  infinite;
   -o-animation: fade-away-22 4s linear 0s  infinite;
   animation: fade-away-22 4s linear 0s  infinite;
-  height: calc(var(--current-player-height) / 2.8);
+  height: var(--mid-wave-height);
   position: absolute;
-  left: 20%;
-  top: 13%;
+  left: 25%;
+  top: var(--mid-wave-indent);
 }
 .rwave-three-2 {
   -webkit-animation: fade-away-23 4s linear 0s  infinite;
   -moz-animation: fade-away-23 4s linear 0s  infinite;
   -o-animation: fade-away-23 4s linear 0s  infinite;
   animation: fade-away-23 4s linear 0s  infinite;
-  height: calc(var(--current-player-height) / 4.2);
+  height: var(--lit-wave-height);
   position: absolute;
   left: 0%;
-  top: 25%;
+  top: var(--lit-wave-indent);
 }
 
 
@@ -671,29 +675,29 @@
   -moz-animation: fade-away-31 4s linear 0s  infinite;
   -o-animation: fade-away-31 4s linear 0s  infinite;
   animation: fade-away-31 4s linear 0s  infinite;
-  height: calc(var(--current-player-height) / 2);
+  height: var(--big-wave-height);
   position: absolute;
-  left: 45%;
+  left: 50%;
 }
 .rwave-two-3 {
   -webkit-animation: fade-away-32 4s linear 0s  infinite;
   -moz-animation: fade-away-32 4s linear 0s  infinite;
   -o-animation: fade-away-32 4s linear 0s  infinite;
   animation: fade-away-32 4s linear 0s  infinite;
-  height: calc(var(--current-player-height) / 2.8);
+  height: var(--mid-wave-height);
   position: absolute;
-  left: 20%;
-  top: 12%;
+  left: 25%;
+  top: var(--mid-wave-indent);
 }
 .rwave-three-3 {
   -webkit-animation: fade-away-33 4s linear 0s  infinite;
   -moz-animation: fade-away-33 4s linear 0s  infinite;
   -o-animation: fade-away-33 4s linear 0s  infinite;
   animation: fade-away-33 4s linear 0s  infinite;
-  height: calc(var(--current-player-height) / 4.2);
+  height: var(--lit-wave-height);
   position: absolute;
   left: 0%;
-  top: 25%;
+  top: var(--lit-wave-indent);
 }
 
 

@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/player.css">
     <link rel="stylesheet" href="css/player-waves.css">
     <link rel="stylesheet" href="css/demobutts.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/tabs.css">
 
     <!-- favicons -->
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
@@ -60,17 +62,16 @@
       </div>
       <div class="player">
         <div class="player-main">
-          <img src="images/RADIOsyt.jpg" alt="радио" class="player-image">
-          <img src="images/play.png?raw=true" alt="радио" id="player-play-button">
-          <img src="images/stop.png?raw=true" alt="радио" id="player-stop-button">
+          <img src="images/RADIOsyt.png" alt="радио" class="player-image">
+          <img src="images/play-sm.png?raw=true" alt="радио" id="player-play-button">
+          <img src="images/stop-sm.png?raw=true" alt="радио" id="player-stop-button">
           <div id="player-volume-control">
             <img src=images/scale.png id="player-volume-line">
             <img src=images/pointer.png id="player-volume-dot">
           </div>
         </div>
       </div>
-
-    <div class="demobutts">
+<!--     <div class="demobutts">
       <div class="demobutts-submenu">
         <a href="https://vk.com/znb_radio" target="_blank" class="demobutts-button demobutts-round">
           <img border="0" alt="VK" src="images/vk.png">
@@ -92,13 +93,53 @@
       <a href="https://teleg.run/radiochata" target="_blank" class="demobutts-button demobutts-long">
         <img border="0" alt="TG_chat" src="images/chat.png">
       </a>
-
     </div>
+ -->
+	<div id="menu" class="menu">
+	 	<a href="#home"><button class="tablink" onclick="openPage(event, 'tab-home')">дом</button></a>
+	  <a href="#regulars"><button class="tablink" onclick="openPage(event, 'tab-regulars')">передачи</button></a>
+	  <a href="#news"><button class="tablink" onclick="openPage(event, 'tab-news')">анонсы</button></a>
+	  <a href="#aboutus"><button class="tablink" onclick="openPage(event, 'tab-aboutus')">кто мы и где</button></a>
+	</div>
 
-    <audio src="http://c22.radioboss.fm:8033/stream" id="player-sound" preload="none" controls>
-    </audio>
-    <!-- partial -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-    <script src="js/player.js"></script>
+	<div id="home" class="tab-anchor">x</div>
+  <div id="tab-home" class="tab">
+  	<div class="tab-uppersection">
+   		<script src="js/content/tab-home-content.js"></script>
+   	</div>
+   	<div class="tab-bottomsection">подвал</div>
+  </div>
 
-  </body>
+  <div id="regulars" class="anchor">x</div>
+  <div id="tab-regulars" class="tab">
+   	<div class="tab-uppersection">
+   		<script src="js/content/tab-regulars-content.js"></script>
+   	</div>
+    <div class="tab-bottomsection">подвал</div>
+  </div>
+
+  <div id="news" class="anchor">x</div>
+  <div id="tab-news" class="tab">
+    <div class="tab-uppersection">
+      <script src="js/content/tab-news-content.js"></script>	
+    </div>
+    <div class="tab-bottomsection">подвал</div>
+  </div>
+
+  <div id="aboutus" class="anchor">x</div>
+	<div id="tab-aboutus" class="tab">
+    <div class="tab-uppersection">
+      <script src="js/content/tab-aboutus-content.js"></script>	
+    </div>
+    <div class="tab-bottomsection">подвал</div>
+  </div>
+
+  <audio src="http://c22.radioboss.fm:8033/stream" id="player-sound" preload="none" controls></audio>
+  
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script> <!-- что делает этот скрипт? -->
+  <script src="js/open_tabs.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/smoothscroll.js"></script>
+  <script src="js/sticky_menu.js"></script>
+</body>

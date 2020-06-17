@@ -15,6 +15,16 @@ html{
   --all-buttons-height: var(--buttons-height);
   --buttons-top: calc(97vh - var(--all-buttons-height));
   --buttons-width: calc(9 * var(--buttons-height));
+  --tab-min-height: 90vh;
+
+  --big-wave-height: 27vh;  
+  --mid-wave-height: calc(var(--big-wave-height) * 0.65);
+  --lit-wave-height: calc(var(--big-wave-height) * 0.4);
+
+  --waves-width: calc(var(--big-wave-height) * 0.8); 
+
+  --mid-wave-indent: calc((var(--big-wave-height) - var(--mid-wave-height)) / 2);
+  --lit-wave-indent: calc((var(--big-wave-height) - var(--lit-wave-height)) / 2);
 }
 
 .player {
