@@ -1,3 +1,7 @@
+:root {
+  --menu-height: 12vh;
+}
+
 .menu {
   display: -webkit-box;
   display: -moz-box;
@@ -5,17 +9,64 @@
   display: -webkit-flex;
   display: flex;
   position: absolute;
-  top: calc(100% - (var(--buttons-height) / 2)); 
+  top: calc(100% - var(--menu-height)); 
   left: calc((100% - var(--buttons-width)) / 2);
-  width: var(--buttons-width);
-  height: calc(var(--buttons-height) / 2);
+  width: calc(var(--buttons-width) + 0px);
+  height: var(--menu-height);
   white-space: nowrap;
   z-index: 1;
   background-color: white;
   border-bottom: 1px solid black;
+  align-items: center;
 }
 
-.menu button{
+
+.menu > a {
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  /*padding: 10px;*/
+  width: calc((var(--buttons-width) - 4vw) / 4);
+  height: var(--menu-height);
+  text-align: center;
+  text-transform: lowercase;
+  border: none;
+  background-color: white;
+  -webkit-box-flex: 1 1 auto;
+  -moz-box-flex:  1 1 auto;
+  -webkit-flex:  1 1 auto;
+  -ms-flex:  1 1 auto;
+  flex:  1 1 auto;
+  /*border: 1px solid green;*/
+}
+
+.menu img {
+  height: calc(var(--menu-height) / 4);
+  position: relative;
+  top: 40%;
+  /*border: 1px solid red;*/
+}
+
+.menu > a:nth-child(3) {
+  width: 4vw;
+  height: ;
+  padding: 20px;
+  height: calc(var(--menu-height) - 40px);
+}
+
+.menu > a:nth-child(3) > img {
+  height: calc(var(--menu-height) - 40px) ;
+  position: relative;
+  top: 0vh;
+}
+
+
+
+
+
+
+
+/*.menu button{
   position: relative;
   cursor: pointer;
   font: normal 105% arial, sans-serif;
@@ -33,22 +84,24 @@
   -webkit-flex:  1 1 auto;
   -ms-flex:  1 1 auto;
   flex:  1 1 auto;
-}
+}*/
 
-.menu button:hover {
+/*.menu button:hover {
   color: #888;
   transition: 0.3s;
 }
-
-.menu .active {
+*/
+/*.menu .active {
   background-color: white;
   opacity: 1;
   color: black;
   font-weight: bold;
   border-bottom: 2px solid white;
 }
+*/
 
 .sticky {
   position: fixed;
   top: 0;
 }
+

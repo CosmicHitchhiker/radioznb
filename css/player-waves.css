@@ -1,3 +1,14 @@
+:root {
+  --big-wave-height: 27vh;  
+  --mid-wave-height: calc(var(--big-wave-height) * 0.65);
+  --lit-wave-height: calc(var(--big-wave-height) * 0.4);
+
+  --waves-width: calc(var(--big-wave-height) * 0.8); 
+
+  --mid-wave-indent: calc((var(--big-wave-height) - var(--mid-wave-height)) / 2);
+  --lit-wave-indent: calc((var(--big-wave-height) - var(--lit-wave-height)) / 2);
+}
+
 
 /* 13 -------------------------------------- */
 @keyframes fade-away-13 {

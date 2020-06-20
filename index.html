@@ -96,43 +96,76 @@
     </div>
  -->
 	<div id="menu" class="menu">
-	 	<a href="#home"><button class="tablink" onclick="openPage(event, 'tab-home')">дом</button></a>
+	  <!-- расписание -->
+	  <a class="tablink" id="tablink-listing" href="#listing" onclick="openPage(event, 'tab-listing')">
+      <img  id="tablink-listing-img" src="images/tab-programs.png">
+    </a>
+
+	  <!-- регулярные передачи -->
+	  <a class="tablink" id="tablink-regulars" href="#regulars"  onclick="openPage(event, 'tab-regulars')">
+      <img id="tablink-regulars-img" src="images/tab-programs.png">
+    </a>
+
+	  <!-- домашняя страница, текущее расписание и анонсы -->
+	  <a class="tablink" id="tablink-home" href="#home" onclick="openPage(event, 'tab-home')">
+      <img id="tablink-home-img" src="images/tab-home.png">
+    </a>
+
+	  <!-- о нас -->
+	  <a class="tablink" id="tablink-aboutus" href="#aboutus" onclick="openPage(event, 'tab-aboutus')">
+      <img id="tablink-aboutus-img" id="tablink-listing-img" src="images/tab-who.png">
+    </a>
+
+	  <!-- ссылки на соцсети и скачивание -->
+	  <a  class="tablink" id="tablink-contacts" href="#contacts" onclick="openPage(event, 'tab-contacts')">
+      <img id="tablink-contacts-img" src="images/tab-where.png">
+    </a>
+
+	  <!-- <a href="#home"><button class="tablink" onclick="openPage(event, 'tab-home')">дом</button></a>
 	  <a href="#regulars"><button class="tablink" onclick="openPage(event, 'tab-regulars')">передачи</button></a>
 	  <a href="#news"><button class="tablink" onclick="openPage(event, 'tab-news')">анонсы</button></a>
-	  <a href="#aboutus"><button class="tablink" onclick="openPage(event, 'tab-aboutus')">кто мы и где</button></a>
+	  <a href="#aboutus"><button class="tablink" onclick="openPage(event, 'tab-aboutus')">кто мы и где</button></a> -->
+	</div>
+
+	<div id="listing" class="tab-anchor">x</div>
+	    <div id="tab-listing" class="tab">
+	    	<div class="tab-uppersection">
+	  	  		<script src="js/content/tab-listing-content.js"></script>
+	   		</div>
+	   	<div class="tab-bottomsection">подвал</div>
+  	</div>
+
+	<div id="regulars" class="tab-anchor">x</div>
+		<div id="tab-regulars" class="tab">
+		   	<div class="tab-uppersection">
+		   		<script src="js/content/tab-regulars-content.js"></script>
+		   	</div>
+	    <div class="tab-bottomsection">подвал</div>
 	</div>
 
 	<div id="home" class="tab-anchor">x</div>
-  <div id="tab-home" class="tab">
-  	<div class="tab-uppersection">
-   		<script src="js/content/tab-home-content.js"></script>
-   	</div>
-   	<div class="tab-bottomsection">подвал</div>
-  </div>
+	    <div id="tab-home" class="tab">
+	    	<div class="tab-uppersection">
+	  	  		<script src="js/content/tab-home-content.js"></script>
+	   		</div>
+	   	<div class="tab-bottomsection">подвал</div>
+  	</div>
 
-  <div id="regulars" class="tab-anchor">x</div>
-  <div id="tab-regulars" class="tab">
-   	<div class="tab-uppersection">
-   		<script src="js/content/tab-regulars-content.js"></script>
-   	</div>
-    <div class="tab-bottomsection">подвал</div>
-  </div>
+	<div id="aboutus" class="tab-anchor">x</div>
+		<div id="tab-aboutus" class="tab">
+	    	<div class="tab-uppersection">
+	      		<script src="js/content/tab-aboutus-content.js"></script>	
+	   		</div>
+	    <div class="tab-bottomsection">подвал</div>
+	</div>
 
-  <div id="news" class="tab-anchor">x</div>
-  <div id="tab-news" class="tab">
-    <div class="tab-uppersection">
-      <script src="js/content/tab-news-content.js"></script>	
-    </div>
-    <div class="tab-bottomsection">подвал</div>
-  </div>
-
-  <div id="aboutus" class="tab-anchor">x</div>
-	<div id="tab-aboutus" class="tab">
-    <div class="tab-uppersection">
-      <script src="js/content/tab-aboutus-content.js"></script>	
-    </div>
-    <div class="tab-bottomsection">подвал</div>
-  </div>
+	<div id="contacts" class="tab-anchor">x</div>
+	    <div id="tab-contacts" class="tab">
+	    	<div class="tab-uppersection">
+	      		<script src="js/content/tab-news-content.js"></script>	
+	    	</div>
+        <div class="tab-bottomsection">подвал</div>
+	</div>
 
   <audio src="http://c22.radioboss.fm:8033/stream" id="player-sound" preload="none" controls></audio>
   
@@ -142,4 +175,5 @@
   <script src="js/player.js"></script>
   <script src="js/smoothscroll.js"></script>
   <script src="js/sticky_menu.js"></script>
+  <script src="js/changing_menu.js"></script>
 </body>
