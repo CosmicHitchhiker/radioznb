@@ -57,13 +57,8 @@
 .menu > a:nth-child(3) > img {
   height: calc(var(--menu-height) - 40px) ;
   position: relative;
-  top: 0vh;
+  top: 1vh;
 }
-
-
-
-
-
 
 
 /*.menu button{
@@ -105,3 +100,14 @@
   top: 0;
 }
 
+.tablink-img-active, 
+.active > .tablink-img,
+.tablink:hover .tablink-img {
+  display: none;
+}
+
+.tablink-img,
+.active > .tablink-img-active,
+.tablink:hover .tablink-img-active {
+  display: inline-block;
+}

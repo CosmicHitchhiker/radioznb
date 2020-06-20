@@ -98,27 +98,32 @@
 	<div id="menu" class="menu">
 	  <!-- расписание -->
 	  <a class="tablink" id="tablink-listing" href="#listing" onclick="openPage(event, 'tab-listing')">
-      <img  id="tablink-listing-img" src="images/tab-programs.png">
+      <img class="tablink-img" id="tablink-listing-img" src="images/tab-programs.png">
+      <img class="tablink-img-active" id="tablink-listing-img-active" src="images/tab-programs-bold.png">
     </a>
 
 	  <!-- регулярные передачи -->
 	  <a class="tablink" id="tablink-regulars" href="#regulars"  onclick="openPage(event, 'tab-regulars')">
-      <img id="tablink-regulars-img" src="images/tab-programs.png">
+      <img class="tablink-img" id="tablink-regulars-img" src="images/tab-programs.png">
+      <img class="tablink-img-active" id="tablink-regulars-img-active" src="images/tab-programs-bold.png">
     </a>
 
 	  <!-- домашняя страница, текущее расписание и анонсы -->
 	  <a class="tablink" id="tablink-home" href="#home" onclick="openPage(event, 'tab-home')">
-      <img id="tablink-home-img" src="images/tab-home.png">
+      <img class="tablink-img" id="tablink-home-img" src="images/tab-home.png">
+      <img class="tablink-img-active" id="tablink-home-img-active" src="images/tab-home-folks.png">
     </a>
 
 	  <!-- о нас -->
 	  <a class="tablink" id="tablink-aboutus" href="#aboutus" onclick="openPage(event, 'tab-aboutus')">
-      <img id="tablink-aboutus-img" id="tablink-listing-img" src="images/tab-who.png">
+      <img class="tablink-img" id="tablink-aboutus-img" src="images/tab-who.png">
+      <img class="tablink-img-active" id="tablink-aboutus-img-active" src="images/tab-who-bold.png">
     </a>
 
 	  <!-- ссылки на соцсети и скачивание -->
 	  <a  class="tablink" id="tablink-contacts" href="#contacts" onclick="openPage(event, 'tab-contacts')">
-      <img id="tablink-contacts-img" src="images/tab-where.png">
+      <img class="tablink-img" id="tablink-contacts-img" src="images/tab-where.png">
+      <img class="tablink-img-active" id="tablink-contacts-img-active" src="images/tab-where-bold.png">
     </a>
 
 	  <!-- <a href="#home"><button class="tablink" onclick="openPage(event, 'tab-home')">дом</button></a>
@@ -175,5 +180,4 @@
   <script src="js/player.js"></script>
   <script src="js/smoothscroll.js"></script>
   <script src="js/sticky_menu.js"></script>
-  <script src="js/changing_menu.js"></script>
 </body>
