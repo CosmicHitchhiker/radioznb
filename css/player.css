@@ -80,28 +80,28 @@
 
   #player-play-button {
     position: absolute;
-    top: 60%;
+    top: 68%;
     left: 44%;
     height: 22%;
   }
 
   #player-stop-button {
     position: absolute;
-    top: 59%;
+    top: 67%;
     left: 66%;
     height: 22%;
   }
 
   #player-stop-button:hover {
     position: absolute;
-    top: 59%;
+    top: 67%;
     left: 66%;
     height: 22%;
   }
 
   #player-play-button:hover {
     position: absolute;
-    top: 60%;
+    top: 68%;
     left: 44%;
     height: 22%;
   }
