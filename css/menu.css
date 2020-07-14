@@ -1,5 +1,7 @@
 :root {
   --menu-height: 12vh;
+  --menu-width: calc(12 * var(--menu-height));
+
 }
 
 .menu {
@@ -10,8 +12,8 @@
   display: flex;
   position: absolute;
   top: calc(100% - var(--menu-height)); 
-  left: calc((100% - var(--buttons-width)) / 2);
-  width: calc(var(--buttons-width) + 0px);
+  left: calc((100% - var(--menu-width)) / 2);
+  width: var(--menu-width);
   height: var(--menu-height);
   white-space: nowrap;
   z-index: 1;
@@ -26,7 +28,7 @@
   cursor: pointer;
   outline: none;
   /*padding: 10px;*/
-  width: calc((var(--buttons-width) - 4vw) / 4);
+  width: calc((var(--menu-width) - 4vw) / 4);
   height: var(--menu-height);
   text-align: center;
   text-transform: lowercase;
@@ -37,14 +39,14 @@
   -webkit-flex:  1 1 auto;
   -ms-flex:  1 1 auto;
   flex:  1 1 auto;
-  /*border: 1px solid green;*/
+/*  border: 1px solid green;*/
 }
 
 .menu img {
-  height: calc(var(--menu-height) / 4);
+  height: calc(var(--menu-height) / 3.3);
   position: relative;
   top: 40%;
-  /*border: 1px solid red;*/
+/*  border: 1px solid red;*/
 }
 
 .menu > a:nth-child(3) {

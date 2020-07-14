@@ -14,41 +14,41 @@
   height: 100%;
   width: 100%;
   max-width: 100%;
-  top: 0;
+  top: 5vh;
   left: 0;
 }
 
 #player-play-button {
   position: absolute;
-  top: 57%;
+  top: 67%;
   left: 47%;
   height: 19%;
 }
 
 #player-stop-button {
   position: absolute;
-  top: 56%;
+  top: 66%;
   left: 68%;
   height: 19%;
 }
 
 #player-stop-button:hover {
   position: absolute;
-  top: 54.5%;
+  top: 64.5%;
   left: 66.5%;
   height: 21%;
 }
 
 #player-play-button:hover {
   position: absolute;
-  top: 55.5%;
+  top: 65.5%;
   left: 45.5%;
   height: 21%;
 }
 
 #player-volume-control {
   position: absolute;
-  top: 82%;
+  top: 92%;
   left: 45%;
   width: 40%;
   height: 5%;
@@ -56,7 +56,7 @@
 
 #player-volume-line {
   position: absolute;
-  top: 30%;
+  top: 26%;
   left: 0%;
   height: 40%;
   width: 100%;
@@ -64,7 +64,7 @@
 
 #player-volume-dot {
   position: absolute;
-  top: 0%;
+  top: -4%;
   left: 90%;
   height: 100%;
 }

@@ -5,8 +5,8 @@
 .tab {
   position: absolute;
   top: 100%;
-  left: calc((100% - var(--buttons-width)) / 2);
-  width: var(--buttons-width);
+  left: calc((100% - var(--menu-width)) / 2);
+  width: var(--menu-width);
   min-height: var(--tab-min-height);
   /*height: calc(100% - var(--menu-height));*/
   color: rgba(0, 0, 0, 1);
@@ -26,16 +26,16 @@
   border-top: none;
   min-height: calc(var(--tab-min-height)*0.66);
   height: ;
-  border: 2px solid black;
+/*  border: 2px solid black;*/
   border-bottom: none;
   overflow: auto;
 }
 
 .tab-bottomsection {
   position: absolute;
-  width: calc(100% - 4px);
-  margin-bottom: 20px;
-  border: 2px solid black;
+  width: calc(100% - 0px); /* на всю ширину минус сумму толщины границ*/
+  margin-bottom: 3vh;
+  border-top: 1px solid black;
   height: calc(var(--tab-min-height)*0.1 - 5px);
 }
 
