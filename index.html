@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="css/tabs.css">
     <link rel="stylesheet" href="css/footer.css">
 
+    <link rel="stylesheet" href="css/home-tab.css">
+
+
     <!-- favicons -->
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
@@ -24,7 +27,7 @@
     <script>document.getElementsByTagName("html")[0].className += " js";</script>
   </head>
 
-  <body>
+  <body onload="load_news()">
       <div class="waves" id="waves">
         <div class="lwaves">
           <div class="lwave-one">
@@ -97,42 +100,39 @@
     </div>
  -->
 	<div id="menu" class="menu">
-	  <!-- расписание -->
+	  <!-- меню: расписание -->
 	  <a class="tablink" id="tablink-listing" href="#listing" onclick="openPage(event, 'tab-listing')">
       <img class="tablink-img" id="tablink-listing-img" src="images/tab-programs.png">
       <img class="tablink-img-active" id="tablink-listing-img-active" src="images/tab-programs-bold.png">
     </a>
 
-	  <!-- регулярные передачи -->
+	  <!-- меню: регулярные передачи -->
 	  <a class="tablink" id="tablink-regulars" href="#regulars"  onclick="openPage(event, 'tab-regulars')">
       <img class="tablink-img" id="tablink-regulars-img" src="images/tab-programs.png">
       <img class="tablink-img-active" id="tablink-regulars-img-active" src="images/tab-programs-bold.png">
     </a>
 
-	  <!-- домашняя страница, текущее расписание и анонсы -->
+	  <!-- меню: домашняя страница, текущее расписание и анонсы -->
 	  <a class="tablink" id="tablink-home" href="#home" onclick="openPage(event, 'tab-home')">
       <img class="tablink-img" id="tablink-home-img" src="images/tab-home.png">
       <img class="tablink-img-active" id="tablink-home-img-active" src="images/tab-home-folks.png">
     </a>
 
-	  <!-- о нас -->
+	  <!-- меню: о нас -->
 	  <a class="tablink" id="tablink-aboutus" href="#aboutus" onclick="openPage(event, 'tab-aboutus')">
       <img class="tablink-img" id="tablink-aboutus-img" src="images/tab-who.png">
       <img class="tablink-img-active" id="tablink-aboutus-img-active" src="images/tab-who-bold.png">
     </a>
 
-	  <!-- ссылки на соцсети и скачивание -->
+	  <!-- меню: ссылки на соцсети и скачивание -->
 	  <a  class="tablink" id="tablink-contacts" href="#contacts" onclick="openPage(event, 'tab-contacts')">
       <img class="tablink-img" id="tablink-contacts-img" src="images/tab-where.png">
       <img class="tablink-img-active" id="tablink-contacts-img-active" src="images/tab-where-bold.png">
     </a>
-
-	  <!-- <a href="#home"><button class="tablink" onclick="openPage(event, 'tab-home')">дом</button></a>
-	  <a href="#regulars"><button class="tablink" onclick="openPage(event, 'tab-regulars')">передачи</button></a>
-	  <a href="#news"><button class="tablink" onclick="openPage(event, 'tab-news')">анонсы</button></a>
-	  <a href="#aboutus"><button class="tablink" onclick="openPage(event, 'tab-aboutus')">кто мы и где</button></a> -->
 	</div>
 
+
+	<!-- страница: расписание -->
 	<div id="listing" class="tab-anchor">x</div>
 	    <div id="tab-listing" class="tab">
 	    	<div class="tab-uppersection">
@@ -143,6 +143,7 @@
 	   		</div>
   	</div>
 
+  	<!-- страница: регулярные передачи -->
 	<div id="regulars" class="tab-anchor">x</div>
 		<div id="tab-regulars" class="tab">
 		   	<div class="tab-uppersection">
@@ -151,6 +152,7 @@
 	    <div class="tab-bottomsection">подвал</div>
 	</div>
 
+	<!-- страница: домашняя -->
 	<div id="home" class="tab-anchor">x</div>
 	    <div id="tab-home" class="tab">
 	    	<div class="tab-uppersection">
@@ -159,6 +161,7 @@
 	   	<div class="tab-bottomsection">подвал</div>
   	</div>
 
+	<!-- страница: о нас -->
 	<div id="aboutus" class="tab-anchor">x</div>
 		<div id="tab-aboutus" class="tab">
 	    	<div class="tab-uppersection">
@@ -167,6 +170,7 @@
 	    <div class="tab-bottomsection">подвал</div>
 	</div>
 
+	<!-- страница: ссылки на соцсети и скачивание -->
 	<div id="contacts" class="tab-anchor">x</div>
 	    <div id="tab-contacts" class="tab">
 	    	<div class="tab-uppersection">
@@ -184,4 +188,7 @@
   <script src="js/smoothscroll.js"></script>
   <script src="js/sticky_menu.js"></script>  
   <script src="js/open_modal.js"></script>
+
+  <script src="js/home-news.js"></script> 
+  <script src="js/home-open_newsform.js"></script>
 </body>
