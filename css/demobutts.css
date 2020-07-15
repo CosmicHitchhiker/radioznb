@@ -1,7 +1,51 @@
-.demobutts-button img {
-  height: 100%;
-  width: 100%;
+
+.contacts-demobutts {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  position: relative;
+  max-width: calc(var( --menu-width) * 0.75);
+  margin: auto;
 }
+
+.contacts-demobutts-button {
+  width: calc((var( --menu-width) * 0.8) / 8);
+  display: flex;
+  justify-content: space-around;
+}
+
+.contacts-demobutts-button img {
+  height: calc(var(--menu-height)*0.9);
+}
+
+.contacts-demobutts-submenu {
+  width: calc((var(--menu-width) * 0.8) / 4);
+  display: flex;
+  justify-content: space-around;
+}
+
+.contacts-demobutts-submenu:nth-child(2) {
+}
+
+
+.contacts-demobutts-round img {
+  position: relative;
+  left: 4%;
+}
+
+.contacts-demobutts-long {
+  display: flex;
+  justify-content: space-around;
+  width: calc((var( --menu-width) * 0.8) / 2);
+}
+
+.contacts-demobutts-button:hover{
+opacity: 0.4;
+transition: 0.3s;
+}
+
+
+/*
 
 .demobutts-round {
   position: absolute;
@@ -33,14 +77,12 @@
   top: 0%;
   width: 50%;
   height: 100%;
-  /* height: 50%;
-  max-width: 380px; */
 }
 
 .demobutts-button:hover{
 opacity: 0.4;
 transition: 0.3s;
-}
+}*/
 
 @media only screen and (max-aspect-ratio: 3/2) and (min-aspect-ratio: 2/3){
   .demobutts-long {
