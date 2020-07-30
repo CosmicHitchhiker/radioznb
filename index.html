@@ -7,13 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/player.css">
-    <link rel="stylesheet" href="css/player-waves.css">
+    <link rel="stylesheet" href="css/player-waves.css">    
     <link rel="stylesheet" href="css/demobutts.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/tabs.css">
     <link rel="stylesheet" href="css/footer.css">
 
+    <link rel="stylesheet" href="css/archive-tab.css">
+    <link rel="stylesheet" href="css/regulars-tab.css">
     <link rel="stylesheet" href="css/home-tab.css">
+    <link rel="stylesheet" href="css/aboutus-tab.css">
+
+
 
 
     <!-- favicons -->
@@ -75,96 +80,241 @@
           </div>
         </div>
       </div>
-	<div id="menu" class="menu">
-	  <!-- меню: расписание -->
-	  <a class="tablink" id="tablink-listing" href="#listing" onclick="openPage(event, 'tab-listing')">
-      <img class="tablink-img" id="tablink-listing-img" src="images/tab-programs.png">
-      <img class="tablink-img-active" id="tablink-listing-img-active" src="images/tab-programs-bold.png">
+  <div id="menu" class="menu">
+    <!-- меню: архив передач -->
+    <a class="tablink" id="tablink-archive" href="#archive" onclick="openPage(event, 'tab-archive')">
+      <img class="tablink-img" id="tablink-archive-img" src="images/tab-archive.png">
+      <img class="tablink-img-active" id="tablink-archive-img-active" src="images/tab-archive-bold.png">
     </a>
 
-	  <!-- меню: регулярные передачи -->
-	  <a class="tablink" id="tablink-regulars" href="#regulars"  onclick="openPage(event, 'tab-regulars')">
-      <img class="tablink-img" id="tablink-regulars-img" src="images/tab-programs.png">
+    <!-- меню: регулярные передачи. описание -->
+    <a class="tablink" id="tablink-regulars" href="#regulars"  onclick="openPage(event, 'tab-regulars')">
+      <img class="tablink-img" id="tablink-regulars-img" src="images/tab-programs2.png">
       <img class="tablink-img-active" id="tablink-regulars-img-active" src="images/tab-programs-bold.png">
     </a>
 
-	  <!-- меню: домашняя страница, текущее расписание и анонсы -->
-	  <a class="tablink" id="tablink-home" href="#home" onclick="openPage(event, 'tab-home')">
+    <!-- меню: домашняя страница, текущее расписание и анонсы -->
+    <a class="tablink" id="tablink-home" href="#home" onclick="openPage(event, 'tab-home')">
       <img class="tablink-img" id="tablink-home-img" src="images/tab-home.png">
       <img class="tablink-img-active" id="tablink-home-img-active" src="images/tab-home-folks.png">
     </a>
 
-	  <!-- меню: о нас -->
-	  <a class="tablink" id="tablink-aboutus" href="#aboutus" onclick="openPage(event, 'tab-aboutus')">
-      <img class="tablink-img" id="tablink-aboutus-img" src="images/tab-who.png">
+    <!-- меню: о нас -->
+    <a class="tablink" id="tablink-aboutus" href="#aboutus" onclick="openPage(event, 'tab-aboutus')">
+      <img class="tablink-img" id="tablink-aboutus-img" src="images/tab-who2.png">
       <img class="tablink-img-active" id="tablink-aboutus-img-active" src="images/tab-who-bold.png">
     </a>
 
-	  <!-- меню: ссылки на соцсети и скачивание -->
-	  <a  class="tablink" id="tablink-contacts" href="#contacts" onclick="openPage(event, 'tab-contacts')">
-      <img class="tablink-img" id="tablink-contacts-img" src="images/tab-where.png">
+    <!-- меню: ссылки на соцсети и скачивание -->
+    <a  class="tablink" id="tablink-contacts" href="#contacts" onclick="openPage(event, 'tab-contacts')">
+      <img class="tablink-img" id="tablink-contacts-img" src="images/tab-where2.png">
       <img class="tablink-img-active" id="tablink-contacts-img-active" src="images/tab-where-bold.png">
     </a>
-	</div>
+  </div>
+
+    <!-- страница: арxив передач -->
+    <div id="archive" class="tab-anchor">x</div>
+    <div id="tab-archive" class="tab">
+      <div class="tab-uppersection">
+        <!-- <script src="js/content/tab-archive-content.js"></script> -->
+        <img class="soon" src="images/soon.png"> 
+      </div>
+      <div class="tab-bottomsection">
+        <script src="js/content/tab-footer.js"></script>
+      </div>
+    </div>
 
 
-	<!-- страница: расписание -->
-	<div id="listing" class="tab-anchor">x</div>
-	    <div id="tab-listing" class="tab">
-	    	<div class="tab-uppersection">
-	  	  		<script src="js/content/tab-listing-content.js"></script>
-	   		</div>
-	   		<div class="tab-bottomsection">
-				<script src="js/content/tab-footer.js"></script>
-	   		</div>
-  	</div>
+      <!-- страница: передачи -->
+    <div id="regulars" class="tab-anchor">x</div>
+    <div id="tab-regulars" class="tab">
+      <div class="tab-uppersection">
 
-  	<!-- страница: регулярные передачи -->
-	<div id="regulars" class="tab-anchor">x</div>
-		<div id="tab-regulars" class="tab">
-		   	<div class="tab-uppersection">
-		   		<script src="js/content/tab-regulars-content.js"></script>
-		   	</div>
-	    <div class="tab-bottomsection">подвал</div>
-	</div>
+        <!-- аккордеон с текущими передачами -->
+        <div class="regulars-accordion">
+          <ul id="regulars-accordion-current-list">
+            <!-- сюда скиптом вставляются передачи. -->
+          </ul>
+        </div>
 
-	<!-- страница: домашняя -->
-	<div id="home" class="tab-anchor">x</div>
-	    <div id="tab-home" class="tab">
-	    	<div class="tab-uppersection">
-	  	  		<script src="js/content/tab-home-content.js"></script>
-	   		</div>
-	   	<div class="tab-bottomsection">подвал</div>
-  	</div>
+        <hr style="height:2px;width:60%;margin:auto;background-color:black;">
 
-	<!-- страница: о нас -->
-	<div id="aboutus" class="tab-anchor">x</div>
-		<div id="tab-aboutus" class="tab">
-	    	<div class="tab-uppersection">
-	      		<script src="js/content/tab-aboutus-content.js"></script>	
-	   		</div>
-	    <div class="tab-bottomsection">подвал</div>
-	</div>
+        <!-- прошедщие передачи -->
+        <div class="regulars-accordion">
+          <ul id="regulars-accordion-past-list"></ul>
+        </div>
+      </div>
+      <div class="tab-bottomsection">
+        <script src="js/content/tab-footer.js"></script>
+      </div>
+    </div>
 
-	<!-- страница: ссылки на соцсети и скачивание -->
-	<div id="contacts" class="tab-anchor">x</div>
-	    <div id="tab-contacts" class="tab">
-	    	<div class="tab-uppersection">
-	      		<script src="js/content/tab-contacts-content.js"></script>	
-	    	</div>
-        <div class="tab-bottomsection">подвал</div>
-	</div>
+    <!-- страница: домашняя -->
+    <div id="home" class="tab-anchor">x</div>
+    <div id="tab-home" class="tab">
+      <div class="tab-uppersection">
+        <script src="js/content/tab-home-content.js"></script>
+      </div>
+      <div class="tab-bottomsection">
+        <script src="js/content/tab-footer.js"></script>
+      </div>
+    </div>
+
+    <!-- страница: о нас -->
+    <div id="aboutus" class="tab-anchor">x</div>
+    <div id="tab-aboutus" class="tab">
+      <div class="tab-uppersection">
+        <h1>заголовок если нужно</h1>
+        <div class="aboutus-manifest">
+          <p>Манифест Манифест. Манифистирую манифест. Мани мани мани. Манифест Манифест. Манифистирую манифест. Мани мани мани. Манифест Манифест. Манифистирую манифест. Манифест Манифест. Манифистирую манифест. Манифест Манифест. Манифистирую манифест. Забываю прислать манифест. Ставлю чашку с чаем на недописанный манифест. Остаются кольца-отметины на недописаном манифесте. Это манифест. Смазываются буквы. Манифеста. Манифест мой манифест. Манифест Манифест. Манифистирую манифест. Мани мани мани. Манифест Манифест. Манифистирую манифест. Мани мани мани. Манифест Манифест. Манифистирую манифест. Манифест Манифест. Манифистирую манифест. Манифест Манифест. Манифистирую манифест. Забываю прислать манифест. Ставлю чашку с чаем на недописанный манифест. Остаются кольца-отметины на недописаном манифесте. Это манифест. Смазываются буквы. Манифеста. Манифест мой манифест.</p>
+          <p>Манифест Манифест. Манифистирую манифест. Мани мани мани. Манифест Манифест. Манифистирую манифест. Мани мани мани. Манифест Манифест. Манифистирую манифест. Манифест Манифест. Манифистирую манифест. Манифест Манифест. Манифистирую манифест. Забываю прислать манифест. Ставлю чашку с чаем на недописанный манифест. Остаются кольца-отметины на недописаном манифесте. Это манифест. Смазываются буквы. Манифеста. Манифест мой манифест.</p>
+        </div>
+        <div class="aboutus-faces">
+    
+          <img src="images/faces/Ol-sm.png" class="aboutus-face" alt="Оля" id="olya">
+          <div id="olya-face-modal" class="aboutus-face-modal">
+            <div class="aboutus-face-modal-content">
+              <img class="aboutus-face-large">
+              <div class="aboutus-face-modal-description">
+                <p>Привет! Оля. Xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.</p>
+              </div>
+              <span class="close">&times;</span> 
+            </div>
+          </div>
+
+          <img src="images/faces/Egor-sm.png" class="aboutus-face" alt="Егор" id="egor">
+          <div id="egor-face-modal" class="aboutus-face-modal">
+            <div class="aboutus-face-modal-content">
+              <img class="aboutus-face-large">
+              <div class="aboutus-face-modal-description">
+                <p>Привет! Егор. Xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.</p>
+              </div>
+              <span class="close">&times;</span> 
+            </div>
+          </div>
+
+          <img src="images/faces/Fed-sm.png" class="aboutus-face" alt="Федя" id="fedya">
+          <div id="fed-face-modal" class="aboutus-face-modal">
+            <div class="aboutus-face-modal-content">
+              <img class="aboutus-face-large"> 
+              <div class="aboutus-face-modal-description">
+                <p>Привет! Fedya. Xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.</p>
+              </div>
+              <span class="close">&times;</span>
+            </div>
+          </div>
+
+          <img src="images/faces/Seva-sm.png" class="aboutus-face" alt="Сева" id="seva">
+          <div id="seva-face-modal" class="aboutus-face-modal">
+            <div class="aboutus-face-modal-content">
+              <img class="aboutus-face-large">
+              <div class="aboutus-face-modal-description">
+                <p>Привет! Seva. Xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.</p>
+              </div>
+              <span class="close">&times;</span> 
+            </div>
+          </div>
+
+          <img src="images/faces/Stesh-sm.png" class="aboutus-face" alt="Стеша" id="stesha">
+          <div id="stesh-face-modal" class="aboutus-face-modal">
+            <div class="aboutus-face-modal-content">
+              <img class="aboutus-face-large">
+              <div class="aboutus-face-modal-description">
+                <p>Привет! Stesha. Xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.</p>
+              </div>
+              <span class="close">&times;</span> 
+            </div>
+          </div>
+
+          <img src="images/faces/An-sm.png" class="aboutus-face" alt="Аня" id="anya">
+          <div id="anya-face-modal" class="aboutus-face-modal">
+            <div class="aboutus-face-modal-content">
+              <img class="aboutus-face-large">
+              <div class="aboutus-face-modal-description">
+                <p>Привет! Anya. Xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.</p>
+              </div>
+              <span class="close">&times;</span> 
+            </div>
+          </div>
+
+          <img src="images/faces/Mot-sm.png" class="aboutus-face" alt="Мотя" id="motya">
+          <div id="motya-face-modal" class="aboutus-face-modal">
+            <div class="aboutus-face-modal-content">
+              <img class="aboutus-face-large"> 
+              <div class="aboutus-face-modal-description">
+                <p>Привет! Mot. Xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.</p>
+              </div>
+              <span class="close">&times;</span>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+      <div class="tab-bottomsection">
+        <script src="js/content/tab-footer.js"></script>
+      </div>
+    </div>
+
+    <!-- страница: ссылки на соцсети и скачивание -->
+    <div id="contacts" class="tab-anchor">x</div>
+    <div id="tab-contacts" class="tab">
+      <div class="tab-uppersection">
+        <script src="js/content/tab-contacts-content.js"></script>  
+      </div>
+    </div>
+
+    <!-- Footer Modals Content --> 
+    <!-- First Modal Content -->
+    <div class="footer-modal" id="footer-first_modal">
+      <div class="footer-modal-content">
+        <div class="footer-modal-header">
+          <h2>Помочь радио</h2>
+            <span class="footer-modal-close">×</span>
+        </div>
+        <div class="footer-modal-body"> 
+          <p>[ Инфа про то, как перевести деньги: карточка, телефон, через контакт, подписка на каком-нибудь патрионе ]</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet erat convallis, porta elit eu, vehicula odio. Donec augue purus, aliquam non cursus in, condimentum at ex. Aliquam vitae vulputate nulla, in pretium ligula. Integer feugiat justo vel aliquet aliquet. Donec fringilla ultricies purus eu eleifend. Vestibulum eleifend elit vel pharetra gravida. Suspendisse et nulla dapibus ligula ornare facilisis vel vel nulla. Ut turpis sem, ultrices quis scelerisque feugiat, luctus eu risus. Suspendisse dapibus ipsum ut sodales accumsan. Proin quam est, sodales vitae lorem vel, tristique pretium ante. Aliquam eget gravida arcu, ut lobortis augue. Sed lobortis ipsum sed felis commodo aliquet. Donec et metus tellus. Nullam sit amet ante sit amet odio posuere congue at sit amet leo. Integer aliquam viverra nisl interdum commodo.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet erat convallis, porta elit eu, vehicula odio. Donec augue purus, aliquam non cursus in, condimentum at ex. Aliquam vitae vulputate nulla, in pretium ligula. Integer feugiat justo vel aliquet aliquet. Donec fringilla ultricies purus eu eleifend. Vestibulum eleifend elit vel pharetra gravida. Suspendisse et nulla dapibus ligula ornare facilisis vel vel nulla. Ut turpis sem, ultrices quis scelerisque feugiat, luctus eu risus. Suspendisse dapibus ipsum ut sodales accumsan. Proin quam est, sodales vitae lorem vel, tristique pretium ante. Aliquam eget gravida arcu, ut lobortis augue. Sed lobortis ipsum sed felis commodo aliquet. Donec et metus tellus. Nullam sit amet ante sit amet odio posuere congue at sit amet leo. Integer aliquam viverra nisl interdum commodo.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet erat convallis, porta elit eu, vehicula odio. Donec augue purus, aliquam non cursus in, condimentum at ex. Aliquam vitae vulputate nulla, in pretium ligula. Integer feugiat justo vel aliquet aliquet. Donec fringilla ultricies purus eu eleifend. Vestibulum eleifend elit vel pharetra gravida. Suspendisse et nulla dapibus ligula ornare facilisis vel vel nulla. Ut turpis sem, ultrices quis scelerisque feugiat, luctus eu risus. Suspendisse dapibus ipsum ut sodales accumsan. Proin quam est, sodales vitae lorem vel, tristique pretium ante. Aliquam eget gravida arcu, ut lobortis augue. Sed lobortis ipsum sed felis commodo aliquet. Donec et metus tellus. Nullam sit amet ante sit amet odio posuere congue at sit amet leo. Integer aliquam viverra nisl interdum commodo.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Modal Content-->
+    <div class="footer-modal" id="footer-second_modal">
+      <div class="footer-modal-content">
+        <div class="footer-modal-header">
+          <h2>Слушать не на сайте</h2>
+          <span class="footer-modal-close">×</span>
+        </div>
+        <div class="footer-modal-body"> 
+          <p>[ Инструкция про M3U: что такое, как и где скачать, как и где слушать ]</p>
+          <p>Mauris pellentesque velit eu magna sollicitudin finibus. Mauris ac turpis turpis. Aenean congue, sem in eleifend volutpat, mauris libero blandit velit, quis tincidunt massa neque vel lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sem   dui, pretium suscipit ipsum in, dignissim euismod quam. Aliquam vestibulum ut quam id sollicitudin. Donec hendrerit pulvinar dignissim. Aenean purus massa, pulvinar non metus non, placerat interdum velit.</p>    
+          <p>Mauris pellentesque velit eu magna sollicitudin finibus. Mauris ac turpis turpis. Aenean congue, sem in eleifend volutpat, mauris libero blandit velit, quis tincidunt massa neque vel lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sem   dui, pretium suscipit ipsum in, dignissim euismod quam. Aliquam vestibulum ut quam id sollicitudin. Donec hendrerit pulvinar dignissim. Aenean purus massa, pulvinar non metus non, placerat interdum velit.</p>    
+          <p>Mauris pellentesque velit eu magna sollicitudin finibus. Mauris ac turpis turpis. Aenean congue, sem in eleifend volutpat, mauris libero blandit velit, quis tincidunt massa neque vel lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sem   dui, pretium suscipit ipsum in, dignissim euismod quam. Aliquam vestibulum ut quam id sollicitudin. Donec hendrerit pulvinar dignissim. Aenean purus massa, pulvinar non metus non, placerat interdum velit.</p>    
+          <p>Mauris pellentesque velit eu magna sollicitudin finibus. Mauris ac turpis turpis. Aenean congue, sem in eleifend volutpat, mauris libero blandit velit, quis tincidunt massa neque vel lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sem   dui, pretium suscipit ipsum in, dignissim euismod quam. Aliquam vestibulum ut quam id sollicitudin. Donec hendrerit pulvinar dignissim. Aenean purus massa, pulvinar non metus non, placerat interdum velit.</p>    
+        </div>
+      </div>
+    </div>
 
   <audio src="http://c22.radioboss.fm:8033/stream" id="player-sound" preload="none" controls></audio>
   
   <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script> <!-- что делает этот скрипт? -->
-  <script src="js/open_tabs.js"></script>
-  <script src="js/player.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
   <script src="js/smoothscroll.js"></script>
-  <script src="js/sticky_menu.js"></script>  
-  <script src="js/open_modal.js"></script>
+
+  <script src="js/general-open_tabs.js"></script>
+  <script src="js/general-player.js"></script>
+  <script src="js/general-sticky_menu.js"></script> 
+  <script src="js/general-footer-open_modal.js"></script>
+
+
+  <script src="js/content/tab-regulars-content.js"></script>  <!-- вставляет содежимое в аккордеоны на вкладке "передачи" -->
+  <script src="js/regulars-accordion.js"></script>
 
   <script src="js/home-news.js"></script> 
   <script src="js/home-open_newsform.js"></script>
+
+  <script src="js/aboutus-open_face_modal.js"></script>
+
 </body>

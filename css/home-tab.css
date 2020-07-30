@@ -21,15 +21,15 @@
 
 /* --------------------------- news section ----------------------------- */
 .home-newsbox {
-    width: 90%;
-    /*border:1px solid grey;*/
-    margin: auto;
+  width: 90%;
+  /*border:1px solid grey;*/
+  margin: auto;
 }
 
 .home-newsfeed-title-text {
-	border-top: 14px dotted #ffd6ba;
-    background-color:#fdfdfd;
-    padding:10px;
+	border-top: 2px dotted black;
+  background-color: #fdfdfd;
+  padding:10px;
 }
 
 .home-newsfeed-title-text label{
@@ -39,8 +39,8 @@
 }
 
 .home-newsfeed-content-text {
-    padding: 10px;
-    /*border-top:1px dotted #bbb;*/
+  padding: 10px;
+  /*border-top:1px dotted #bbb;*/
 }
 
 #home-newsform {
@@ -57,15 +57,14 @@
 
 .home-newsbox
 .newsform-ntitle, textarea {
-    width: 100%;
-    padding: 12px;
-  	border: 1px solid grey; /* Gray border */
-  	border-radius: 4px; /* Rounded borders */
-  	box-sizing: border-box; /* Make sure that padding and width stays in place */
-	  margin-top: 6px; /* Add a top margin */
-  	margin-bottom: 16px; /* Bottom margin */
-  	resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
-
+  width: 100%;
+  padding: 12px;
+  border: 1px solid grey; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+	margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
 } 
 
 .newsform-btn {
@@ -81,29 +80,28 @@
 .newsform-btn:hover {
   background-color: #C3A29E;
   color: black;
-
 }
 
 .home-newsfeed {
-    padding:0;
-    list-style:none;
-    overflow:auto;
+  padding:0;
+  list-style:none;
+  overflow:auto;
 }
 .home-newsfeed li {
-    margin:0;
-    margin-top:10px;
+  margin:0;
+  margin-top:10px;
 }
 .home-newsfeed li > div {
-    /*display:table-cell;*/
+  /*display:table-cell;*/
 }
 
 .home-newsfeed-content-text p {
-    margin:0;
-    margin-bottom: 10px;
+  margin:0;
+  margin-bottom: 10px;
 }
 
 .sub-text {
-    color: #aaa;
-    font-size: 11px;
+  color: #aaa;
+  font-size: 11px;
 }
 

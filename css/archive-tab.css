@@ -1,0 +1,13 @@
+/*#tab-archive .tab-uppersection {
+	height: calc(var(--tab-min-height) *0.6);
+}*/
+
+#tab-archive {
+	height: var(--tab-min-height);
+}
+.soon {
+	position: relative;
+	width: 70%;
+	left: 15%;
+	top: 5vhц;
+}
