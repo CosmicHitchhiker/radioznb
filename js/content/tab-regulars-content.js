@@ -1,113 +1,73 @@
-var programs_current = [	
-							{
-								"title": "музыкальная кухня",
-								"description": "",
-								"author": "Яна Сидорова",
-								"tags": [""]
-							},
-							{
-								"title": "фрустайл",
-								"description": "",
-								"author": "Юля",
-								"tags": [""]
-							},
-							{
-								"title": "крок мадам",
-								"description": "крок мадам",
-								"author": "Саша",
-								"tags": [""]
-							},
-							{
-								"title": "заплыв",
-								"description": "заплыв",
-								"author": "Лиза Плавинская",
-								"tags": [""]
-							},
-							{
-								"title": "лапша в уши",
-								"description": "лапша в уши",
-								"author": "Катя Лапша",
-								"tags": [""]
-							},
-							{
-								"title": "медицина по верхам",
-								"description": "",
-								"author": "Доктор Наташа",
-								"tags": [""]
-							},
-							{
-								"title": "лекторий",
-								"description": "",
-								"author": "Ульяна Леонова",
-								"tags": [""]
-							},
-							{
-								"title": "радиосаша",
-								"description": "радио саша",
-								"author": "Саша Сергиенко",
-								"tags": [""]
-							},
-							{
-								"title": "пип",
-								"description": "пип",
-								"author": "Андрей и Тася",
-								"tags": [""]
-							},
-							{
-								"title": "элементарное слушание музыки",
-								"description": "элементарное слушание музыки",
-								"author": "Муся Короткова",
-								"tags": ["музыкальная", "классика"]
-							},
-							{
-								"title": "звёздный час",
-								"description": "программа про астрономию",
-								"author": "Сева Ландер", 
-								"tags": ["познавательная", "научпоп"]			
-							},
-							{
-								"title": "сто магнитоальбомов",
-								"description": "чтение и слушание кушнира",
-								"author": "Матвей", 								
-								"tags": ["музыкальная", "отечественная музыка"]
-							}
-						];
+/* -------------------- Загрузка списка передач --------------------- */
 
+// Загрузка данных из файла
+fetch("data/program_list.json")
+  .then(response => response.json())
+  .then(data => insert_all(data));
 
-var programs_past = [
-						{
-							"title": "чешем языком",
-							"description": "программа про лингвистику и философию",
-							"author": "муха",
-							"tags": ["философия", "чесание"]
-						}
-					];
+//  Загрузка данных, закончившиеся передачи
+fetch("data/program_past_list.json")
+  .then(response => response.json())
+  .then(data => insert_programs(data,  "regulars-accordion-past-list"));
 
-// Текущие передачи
-var list = document.getElementById('regulars-accordion-current-list');
-for (i = 0; i < programs_current.length; i++) { 
-	list.innerHTML += '<li>' +
-						'<button class="accordion-program-title" id="accordion-control-' + i + '">' + 
-						'<span>' + programs_current[i].title + '</span>' +
-						'</button>' + 
-						'<div class="accordion-program-content" id="content-' + i + '">' + 
-							'<p>' + programs_current[i].description +'</p>' + 
-							'<p>ведущий: ' + programs_current[i].author +'</p>' + 
-							'<tag>теги: ' + programs_current[i].tags.join(', ') + '</tag>' +
-						'</div>'+
-					  '</li>'
-} 
+// Вставить в аккордеон
+function insert_programs(data, list_id) {
+  let list = document.getElementById(list_id);
+  for (i = 0; i < data.length; i++) { 
+    list.innerHTML += '<li>' +
+              '<div class="accordion-program-title" id="accordion-control-' + i + '">' + 
+              '<span>' + data[i].title + '</span>' +
+              '</div>' + 
+              '<div class="accordion-program-content" id="content-' + i + '">' + 
+                '<p>' + data[i].description +'</p>' + 
+                '<p>ведёт: ' + data[i].author +'</p>' +
+                '</div>'+
+              '</li>';
+  };
+};
 
-var list_past = document.getElementById('regulars-accordion-past-list');
-for (i = 0; i < programs_past.length; i++) { 
-	list_past.innerHTML += '<li>' +
-						'<button class="accordion-program-title" id="accordion-control-' + i + '">' + 
-						'<span>' + programs_past[i].title + '</span>' + 
-						'</button>' + 
-						'<div class="accordion-program-content" id="content-' + i + '">' + 
-							'<p>' + programs_past[i].description +'</p>' + 
-							'<p>ведущий: ' + programs_past[i].author +'</p>' + 
-							'<tag>теги: ' + programs_past[i].tags.join(', ') + '</tag>' +
-						'</div>'+
-					  '</li>'
-} 
+function show_author(name) {
+  if(name !== "") {
+    return "<p>ведёт: " + name + "</p>"
+  } else {return ""} 
+}
+
+function insert_programs(data, list_id) {
+  let list = document.getElementById(list_id);
+  for (i = 0; i < data.length; i++) {
+    list.innerHTML += `<li>
+                        <button class="accordion-program-title">
+                          <span>` + data[i].title + `</span>
+                        </button>
+                        <div class="accordion-program-content">
+                          <p>` + data[i].description + `</p>` + show_author(data[i].author) + 
+                       `</div>
+                       </li>`;
+  };
+}
+
+function insert_tabs(data) {
+  let tablinks_l = document.getElementById("prog_tablinks-left");
+  let tablinks_r = document.getElementById("prog_tablinks-right");
+  let tabpages = document.getElementById("prog_tabpages");
+
+  for (i = 0; i < data.length; i++) {
+    if (i <= data.length / 2) {
+    tablinks_l.innerHTML += `<button class="tab-program-title" onclick="openProg(event, 'prog-tab-` + i+ `')">
+                            <span>` + data[i].title + `</span>
+                          </button>`;
+    } else { tablinks_r.innerHTML += `<button class="tab-program-title" onclick="openProg(event, 'prog-tab-` + i+ `')">
+                            <span>` + data[i].title + `</span>
+                          </button>`;
+    }
+    tabpages.innerHTML += `<div class="tab-program-content" id="prog-tab-` + i + `">
+                            <h2>` + data[i].title + `</h2>
+                            <p>` + data[i].description + `</p>` + show_author(data[i].author) + 
+                          `</div>`;    
+  };
+}
+
+function insert_all(data) {
+  insert_programs(data, "regulars-accordion-current-list");
+  insert_tabs(data);  
+}

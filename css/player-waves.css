@@ -714,14 +714,15 @@
 
 
 /* Tablet version -------------------------------------------*/
-@media only screen and (max-aspect-ratio: 3/2) and (min-aspect-ratio: 2/3) {
+/*@media only screen and (max-aspect-ratio: 3/2) and (min-aspect-ratio: 2/3) {
 
 }
-
+*/
 
 /* Mobile version -------------------------------------------*/
-@media only screen and (max-aspect-ratio: 9/7) {
+/*@media only screen and (max-aspect-ratio: 9/7) {
   .waves {
     display: none;
   }
 }
+*/

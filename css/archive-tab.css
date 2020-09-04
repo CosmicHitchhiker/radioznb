@@ -5,9 +5,10 @@
 #tab-archive {
 	height: var(--tab-min-height);
 }
+
 .soon {
 	position: relative;
-	width: 70%;
-	left: 15%;
-	top: 5vhц;
+	width: 60%;
+	left: 20%;
+	top: 5vh;
 }

@@ -1,19 +1,76 @@
 /* ------------------------ Accordion ------------------------------ */
+#tab-regulars > .tab-uppersection {
+  padding: 0vh 2vh;
+}
 
 .regulars-accordion {
-  width: 80%;
+  display: none;
+  width: 85%;
   margin: auto;
+  font-size: 1.1em;
+
 }
 
 .regulars-accordion ul {
-  /*list-style-type: none;*/
-  list-style-image: url("../images/dot.svg");
-  /*list-style-type: circle;*/
+/*  list-style-type: none;
+*//*  list-style-image: url("../images/dot.png");*/
+ list-style-type: circle;
+ font-size: inherit;
 }
+
+/*
+.regulars-accordion ul li:nth-child(2n) {
+  list-style-type: "\26C6";
+}
+
+.regulars-accordion ul li:nth-child(3n) {
+  list-style-type: "\2602";
+}
+
+.regulars-accordion ul li:nth-child(odd) {
+  list-style-type: "\2604";
+}
+
+.regulars-accordion ul li:nth-child(5n) {
+  list-style-type: "\2600";
+}
+
+.regulars-accordion ul li:nth-child(10n) {
+  list-style-type: "\2614";
+}
+
+.regulars-accordion ul li:nth-child(4n + 3) {
+  list-style-type: "\2615";
+}
+
+.regulars-accordion ul li:nth-child(2 + 8n) {
+  list-style-type: "\2622";
+}*/
+
+.regulars-accordion ul li {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 2vh;
+  font-size: inherit;
+/*  background-image: url("../images/dot.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 1vh;*/
+}
+
+
+/*.regulars-accordion ul li::before {
+  content: '\229A';
+  font-weight: bold;
+  width: 0.2em;
+  margin-left: -2em;
+  font-size: inherit;
+}*/
+
 
 /*.accordion-program-title {
   width: 100%;
-   /*background-color: #eee;
+  background-color: #eee;
   color: #444;
   cursor: pointer;
   padding: 18px;
@@ -22,42 +79,124 @@
   outline: none;
   font-size: 1.1em;
   transition: 0.4s;
-border: 1px solid #eee;
-/*border: 1px solid #fff;
+  border: 1px solid #eee;
+  border: 1px solid #fff;
   border-collapse: collapse;
 }*/
 
 .accordion-program-title {
+  /*transition: 0.4s;*/
   width: 100%;
-  background-color: white;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  border: none;
-  text-align: left;
   outline: none;
-  font-size: 1em;
-  transition: 0.4s;
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  font-size: inherit;
+  text-align: left; 
 }
 
-/*.active, 
-.accordion-program-title:hover {
-  background-color: #ccc; 
-} */
-
-.regulars-accordion-active > span,
-.accordion-program-title:hover > span {
-  transition: 0.2s;
+.regulars-accordion-active > span {
+  transition: 0.4s;
+  font-weight: bold;
+  /*background-color: pink;*/
   /*color: white;*/
-  background-color: lightblue;
-/*  background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
-*/}
+  }
+
 
 .accordion-program-content {
-  padding: 5px 18px;
-  padding-bottom: 20px;
-  background-color: white;
   display: none;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 0.4s ease-out;
+  padding: 1vh 2vw;
+  padding-bottom: 2vh;
+  background-color: white;  
+  color: #444;
+  font-size: inherit;
 }
+
+.prog_tablinks {
+  float: left;
+  border: 1px solid lightgrey;
+  /*background-color: #fff;*/
+  width: 14%;
+  min-height: 52vh;
+}
+
+#prog_tablinks-left {
+  padding-left: 8vh;
+  padding-top: 4vh;
+  background-image: linear-gradient(90deg, transparent 7.8vh, #e63946 7.8vh, #9a031e 8vh, transparent 8vh),
+  linear-gradient(grey .01em, transparent .04em);
+  background-size: 100% 1.4em;
+}
+
+#prog_tablinks-right {
+  padding-right: 8vh;
+  padding-top: 4vh;
+  background-image: linear-gradient(90deg, transparent 19.9vh, #e63946 19.9vh, #9a031e 20.1vh, transparent 20.1vh),
+  linear-gradient(grey .01em, transparent .04em);
+  background-size: 100% 1.4em;
+}
+
+
+
+.prog_tablinks button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 15px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+
+.prog_tablinks button:hover {
+  /*background-color: #ddd;*/
+  font-weight: bold;
+}
+
+.prog_tablinks button.active {
+ /* background-color: #ccc;*/
+ font-weight: bold;
+}
+
+#prog_tablinks-left > button {
+  text-align: left;
+}
+#prog_tablinks-right > button {
+  text-align: right;
+}
+
+#prog_tabpages {
+    min-height: 500px;
+    float: left;
+    width: 57%;
+    padding: 0vh 2vh;
+}
+
+#regulars-tabpage-defaultOpen {
+  display: block;
+}
+
+.tab-program-content {
+  display: none;
+  padding: 8vh 7vh;
+  height: 500px;
+  border: none;
+}
+
+
+@media(hover: hover) and (pointer: fine) {
+  .accordion-program-title:hover > span {
+  /*transition: 0.4s;*/
+  /*background-color: pink;*/
+  font-weight: bold;
+  }
+}
+
+
+

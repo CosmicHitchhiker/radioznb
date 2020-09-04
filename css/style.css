@@ -8,8 +8,8 @@ html{
 
 :root {
   --wide-player-height: 75vh;
-  --tablet-player-height: 63vh;
-  --mobile-player-height: 50vh;
+  /*--tablet-player-height: 63vh;*/
+  /*--mobile-player-height: 50vh;*/
   --current-player-height: var(--wide-player-height);
   --buttons-height: 15vh;
   --all-buttons-height: var(--buttons-height);
@@ -44,7 +44,7 @@ html{
   height: var(--current-player-height);
 }
 
-@media only screen and (max-aspect-ratio: 4/5) {
+/*@media only screen and (max-aspect-ratio: 4/5) {
   :root {
     --current-player-height: var(--mobile-player-height);
     --all-buttons-height: calc(3 * var(--buttons-height));
@@ -59,3 +59,4 @@ html{
     --buttons-width: calc(5 * var(--buttons-height));
   }
 }
+*/

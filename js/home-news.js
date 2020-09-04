@@ -1,37 +1,43 @@
 
-// загружает все новости из json
-
+// Загружает json-файл с сервера и отправляет данные функции, генерирующей html
 function load_news() {
+	// var news_json = [ {   "title": "каникулы!", "content": "ДРУЗЬЯ!\n\nдля всех, кто пропустил мимо ушей, сообщаем официально:\nрадио «зимы не будет» устраивает себе каникулы, чтобы перестроиться, собраться с новыми силами и начать вещать ещё лучше! не унывайте без нас и до встречи через две недели на radioznb.ru\n\nпланов у нас вагон, так что оно того стоит!\n\nс приветом, редакция",    "date": "28 июня 2020 г."  },  {    "title": "пока каникулы",    "content": "товарищи!\nнаши радиоведущие продолжают свою радиоактивность даже во время каникул. завтра сырник и павлы устраивают свой балаган за пределами наших волн! завтра же напишут где и как, не пропустите если скучаете",    "date": "1 июля 2020 г."  },  {    "title": "\"очень приятно, царь\"",    "content": "роман шляхтин и мария красильникова обсудят личные отношения султана мехмеда и императора константина до и после осады константинополя\n\n18:00",    "date": "27 июня 2020 г."}, {    "title": "каникулы!",    "content": "ДРУЗЬЯ!\n\nдля всех, кто пропустил мимо ушей, сообщаем официально:\nрадио «зимы не будет» устраивает себе каникулы, чтобы перестроиться, собраться с новыми силами и начать вещать ещё лучше! не унывайте без нас и до встречи через две недели на radioznb.ru\n\nпланов у нас вагон, так что оно того стоит!\n\nс приветом, редакция",    "date": "28 июня 2020 г."},  {    "title": "пока каникулы",    "content": "товарищи!\nнаши радиоведущие продолжают свою радиоактивность даже во время каникул. завтра сырник и павлы устраивают свой балаган за пределами наших волн! завтра же напишут где и как, не пропустите если скучаете",    "date": "1 июля 2020 г."  },  {    "title": "\"очень приятно, царь\"",    "content": "роман шляхтин и мария красильникова обсудят личные отношения султана мехмеда и императора константина до и после осады константинополя\n\n18:00",    "date": "27 июня 2020 г."  }, {"title": "каникулы!",    "content": "ДРУЗЬЯ!\n\nдля всех, кто пропустил мимо ушей, сообщаем официально:\nрадио «зимы не будет» устраивает себе каникулы, чтобы перестроиться, собраться с новыми силами и начать вещать ещё лучше! не унывайте без нас и до встречи через две недели на radioznb.ru\n\nпланов у нас вагон, так что оно того стоит!\n\nс приветом, редакция",    "date": "28 июня 2020 г."}];
 
+	fetch("data/newslist.json")
+		.then(response => response.json())
+		.then(items => show_news(items));			
+}
+
+
+// Каждая новость записывается в html как элемент списка
+function show_news(items) {
 	var newsfeed = document.getElementById('home-newsfeed');
 
-	// читает json-файл по ссылке
-	$.getJSON("https://ansorox.github.io/experiments/newslist.json", function(newslist) {
+	for (i = 0; i < items.length; i++) {
+		var title = items[i].title;
+		var content = items[i].content.replace(/\n/g, "<br/>"); 
+		var date = items[i].date; 
 
-		// alert(JSON.stringify(newslist.items))
-
-	 	for (i in newslist.items) {
-	 		var title = newslist.items[i].title;
-	 		var content = newslist.items[i].content.replace(/\n/g, "<br/>"); 
-	 		var date = newslist.items[i].date; 
-
-			newsfeed.innerHTML += "<li>"+ "<div class='home-newsfeed-title-text'>" + "<label>" + title + "</label>" + "</div>" + "<div class='home-newsfeed-content-text'>" + "<p>" + content + "</p>" +  "<span class='home-newsfeed-date sub-text'>" + date + "</span>" + "</div>" + "</li>"
-		}
-	});
+		newsfeed.innerHTML += "<li>" +
+							    "<div class='home-newsfeed-title-text'>" + "<label>" + title + "</label>" + "</div>" +
+							    "<div class='home-newsfeed-content-text'>" + "<p>" + content + "</p>" +
+							      "<span class='home-newsfeed-date sub-text'>" + date + "</span>" +
+							    "</div>" +
+							  "</li>"
+	};
 }
 
+// Загрузка новой новости в json
+// function publish() {
+// 	var ntitle = document.getElementById("newsform-ntitle").value;  
+// 	var ncontent = document.getElementById("newsform-ncontent").value;
 
-// загружает новую новость в json
-function publish() {
-	var ntitle = document.getElementById("newsform-ntitle").value;  
-	var ncontent = document.getElementById("newsform-ncontent").value;
+// 	var d = new Date();
+// 	var months = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября" , "декабря"]
+// 	var current_date = [d.getDate(), months[d.getMonth()], d.getFullYear()].join(" ")
+// 	var nitem = {"title": ntitle, "content": ncontent, "date": current_date};
+// 	alert(JSON.stringify(nitem));
 
-	var d = new Date();
-	var months = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября" , "декабря"]
-	var current_date = [d.getDate(), months[d.getMonth()], d.getFullYear()].join(" ")
-	var nitem = {"title": ntitle, "content": ncontent, "date": current_date};
-	alert(JSON.stringify(nitem));
-
-}
+// }
 
 

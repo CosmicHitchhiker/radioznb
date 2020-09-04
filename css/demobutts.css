@@ -1,52 +1,105 @@
 
 .contacts-demobutts {
+ /* display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox; 
+  display: -webkit-flexbox;
+  display: -webkit-flex; 
   display: flex;
-  align-items: end;
+
+  -webkit-box-align: end;
+  -webkit-flex-align: flex-end;
+  -ms-flex-align: flex-end;
+  -o-flex-align: flex-end;
+  -webkit-align-items: flex-end;
+  -ms-align-items: flex-end;
+  -o-align-items: flex-end;
+  align-items: flex-end;
+
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
   justify-content: space-between;
+
   position: relative;
-  max-width: calc(var( --menu-width) * 0.75);
+  margin: auto;*/
+  /*max-width: calc(var( --menu-width) * 0.75);*/
+  width: calc(var(--menu-width)*0.8);
   margin: auto;
 }
 
 .contacts-demobutts-button {
+ /* display: -webkit-box;*/ /* OLD - iOS 6-, Safari 3.1-6 */
+  /*display: -moz-box;*/    /* OLD - Firefox 19- (buggy but mostly works) */
+  /*display: -ms-flexbox; */ /* TWEENER - IE 10 */
+ /* display: -webkit-flexbox;*/ /* NEW - Chrome */
+  /*display: -webkit-flex;*/ /* NEW - Chrome */
+  /*display: flex;*/
+
+/*  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  justify-content: space-around;*/
+
+/*  width: calc((var( --menu-width) * 0.8) / 8);*/
   width: calc((var( --menu-width) * 0.8) / 8);
-  display: flex;
-  justify-content: space-around;
 }
 
 .contacts-demobutts-button img {
-  height: calc(var(--menu-height)*0.9);
+  /*height: calc(var(--menu-height)*0.9);*/
 }
 
 .contacts-demobutts-submenu {
-  width: calc((var(--menu-width) * 0.8) / 4);
-  display: flex;
+  /*display: -webkit-box; *//* OLD - iOS 6-, Safari 3.1-6 */
+  /*display: -moz-box;  */  /* OLD - Firefox 19- (buggy but mostly works) */
+  /*display: -ms-flexbox; */ /* TWEENER - IE 10 */
+  /*display: -webkit-flexbox; *//* NEW - Chrome */
+  /*display: -webkit-flex;*/ /* NEW - Chrome */
+  /*display: flex;*/
+
+/*  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
   justify-content: space-around;
-}
+*/
+/*  width: calc((var(--menu-width) * 0.8) / 4);
+*/}
 
-.contacts-demobutts-submenu:nth-child(2) {
+/*.contacts-demobutts-submenu:nth-child(2) {
 }
-
 
 .contacts-demobutts-round img {
   position: relative;
   left: 4%;
-}
+}*/
 
 .contacts-demobutts-long {
-  display: flex;
+ /* display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flexbox;
+  display: -webkit-flex;
+  display: flex;*/
+
+/*  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
   justify-content: space-around;
+*/
+  /*width: calc((var( --menu-width) * 0.8) / 2);*/
   width: calc((var( --menu-width) * 0.8) / 2);
 }
 
 .contacts-demobutts-button:hover{
-opacity: 0.4;
-transition: 0.3s;
+  opacity: 0.4;
+  transition: 0.3s;
 }
 
-
 /*
-
 .demobutts-round {
   position: absolute;
   top: 0%;
@@ -84,7 +137,7 @@ opacity: 0.4;
 transition: 0.3s;
 }*/
 
-@media only screen and (max-aspect-ratio: 3/2) and (min-aspect-ratio: 2/3){
+/*@media only screen and (max-aspect-ratio: 3/2) and (min-aspect-ratio: 2/3){
   .demobutts-long {
     top: 55%;
     left: 5%;
@@ -101,8 +154,8 @@ transition: 0.3s;
   .demobutts-submenu:nth-of-type(2){
     left: 50%;
   }
-}
-
+}*/
+/*
 @media only screen and (max-aspect-ratio: 4/5) {
   .demobutts-long {
     top: 66%;
@@ -134,4 +187,40 @@ transition: 0.3s;
   .demobutts-round:nth-of-type(1) {
     left: 57%;
   }
+}*/
+
+
+
+.contacts-demobutts-top table {
+  border-collapse: collapse;
+}
+.contacts-demobutts-top table tr {
+  height: 14vh;
+}
+
+.contacts-demobutts-tglink {
+  width: 30vh;
+}
+
+.contacts-demobutts-tglink img {
+  width: 12vw;
+  height: 10vh;
+}
+
+.contacts-demobutts-tglink-description {
+  width: 70vh;
+}
+
+.contacts-demobutts-bottom table {
+  border-collapse: collapse;
+  width: 90%;
+  margin: auto;
+  margin-top: 10vh;
+}
+
+.contacts-demobutts-soclink {
+}
+
+.contacts-demobutts-soclink img {
+  height: calc(var(--menu-height)*1);
 }

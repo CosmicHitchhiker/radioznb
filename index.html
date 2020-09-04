@@ -5,21 +5,18 @@
     <meta name="description" content="зе бест рэдио ин зе ворлд">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/player.css">
-    <link rel="stylesheet" href="css/player-waves.css">    
-    <link rel="stylesheet" href="css/demobutts.css">
-    <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/tabs.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/style.css?modified=<? filemtime('css/style.css')>">
+    <link rel="stylesheet" href="css/player.css?modified=<? filemtime('css/player.css')">
+    <link rel="stylesheet" href="css/player-waves.css?modified=<? filemtime('css/player-waves.css')">    
+    <link rel="stylesheet" href="css/demobutts.css?modified=<? filemtime('css/demobutts.css')">
+    <link rel="stylesheet" href="css/menu.css?modified=<? filemtime('css/menu.css')">
+    <link rel="stylesheet" href="css/tabs.css?modified=<? filemtime('css/tabs.css')">
+    <link rel="stylesheet" href="css/footer.css?modified=<? filemtime('css/footer.css')">
 
-    <link rel="stylesheet" href="css/archive-tab.css">
-    <link rel="stylesheet" href="css/regulars-tab.css">
-    <link rel="stylesheet" href="css/home-tab.css">
-    <link rel="stylesheet" href="css/aboutus-tab.css">
-
-
-
+    <link rel="stylesheet" href="css/archive-tab.css?modified=<? filemtime('css/archive-tab.css')">
+    <link rel="stylesheet" href="css/regulars-tab.css?modified=<? filemtime('css/regulars-tab.css')">
+    <link rel="stylesheet" href="css/home-tab.css?modified=<? filemtime('css/home-tab.css')">
+    <link rel="stylesheet" href="css/aboutus-tab.css?modified=<? filemtime('css/aboutus-tab.css')">
 
     <!-- favicons -->
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
@@ -30,85 +27,86 @@
     <link rel="icon" type="image/png" sizes="512x512" href="images/favicons/android-chrome-512x512.png">
 
     <script>document.getElementsByTagName("html")[0].className += " js";</script>
+
   </head>
 
-  <body onload="load_news()">
+  <body onload="load_schedule();load_news();setInterval(updateClock, 1000); ">
       <div class="waves" id="waves">
         <div class="lwaves">
           <div class="lwave-one">
-            <span><img class="lwave-one-1" src="images/waves/lwave-11.png"></img></span>
-            <span><img class="lwave-two-1" src="images/waves/lwave-12.png"></img></span>
-            <span><img class="lwave-three-1" src="images/waves/lwave-13.png"></img></span>
+            <span><img class="lwave-one-1" src="images/waves/lwave-11.png?v=1.1"></img></span>
+            <span><img class="lwave-two-1" src="images/waves/lwave-12.png?v=1.1"></img></span>
+            <span><img class="lwave-three-1" src="images/waves/lwave-13.png?v=1.1"></img></span>
           </div>
           <div class="lwave-two">
-            <span><img class="lwave-one-2" src="images/waves/lwave-21.png"></img></span>
-            <span><img class="lwave-two-2" src="images/waves/lwave-22.png"></img></span>
-            <span><img class="lwave-three-2" src="images/waves/lwave-23.png"></img></span>
+            <span><img class="lwave-one-2" src="images/waves/lwave-21.png?v=1.1"></img></span>
+            <span><img class="lwave-two-2" src="images/waves/lwave-22.png?v=1.1"></img></span>
+            <span><img class="lwave-three-2" src="images/waves/lwave-23.png?v=1.1"></img></span>
           </div>
           <div class="lwave-three">
-            <span><img class="lwave-one-3" src="images/waves/lwave-31.png"></img></span>
-            <span><img class="lwave-two-3" src="images/waves/lwave-32.png"></img></span>
-            <span><img class="lwave-three-3" src="images/waves/lwave-33.png"></img></span>
+            <span><img class="lwave-one-3" src="images/waves/lwave-31.png?v=1.1"></img></span>
+            <span><img class="lwave-two-3" src="images/waves/lwave-32.png?v=1.1"></img></span>
+            <span><img class="lwave-three-3" src="images/waves/lwave-33.png?v=1.1"></img></span>
           </div>
         </div>
         <div class="rwaves">
           <div class="rwave-one">
-            <span><img class="rwave-three-1" src="images/waves/rwave-13.png"></img></span>
-            <span><img class="rwave-two-1" src="images/waves/rwave-12.png"></img></span>
-            <span><img class="rwave-one-1" src="images/waves/rwave-11.png"></img></span>
+            <span><img class="rwave-three-1" src="images/waves/rwave-13.png?v=1.1"></img></span>
+            <span><img class="rwave-two-1" src="images/waves/rwave-12.png?v=1.1"></img></span>
+            <span><img class="rwave-one-1" src="images/waves/rwave-11.png?v=1.1"></img></span>
           </div>
           <div class="rwave-two">
-              <span><img class="rwave-three-2" src="images/waves/rwave-23.png"></img></span>
-              <span><img class="rwave-two-2" src="images/waves/rwave-22.png"></img></span>
-              <span><img class="rwave-one-2" src="images/waves/rwave-21.png"></img></span>
+              <span><img class="rwave-three-2" src="images/waves/rwave-23.png?v=1.1"></img></span>
+              <span><img class="rwave-two-2" src="images/waves/rwave-22.png?v=1.1"></img></span>
+              <span><img class="rwave-one-2" src="images/waves/rwave-21.png?v=1.1"></img></span>
           </div>
           <div class="rwave-three">
-              <span><img class="rwave-three-3" src="images/waves/rwave-33.png"></img></span>
-              <span><img class="rwave-two-3" src="images/waves/rwave-32.png"></img></span>
-              <span><img class="rwave-one-3" src="images/waves/rwave-31.png"></img></span>
+              <span><img class="rwave-three-3" src="images/waves/rwave-33.png?v=1.1"></img></span>
+              <span><img class="rwave-two-3" src="images/waves/rwave-32.png?v=1.1"></img></span>
+              <span><img class="rwave-one-3" src="images/waves/rwave-31.png?v=1.1"></img></span>
           </div>
         </div>
       </div>
       <div class="player">
         <div class="player-main">
-          <img src="images/RADIOsyt.png" alt="радио" class="player-image">
-          <img src="images/play-sm.png?raw=true" alt="радио" id="player-play-button">
-          <img src="images/stop-sm.png?raw=true" alt="радио" id="player-stop-button">
+          <img src="images/RADIOsyt.png?v=1.1" alt="радио" class="player-image">
+          <img src="images/play-sm.png?v=1.1" alt="радио" id="player-play-button">
+          <img src="images/stop-sm.png?v=1.1" alt="радио" id="player-stop-button">
           <div id="player-volume-control">
-            <img src=images/scale.png id="player-volume-line">
-            <img src=images/pointer.png id="player-volume-dot">
+            <img src="images/scale.png?v=1.1" id="player-volume-line">
+            <img src="images/pointer.png?v=1.1" id="player-volume-dot">
           </div>
         </div>
       </div>
   <div id="menu" class="menu">
     <!-- меню: архив передач -->
     <a class="tablink" id="tablink-archive" href="#archive" onclick="openPage(event, 'tab-archive')">
-      <img class="tablink-img" id="tablink-archive-img" src="images/tab-archive.png">
-      <img class="tablink-img-active" id="tablink-archive-img-active" src="images/tab-archive-bold.png">
+      <img class="tablink-img" id="tablink-archive-img" src="images/tab-archive.png?v=1.1">
+      <img class="tablink-img-active" id="tablink-archive-img-active" src="images/tab-archive-bold.png?v=1.1">
     </a>
 
     <!-- меню: регулярные передачи. описание -->
     <a class="tablink" id="tablink-regulars" href="#regulars"  onclick="openPage(event, 'tab-regulars')">
-      <img class="tablink-img" id="tablink-regulars-img" src="images/tab-programs2.png">
-      <img class="tablink-img-active" id="tablink-regulars-img-active" src="images/tab-programs-bold.png">
+      <img class="tablink-img" id="tablink-regulars-img" src="images/tab-programs2.png?v=1.1">
+      <img class="tablink-img-active" id="tablink-regulars-img-active" src="images/tab-programs-bold.png?v=1.1">
     </a>
 
     <!-- меню: домашняя страница, текущее расписание и анонсы -->
     <a class="tablink" id="tablink-home" href="#home" onclick="openPage(event, 'tab-home')">
-      <img class="tablink-img" id="tablink-home-img" src="images/tab-home.png">
-      <img class="tablink-img-active" id="tablink-home-img-active" src="images/tab-home-folks.png">
+      <img class="tablink-img" id="tablink-home-img" src="images/tab-home.png?v=1.1">
+      <img class="tablink-img-active" id="tablink-home-img-active" src="images/tab-home-folks.png?v=1.1">
     </a>
 
     <!-- меню: о нас -->
     <a class="tablink" id="tablink-aboutus" href="#aboutus" onclick="openPage(event, 'tab-aboutus')">
-      <img class="tablink-img" id="tablink-aboutus-img" src="images/tab-who2.png">
-      <img class="tablink-img-active" id="tablink-aboutus-img-active" src="images/tab-who-bold.png">
+      <img class="tablink-img" id="tablink-aboutus-img" src="images/tab-who2.png?v=1.1">
+      <img class="tablink-img-active" id="tablink-aboutus-img-active" src="images/tab-who-bold.png?v=1.1">
     </a>
 
     <!-- меню: ссылки на соцсети и скачивание -->
     <a  class="tablink" id="tablink-contacts" href="#contacts" onclick="openPage(event, 'tab-contacts')">
-      <img class="tablink-img" id="tablink-contacts-img" src="images/tab-where2.png">
-      <img class="tablink-img-active" id="tablink-contacts-img-active" src="images/tab-where-bold.png">
+      <img class="tablink-img" id="tablink-contacts-img" src="images/tab-where2.png?v=1.1">
+      <img class="tablink-img-active" id="tablink-contacts-img-active" src="images/tab-where-bold.png?v=1.1">
     </a>
   </div>
 
@@ -117,10 +115,10 @@
     <div id="tab-archive" class="tab">
       <div class="tab-uppersection">
         <!-- <script src="js/content/tab-archive-content.js"></script> -->
-        <img class="soon" src="images/soon.png"> 
+        <img class="soon" src="images/soon.png?v=1.1"> 
       </div>
       <div class="tab-bottomsection">
-        <script src="js/content/tab-footer.js"></script>
+        <script src="js/content/tab-footer.js?modified=<? filemtime('js/content/tab-footer.js')"></script>
       </div>
     </div>
 
@@ -130,33 +128,73 @@
     <div id="tab-regulars" class="tab">
       <div class="tab-uppersection">
 
+        <div id="prog_tabs">
+
+          <div id="prog_tablinks-left" class="prog_tablinks">
+          </div>
+          <div id="prog_tabpages">
+            <div class="tab-program-content" id="regulars-tabpage-defaultOpen">
+              <h2>здесь передачи</h2>
+              <p>xei</p>
+            </div>
+          </div> 
+          <div id="prog_tablinks-right" class="prog_tablinks">
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+
         <!-- аккордеон с текущими передачами -->
         <div class="regulars-accordion">
           <ul id="regulars-accordion-current-list">
             <!-- сюда скиптом вставляются передачи. -->
+
           </ul>
         </div>
 
-        <hr style="height:2px;width:60%;margin:auto;background-color:black;">
-
+<!--         <hr style="height:2px;width:60%;margin:auto;background-color:black;">
+ -->
         <!-- прошедщие передачи -->
         <div class="regulars-accordion">
           <ul id="regulars-accordion-past-list"></ul>
         </div>
+
+       
+
       </div>
       <div class="tab-bottomsection">
-        <script src="js/content/tab-footer.js"></script>
+        <script src="js/content/tab-footer.js?modified=<? filemtime('js/content/tab-footer.js')"></script>
       </div>
     </div>
+
 
     <!-- страница: домашняя -->
     <div id="home" class="tab-anchor">x</div>
     <div id="tab-home" class="tab">
       <div class="tab-uppersection">
-        <script src="js/content/tab-home-content.js"></script>
+          <div class="home-content">
+            <div class="home-timeline-section">
+              <div class="home-schedule" id="home-schedule">
+                <div id="home-schedulde-pretext"></div>
+                <!-- <span id="curr_time"></span> -->
+                <table>
+                  <tbody id="home-schedule-table">
+                  </tbody>
+                </table>           
+              </div>
+            </div>
+            <div class="home-news-section">
+                  <div id="home-newsbox" class="home-newsbox">
+                      <div id="home-newsform"></div>
+                      <ul id="home-newsfeed" class="home-newsfeed"></ul>
+                  </div>
+                </div>
+            </div>
       </div>
       <div class="tab-bottomsection">
-        <script src="js/content/tab-footer.js"></script>
+        <script src="js/content/tab-footer.js?modified=<? filemtime('js/content/tab-footer.js')"></script>
       </div>
     </div>
 
@@ -214,6 +252,7 @@
               <span class="close">&times;</span> 
             </div>
           </div>
+          <br>
 
           <img src="images/faces/Stesh-sm.png" class="aboutus-face" alt="Стеша" id="stesha">
           <div id="stesh-face-modal" class="aboutus-face-modal">
@@ -250,8 +289,9 @@
         
         </div>
       </div>
+      <br>
       <div class="tab-bottomsection">
-        <script src="js/content/tab-footer.js"></script>
+        <script src="js/content/tab-footer.js?modified=<? filemtime('js/content/tab-footer.js')"></script>
       </div>
     </div>
 
@@ -259,7 +299,78 @@
     <div id="contacts" class="tab-anchor">x</div>
     <div id="tab-contacts" class="tab">
       <div class="tab-uppersection">
-        <script src="js/content/tab-contacts-content.js"></script>  
+        <!-- <script src="js/content/tab-contacts-content.js"></script>  --> 
+
+        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet erat convallis, porta elit eu, vehicula odio. Donec augue purus, aliquam non cursus in, condimentum at ex. Aliquam vitae vulputate nulla, in pretium ligula. Integer feugiat justo vel aliquet aliquet. Donec fringilla ultricies purus eu eleifend. Vestibulum eleifend elit vel pharetra gravida. Suspendisse et nulla dapibus ligula ornare facilisis vel vel nulla. Ut turpis sem, ultrices quis scelerisque feugiat, luctus eu risus. Suspendisse dapibus ipsum ut sodales accumsan. Proin quam est, sodales vitae lorem vel, tristique pretium ante. Aliquam eget gravida arcu, ut lobortis augue. Sed lobortis ipsum sed felis commodo aliquet. Donec et metus tellus. Nullam sit amet ante sit amet odio posuere congue at sit amet leo. Integer aliquam viverra nisl interdum commodo.</p>
+ -->
+<!--         <div class="contacts-demobutts">
+          <div class="contacts-demobutts-submenu">
+            <a href="https://vk.com/znb_radio" target="_blank" class="contacts-demobutts-button contacts-demobutts-round">
+              <img border="0" alt="VK" src="images/vk.png">
+            </a>
+            <a href="https://www.facebook.com/100780934922627/" target="_blank" class="contacts-demobutts-button contacts-demobutts-round">
+              <img border="0" alt="FB" src="images/fb.png">
+            </a>
+          </div>
+          <a href="https://teleg.run/radiochata" target="_blank" class="contacts-demobutts-button contacts-demobutts-long">
+            <img border="0" alt="TG_chat" src="images/chat.png">
+          </a>
+          <div class="contacts-demobutts-submenu">
+            <a href="https://teleg.run/radi0ZnB" target="_blank" class="contacts-demobutts-button contacts-demobutts-round">
+              <img border="0" alt="TG" src="images/tg.png" border="0">
+            </a>
+            <a href="http://c18.radioboss.fm/playlist/158/stream.m3u" target="_blank" class="contacts-demobutts-button contacts-demobutts-round">
+              <img alt="M3U_player" src="images/m3u.png" border="0">
+            </a>
+          </div>
+        </div> -->
+        <div class="contacts-demobutts">
+          <div class="contacts-demobutts-top">
+            <table>
+              <tr>
+                <td class="contacts-demobutts-tglink">
+                  <a href="https://teleg.run/radiochata" target="_blank" class="contacts-demobutts-button contacts-demobutts-long">
+                    <img border="0" alt="TG_chat" src="images/chat.png"></a>
+                </td>
+                <td class="contacts-demobutts-tglink-description"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet erat convallis, porta elit eu, vehicula odio. Donec augue purus, aliquam non cursus in, condimentum at ex. Aliquam vitae vulputate nulla, in pretium ligula. Integer feugiat justo vel aliquet aliquet. </p>                  
+                </td>
+              </tr>
+              <tr>
+                <td class="contacts-demobutts-tglink"><a href="https://teleg.run/radiochata" target="_blank" class="contacts-demobutts-button contacts-demobutts-long">
+                    <img border="0" alt="TG_chat" src="images/chat.png"></a>
+                </td>
+                <td class="contacts-demobutts-tglink-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet erat convallis, porta elit eu, vehicula odio. Donec augue purus, aliquam non cursus in, condimentum at ex. Aliquam vitae vulputate nulla, in pretium ligula. Integer feugiat justo vel aliquet aliquet.</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="contacts-demobutts-bottom">
+            <table>
+              <tr>
+                <td class="contacts-demobutts-soclink">
+                  <a href="https://vk.com/znb_radio" target="_blank" class="contacts-demobutts-button contacts-demobutts-round">
+                    <img border="0" alt="VK" src="images/vk.png"></a>
+                </td>
+                <td class="contacts-demobutts-soclink">
+                  <a href="https://www.facebook.com/100780934922627/" target="_blank" class="contacts-demobutts-button contacts-demobutts-round">
+                    <img border="0" alt="FB" src="images/fb.png"></a>
+                </td>
+                <td class="contacts-demobutts-soclink">
+                  <a href="https://vk.com/znb_radio" target="_blank" class="contacts-demobutts-button contacts-demobutts-round">
+                    <img border="0" alt="VK" src="images/vk.png"></a>
+                </td>
+                <td class="contacts-demobutts-soclink">
+                  <a href="https://www.facebook.com/100780934922627/" target="_blank" class="contacts-demobutts-button contacts-demobutts-round">
+                    <img border="0" alt="FB" src="images/fb.png"></a>
+                </td>
+              </tr>
+            </table>            
+          </div>
+        </div>
+
+      </div>
+      <div class="tab-bottomsection">
+        <script src="js/content/tab-footer.js?modified=<? filemtime('js/content/tab-footer.js')"></script>
       </div>
     </div>
 
@@ -268,8 +379,9 @@
     <div class="footer-modal" id="footer-first_modal">
       <div class="footer-modal-content">
         <div class="footer-modal-header">
-          <h2>Помочь радио</h2>
-            <span class="footer-modal-close">×</span>
+          <img class="footer-modal-header-image">
+          <!-- <h2>Помочь радио</h2> -->
+          <span class="footer-modal-close">×</span>
         </div>
         <div class="footer-modal-body"> 
           <p>[ Инфа про то, как перевести деньги: карточка, телефон, через контакт, подписка на каком-нибудь патрионе ]</p>
@@ -284,7 +396,8 @@
     <div class="footer-modal" id="footer-second_modal">
       <div class="footer-modal-content">
         <div class="footer-modal-header">
-          <h2>Слушать не на сайте</h2>
+          <img class="footer-modal-header-image">
+          <!-- <h2>Слушать не на сайте</h2> -->
           <span class="footer-modal-close">×</span>
         </div>
         <div class="footer-modal-body"> 
@@ -300,21 +413,25 @@
   <audio src="http://c22.radioboss.fm:8033/stream" id="player-sound" preload="none" controls></audio>
   
   <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-  <script src="js/smoothscroll.js"></script>
-
-  <script src="js/general-open_tabs.js"></script>
-  <script src="js/general-player.js"></script>
-  <script src="js/general-sticky_menu.js"></script> 
-  <script src="js/general-footer-open_modal.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
 
 
-  <script src="js/content/tab-regulars-content.js"></script>  <!-- вставляет содежимое в аккордеоны на вкладке "передачи" -->
-  <script src="js/regulars-accordion.js"></script>
+  <script src="js/smoothscroll.js?modified=<? filemtime('js/smoothscroll.js')"></script>
 
-  <script src="js/home-news.js"></script> 
-  <script src="js/home-open_newsform.js"></script>
+  <script src="js/general-open_tabs.js?modified=<? filemtime('js/general-open_tabs.js')"></script>
+  <script src="js/general-player.js?modified=<? filemtime('js/general-player.js')"></script>
+  <script src="js/general-sticky_menu.js?modified=<? filemtime('js/general-sticky_menu.js')"></script> 
+  <script src="js/general-footer-open_modal.js?modified=<? filemtime('js/general-footer-open_modal.js')"></script>
 
-  <script src="js/aboutus-open_face_modal.js"></script>
+
+  <script src="js/content/tab-regulars-content.js?modified=<? filemtime('js/content/tab-regulars-content.js')"></script>
+  <script src="js/home-schedule.js?modified=<? filemtime('js/home-schedule.js')"></script> 
+  <script src="js/home-news.js?modified=<? filemtime('js/home-news.js')"></script> 
+  <script src="js/home-open_newsform.js?modified=<? filemtime('js/home-open_newsform.js')"></script>
+
+  <script src="js/aboutus-open_face_modal.js?modified=<? filemtime('js/aboutus-open_face_modal.js')"></script>
+  <script src="js/regulars.js?modified=<? filemtime('js/regulars.js')"></script>
 
 </body>
