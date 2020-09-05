@@ -88,7 +88,7 @@
 
 .footer-modal-close {
   position: absolute;
-  top: 0vh;
+  top: 1vh;
   right: 0vw;
   padding-right: 0.5vw;
   font-size: 2em;

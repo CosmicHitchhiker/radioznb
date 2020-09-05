@@ -13,7 +13,24 @@
   /*position: absolute;*/
   position: static;
   overflow: hidden;
-  padding: 0vh 4.2vh;
+  /*padding: 0vh 4.2vh;*/
+}
+
+.aboutus-faces-line {
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flexbox; /* NEW - Chrome */
+  display: -webkit-flex; /* NEW - Chrome */
+  display: flex;
+
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 4vh;
 }
 
 .aboutus-face {
@@ -30,75 +47,14 @@
 	opacity: 0.7;
 }
 
-#olya {
-	top: 0;
-	left: 0;
-}
-
-
-/*#egor {	
-	top: 0;
-  left: 12.8vw;
-}*/
-
-/*#fedya {
-	top: 0;
-	left: 27.7vw;
-}*/
-/*
-#seva {
-	top: 0;
-	left: 39.9vw;
-}*/
-
-#stesha {
-	top: 3vh;
-	left: 5vw;
-}
-
-#anya {
-	top: 4vh;
-	left: 5.3vw;
-}
-
-#motya {
-	top: 4vh;
-	left: 6vw;
-}
-
-/*
-#olya {
-    transform: rotate(7deg) translate(-126px, 98px);
-}
-#egor {
-	transform: rotate(24deg) translate(-173px, 11px);
-}
-#fedya {
-	transform: rotate(-19deg) translate(614px, 0px);
-}
-#seva {
-	transform: rotate(10deg) translate(79px, 38px);
-}
-#stesha {
-	transform: rotate(-5deg) translate(2px, 101px);
-}
-#anya {
-	transform: rotate(-17deg) translate(-30px, -635px);
-}
-#motya {
-	transform: rotate(-14deg) translate(154px, -274px);
-}*/
-
-
-
 /* ------------- Face Modals -------------- */
 
 .close {
   position: absolute;
-  top: 1vh;
-  right: 1vw;
+  top: 1.5vh;
+  right: 1.5vh;
   font-size: 4vh;
-  font-weight: bold;   
+  font-weight: bold; 
   color: black;
 }
 
@@ -135,10 +91,16 @@
   width: calc(var(--menu-width) / 1.5);
 
   -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.4s;
+  -webkit-animation-duration: 0.3s;
   animation-name: zoom;
-  animation-duration: 0.4s;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
 
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flexbox; /* NEW - Chrome */
+  display: -webkit-flex; /* NEW - Chrome */
   display: flex;
   overflow: hidden;
 }
@@ -161,9 +123,9 @@
 #anya-face-modal > .aboutus-face-modal-content > img {
 	transform: translate(-25px, -45px) rotate(-3deg);
 }
-
 #olya-face-modal > .aboutus-face-modal-content > img {
-	transform: translate(-28px, -30px) rotate(2deg);
+  height: 51vh;
+	transform: translate(-37px, -30px) rotate(-4deg);
 }
 #fed-face-modal > .aboutus-face-modal-content > img {
 	transform: translate(-12px, -42px);
@@ -171,24 +133,25 @@
 #seva-face-modal > .aboutus-face-modal-content > img {
 	transform: translate(-18px, -7px);
 }
-
 #motya-face-modal > .aboutus-face-modal-content > img {
 	transform: translate(-28px, 9px) rotate(2deg);
 }
 
-
-
-
 .aboutus-face-modal-description {
-	width: 40%;
-    left: 10%;
-    top: 7vh;
-    overflow-wrap: break-word;
-    position: relative;
+  position: relative;
+  margin: auto;
+  overflow-wrap: break-word;
+  width: 40%;
+  padding-right: 3vh;
 }
 
 @-webkit-keyframes zoom {
-	from {
-		transform: scale(0.8)}
-	to {transform: scale(1)}
+  0% {
+		transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+  }
+	100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
 }

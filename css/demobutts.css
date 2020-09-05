@@ -1,194 +1,22 @@
 
 .contacts-demobutts {
- /* display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox; 
-  display: -webkit-flexbox;
-  display: -webkit-flex; 
-  display: flex;
-
-  -webkit-box-align: end;
-  -webkit-flex-align: flex-end;
-  -ms-flex-align: flex-end;
-  -o-flex-align: flex-end;
-  -webkit-align-items: flex-end;
-  -ms-align-items: flex-end;
-  -o-align-items: flex-end;
-  align-items: flex-end;
-
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  -ms-justify-content: space-between;
-  -o-justify-content: space-between;
-  justify-content: space-between;
-
-  position: relative;
-  margin: auto;*/
-  /*max-width: calc(var( --menu-width) * 0.75);*/
   width: calc(var(--menu-width)*0.8);
   margin: auto;
 }
 
 .contacts-demobutts-button {
- /* display: -webkit-box;*/ /* OLD - iOS 6-, Safari 3.1-6 */
-  /*display: -moz-box;*/    /* OLD - Firefox 19- (buggy but mostly works) */
-  /*display: -ms-flexbox; */ /* TWEENER - IE 10 */
- /* display: -webkit-flexbox;*/ /* NEW - Chrome */
-  /*display: -webkit-flex;*/ /* NEW - Chrome */
-  /*display: flex;*/
-
-/*  -webkit-justify-content: space-around;
-  -moz-justify-content: space-around;
-  -ms-justify-content: space-around;
-  -o-justify-content: space-around;
-  justify-content: space-around;*/
-
-/*  width: calc((var( --menu-width) * 0.8) / 8);*/
   width: calc((var( --menu-width) * 0.8) / 8);
 }
 
-.contacts-demobutts-button img {
-  /*height: calc(var(--menu-height)*0.9);*/
-}
-
-.contacts-demobutts-submenu {
-  /*display: -webkit-box; *//* OLD - iOS 6-, Safari 3.1-6 */
-  /*display: -moz-box;  */  /* OLD - Firefox 19- (buggy but mostly works) */
-  /*display: -ms-flexbox; */ /* TWEENER - IE 10 */
-  /*display: -webkit-flexbox; *//* NEW - Chrome */
-  /*display: -webkit-flex;*/ /* NEW - Chrome */
-  /*display: flex;*/
-
-/*  -webkit-justify-content: space-around;
-  -moz-justify-content: space-around;
-  -ms-justify-content: space-around;
-  -o-justify-content: space-around;
-  justify-content: space-around;
-*/
-/*  width: calc((var(--menu-width) * 0.8) / 4);
-*/}
-
-/*.contacts-demobutts-submenu:nth-child(2) {
-}
-
-.contacts-demobutts-round img {
-  position: relative;
-  left: 4%;
-}*/
-
 .contacts-demobutts-long {
- /* display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flexbox;
-  display: -webkit-flex;
-  display: flex;*/
-
-/*  -webkit-justify-content: space-around;
-  -moz-justify-content: space-around;
-  -ms-justify-content: space-around;
-  -o-justify-content: space-around;
-  justify-content: space-around;
-*/
-  /*width: calc((var( --menu-width) * 0.8) / 2);*/
   width: calc((var( --menu-width) * 0.8) / 2);
 }
 
-.contacts-demobutts-button:hover{
+.contacts-demobutts-button:hover, 
+.contacts-demobutts-button:focus {
   opacity: 0.4;
   transition: 0.3s;
 }
-
-/*
-.demobutts-round {
-  position: absolute;
-  top: 0%;
-  left: 4%;
-  height: 100%;
-  width: 44%;
-}
-
-.demobutts-round:nth-of-type(1) {
-  left: 52%;
-}
-
-.demobutts-submenu {
-  position: absolute;
-  left: 0%;
-  top: 0%;
-  width: 25%;
-  height: 100%;
-}
-
-.demobutts-submenu:nth-of-type(2){
-  left: 75%;
-}
-
-.demobutts-long {
-  position: absolute;
-  left: 25%;
-  top: 0%;
-  width: 50%;
-  height: 100%;
-}
-
-.demobutts-button:hover{
-opacity: 0.4;
-transition: 0.3s;
-}*/
-
-/*@media only screen and (max-aspect-ratio: 3/2) and (min-aspect-ratio: 2/3){
-  .demobutts-long {
-    top: 55%;
-    left: 5%;
-    height: 45%;
-    width: 90%;
-  }
-
-  .demobutts-submenu {
-    top: 0%;
-    height: 50%;
-    width: 50%;
-  }
-
-  .demobutts-submenu:nth-of-type(2){
-    left: 50%;
-  }
-}*/
-/*
-@media only screen and (max-aspect-ratio: 4/5) {
-  .demobutts-long {
-    top: 66%;
-    left: 5%;
-    height: 33%;
-    width: 90%;
-  }
-
-  .demobutts-submenu {
-    top: 0%;
-    left: 10%;
-    height: 30%;
-    width: 80%;
-  }
-
-  .demobutts-submenu:nth-of-type(2){
-    left: 10%;
-    top: 33%;
-  }
-
-  .demobutts-round {
-    position: absolute;
-    top: 0%;
-    left: 5%;
-    height: 100%;
-    width: 37%;
-  }
-
-  .demobutts-round:nth-of-type(1) {
-    left: 57%;
-  }
-}*/
-
 
 
 .contacts-demobutts-top table {
@@ -213,14 +41,14 @@ transition: 0.3s;
 
 .contacts-demobutts-bottom table {
   border-collapse: collapse;
-  width: 90%;
-  margin: auto;
-  margin-top: 10vh;
+  width: 50%;
+  margin-left: 33%;
+  margin-top: 8vh;
 }
 
 .contacts-demobutts-soclink {
 }
 
 .contacts-demobutts-soclink img {
-  height: calc(var(--menu-height)*1);
+  height: calc(var(--menu-height)*0.95);
 }

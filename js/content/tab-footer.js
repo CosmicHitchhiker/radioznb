@@ -13,15 +13,6 @@ document.write(`
       </div>
 
       <div class="tab-bottomsection-info">
-        <p>[ Здесь может быть техническая инфа про разное ]</p>
-        <p>[ Техническая инфа (про что?) ]</p>
       </div>`);
 
 
-
-
-// function show_model() {
-//   // Get images
-//   var modal_button_img = document.getElementsByClassName("footer-modal_btn-img");
-//   var modal_header_img = document.getElementsByClassName("footer-modal-header-image");
-// }
