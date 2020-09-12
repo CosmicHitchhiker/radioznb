@@ -76,11 +76,14 @@
 .shedule-prog-past {
   text-decoration: line-through;
   /*font-weight: bold;*/
+  opacity: 0.5;
 }
 
 .shedule-prog-current {
-  background: rgba(0,0,0,0.04);
-  background: linear-gradient(transparent 15%, rgba(0,0,0,0.08))
+/*background: rgba(0,0,0,0.04);
+  background: linear-gradient(transparent 15%, rgba(0,0,0,0.08));*/
+  font-weight: bold;
+
 }
 
 

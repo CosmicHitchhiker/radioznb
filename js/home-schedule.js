@@ -48,8 +48,17 @@ function updateSchedule(hours, min) {
 
 	// Определяется положение текущего времени в сортированном массиве со временем передач
 	prog_time_array.push(curr_time);
-	prog_time_array.sort();
-	curr_time_index = prog_time_array.indexOf(curr_time);
+	var prog_time_array_sorted = prog_time_array.sort();
+
+	// Передачи до 2х ночи включаются в текущий день
+	var add2evening = prog_time_array_sorted.filter(function(item){
+		prog_time_h = item.split(":")[0];
+		return prog_time_h == "00" ||  prog_time_h == "01" ||  prog_time_h == "02";
+	});
+	var prog_time_array_real = prog_time_array_sorted.splice(add2evening.length, prog_time_array_sorted.length);
+	prog_time_array_real.push(add2evening);
+
+	curr_time_index = prog_time_array_real.indexOf(curr_time);
 
 	// Прошедшим и текущей передачам добавляются соответствующие классы
 	for (i = 0; i < prog_time_ByCLass.length; i++) {
@@ -58,7 +67,11 @@ function updateSchedule(hours, min) {
 			prog.parentElement.classList.add("shedule-prog-past");
 		}
 		if (i == curr_time_index - 1) {
-			prog.parentElement.classList.add("shedule-prog-current")
+			for (j = 0; j < prog_time_ByCLass.length; j++){
+				// Убрать статус текущей у всех остальных передач
+				prog.parentElement.classList.remove("shedule-prog-current");
+			}
+			prog.parentElement.classList.add("shedule-prog-current"); 
 		}
 	}
 }
