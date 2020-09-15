@@ -69,6 +69,7 @@
 			  transition: 0.4s;
 			  border: none;
 			  border-radius: 5px;
+			  margin-top: 1vh;
 			}
 			.active, .editor-accordion:hover {
 			  background-color: #403F4C; 
@@ -78,8 +79,14 @@
 			  display: none;
 			  overflow: hidden;
 			}
-			
 
+			.newsform-add,
+			.news_editor_form {
+				width: 50%;
+			}
+			.newsform-add {
+				padding-right: 5vh;
+			}
 			textarea {
 				background-color: #ffffff;
 			}
@@ -112,18 +119,18 @@
 				background-color: #FCA311;
 			}			
 			
-			#current_news {
-			  max-width: 50%;
+			#current_news {/*
+			  max-width: 50%;*/
 			  height: 70vh;
 			}
 			#current_schedule {
-			  max-width: 50%;
-			}
+			  width: 100%;
+		}
 			.home-content {
 			  font: normal 110% arial, sans-serif;
-			  position:absolute;
+			  /*position:absolute;
 			  top: 16vh;
-			  left:50%;
+			  left:50%;*/
 			  width:86.5vh;
 			}
 
@@ -139,12 +146,37 @@
 			  background-color: white;
 			  border-radius: 5px;
 			}
+			.news_adder {
+
+			}
+			#newsadder-result {
+				color: black;
+			}
+			#newsform-title {
+				padding: 2vh;
+
+			}
+			#newsform-content {
+				font-family: Arial;
+				padding: 2vh;
+			}
 		</style>
 	</head>
 	<body onload="load_newsfile(); load_schedfile()">
-		<button class="editor-accordion">Новости</button>
+		<button class="editor-accordion">Сформировать новость</button>
+		<div class="news_adder editor-panel">
+			<form  id="newsform-add" class="newsform-add" method="post">
+				<input id="newsform-title" class="newsform-title" type="text" placeholder="Заголовок" required>
+				<textarea id="newsform-content" type="textarea" name="newsform-content"  rows="7" placeholder="Текст комментария" required></textarea>
+				<button type="button" class="button"  onclick="form_newsitem()">Перевести в JSON</button>
+			</form>
+		    <textarea id="newsadder-result" type="textarea">
+		    </textarea>
+		</div>
+
+		<button class="editor-accordion">Редактировать новости</button>
 		<div class="news_editor editor-panel">
-			<form method="post" action="update_news.php">
+			<form class="news_editor_form" method="post" action="update_news.php">
 				<div>
 				  	<textarea id="current_news" name="current_news" type="textarea" spellcheck="true"></textarea>
 				   	<br>		    
@@ -153,7 +185,6 @@
 					<input type="submit" class="button-fin" value="Подтвердить">
 				</div>
 			</form>
-			<br><br>
 			<div class="home-content">
 				<div class="home-news-section">
 					<div id="home-newsbox" class="home-newsbox">
@@ -162,7 +193,6 @@
 				</div>
 		   	</div>
     	</div>
-    	<br><br>
     	<button class="editor-accordion">Расписание на день</button>
     	<div class="schedule_editor editor-panel">
     		<form method="post" action="update_schedule.php">
@@ -179,17 +209,30 @@
 		  acc[i].addEventListener("click", function() {
 		    this.classList.toggle("active");
 		    var panel = this.nextElementSibling;
-		    if (panel.style.display == "block") {
+		    if (panel.style.display == "flex") {
 		      panel.style.display = "none";
 		    } else {
 		      for ( j = 0; j < pans.length; j++) {
 		      	pans[j].style.display = "none";
 		      }
-		      panel.style.display = "block";
+		      panel.style.display = "flex";
 		    }
 		  });
 		}
 	 </script>
+	 <script>
+	 	function form_newsitem() {
+		 	var ntitle = document.getElementById("newsform-title").value;
+		 	var ncontent = document.getElementById("newsform-content").value;
+		 	var d = new Date();
+		 	var months = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября" , "декабря"];
+		 	var current_date = [d.getDate(), months[d.getMonth()], d.getFullYear()].join(" ")
+			var nitem = {"title": ntitle, "content": ncontent, "date": current_date};
+			var nitem_result = document.getElementById("newsadder-result")
+			nitem_result.innerHTML = JSON.stringify(nitem);	 
+	 	}
+	 </script>
 </html>
+
 
 
