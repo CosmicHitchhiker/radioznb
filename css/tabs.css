@@ -2,6 +2,13 @@
   --tab-min-height: 85vh;
 }
 
+div {
+  /*font: normal 100% Open Sans, sans-serif;*/
+  font: 98% Comic Sans MS, cursive,sans-serif;
+}
+p {
+  line-height: 1.4;
+}
 .tab {
   position: absolute;
   top: 100%;
@@ -15,7 +22,7 @@
   /*margin-bottom: 20px;*/
   margin-bottom: 2.5vh;
   padding: 0vh;
-  font: normal 105% arial, sans-serif;
+  /*font: normal 105% arial, sans-serif;*/
   text-align: left;
   color: rgba(0, 0, 0, 1);  
 }
@@ -36,8 +43,9 @@
   position: absolute;
   width: var(--menu-width); 
   margin-bottom: 3vh;
+  border: none;
+  border-top: 4px solid transparent;
   border-image: url('../images/border-sm.png') 100 round round;
-  border-top: 4px solid black; 
 }
 
 .tab-anchor {
