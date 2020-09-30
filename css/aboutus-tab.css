@@ -142,8 +142,9 @@
   position: relative;
   margin: auto;
   overflow-wrap: break-word;
-  width: 40%;
+  width: 42%;
   padding-right: 3vh;
+  font-size: 0.76em;
 }
 
 @-webkit-keyframes zoom {
