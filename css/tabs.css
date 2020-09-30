@@ -4,7 +4,8 @@
 
 div {
   /*font: normal 100% Open Sans, sans-serif;*/
-  font: 103% Comic Sans MS, cursive,sans-serif;
+  /*font: 103% Comic Sans MS, cursive,sans-serif;*/
+  font: 103% helvetica, arial, sans-serif;
 }
 p {
   line-height: 1.4;
