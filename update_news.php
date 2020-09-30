@@ -8,6 +8,6 @@
   if ($fw) echo "Новости обновлены!";
   else echo "Error";
   echo "<br><br>";
-  echo "<button><a href='http://srv88072.ht-test.ru/admin.html'>Вернуться на админскую страницу</a></button>";
-  echo "<button><a href='http://srv88072.ht-test.ru'>Перейти на сайт радио</a></button>";
+  echo "<button><a href='http://radioznb.ru/admin.html'>Вернуться на админскую страницу</a></button>";
+  echo "<button><a href='http://radioznb.ru'>Перейти на сайт радио</a></button>";
 ?> 
