@@ -127,7 +127,7 @@
 			  width: 100%;
 		}
 			.home-content {
-			  font: normal 110% arial, sans-serif;
+			  font: 100% Roboto, Noto Sans, Arial, sans-serif;
 			  /*position:absolute;
 			  top: 16vh;
 			  left:50%;*/
@@ -157,9 +157,17 @@
 
 			}
 			#newsform-content {
-				font-family: Arial;
+				font: 100% Roboto, Noto Sans, Arial, sans-serif;
 				padding: 2vh;
 			}
+			p {
+				font: 100% Roboto, Noto Sans, Arial, sans-serif;
+			}
+			.schedule_editor-instructions {
+				padding: 3vh 7vh;
+				width: 50%;
+			}
+
 		</style>
 	</head>
 	<body onload="load_newsfile(); load_schedfile()">
@@ -182,7 +190,7 @@
 				   	<br>		    
 					<button type="button" class="button" id="show_page" onclick="show_updated_news()">Показать обновленную версию</button>
 					<button type="button" class="button" id="hide_page" onclick="reset_updated_news()">Скрыть</button>
-					<input type="submit" class="button-fin" value="Подтвердить">
+					<input type="submit" class="button-fin" value="Подтвердить изменения">
 				</div>
 			</form>
 			<div class="home-content">
@@ -196,11 +204,23 @@
     	<button class="editor-accordion">Расписание на день</button>
     	<div class="schedule_editor editor-panel">
     		<form method="post" action="update_schedule.php">
-				<textarea id="current_schedule" name="current_schedule" type="textarea" rows="30" cols="50" spellcheck="true"></textarea>
+				<textarea id="current_schedule" name="current_schedule" type="textarea" rows="30" cols="80" spellcheck="true"></textarea>
 				<br>
 			    <input type="submit" class="button-fin" value="Подтвердить изменения">
 	    	</form>
+	    	<div class="schedule_editor-instructions">
+	    		<p><b>Чтобы в расписании ничего не поехало:</b></p>
+	    		<ul style="padding-inline-start:20px;">
+	    			<li><p>любой предваряющий текст (заголовок расписания) должен быть отделен от самого расписания тремя или больше переносами строки.</p></li>
+	    			<li><p>если предваряющего текста нет, всё равно нужно поставить три переноса строки перед раписанием (иначе первая передача станет этим предваряющим текстом).</p></li>
+	    			<li><p>любые строки после трёх переносов, если они не содержат указание на время, не отображаются в расписании (то есть, номер карты и призывы заплатить можно не удалять).</p></li>
+	    			<li><p>время указывается в формате HH:MM.</p></li>
+	    			<li><p>время отделяется от описания передачи при помощи " - " (пробел дефис пробел).</p></li>
+	    			<li><p>передачи могут быть разделены любым количеством переносов строки.</p></li>
+	    		<ul>
+	   		</div>
     	</div>
+
 	</body>
 	<script>
 		var acc = document.getElementsByClassName("editor-accordion");

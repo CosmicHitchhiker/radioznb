@@ -64,7 +64,7 @@ function insert_tabs(data) {
     }
     tabpages.innerHTML += `<div class="tab-program-content" id="prog-tab-` + i + `">
                             <h2>` + data[i].title.replace(/[\r\n]+/g, " ")+ `</h2>
-                            <p>` + data[i].description.replace(/[\r\n]+/g, "<br>") + `</p>` + show_author(data[i].author) + 
+                            <p>` + data[i].description.replace(/[\r\n]/g, "<br>") + `</p>` + show_author(data[i].author) + 
                           `</div>`;    
   };
 }
