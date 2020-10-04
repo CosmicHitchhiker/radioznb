@@ -252,7 +252,7 @@
 		 	var current_date = [d.getDate(), months[d.getMonth()], d.getFullYear()].join(" ")
 			var nitem = {"title": ntitle, "content": ncontent, "date": current_date};
 			var nitem_result = document.getElementById("newsadder-result")
-			nitem_result.innerHTML = JSON.stringify(nitem);	 
+			nitem_result.innerHTML = JSON.stringify(nitem) + ",";	 
 	 	}
 	 </script>
 </html>
