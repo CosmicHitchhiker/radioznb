@@ -90,7 +90,10 @@
 			textarea {
 				background-color: #ffffff;
 			}
+			button, input {
+				font-family: Roboto, Noto Sans, Arial, sans-serif;
 
+			}
 			.button {
 				padding: 10px; 
 				background-color: #E0E0E0;
@@ -154,11 +157,11 @@
 			}
 			#newsform-title {
 				padding: 2vh;
-
+				font: 0.9em Roboto, Noto Sans, Arial, sans-serif;
 			}
 			#newsform-content {
-				font: 100% Roboto, Noto Sans, Arial, sans-serif;
 				padding: 2vh;
+				font: 0.9em Roboto, Noto Sans, Arial, sans-serif;
 			}
 			p {
 				font: 100% Roboto, Noto Sans, Arial, sans-serif;
@@ -175,7 +178,7 @@
 		<div class="news_adder editor-panel">
 			<form  id="newsform-add" class="newsform-add" method="post">
 				<input id="newsform-title" class="newsform-title" type="text" placeholder="Заголовок" required>
-				<textarea id="newsform-content" type="textarea" name="newsform-content"  rows="7" placeholder="Текст комментария" required></textarea>
+				<textarea id="newsform-content" type="textarea" name="newsform-content"  rows="7" placeholder="Текст новости" required></textarea>
 				<button type="button" class="button"  onclick="form_newsitem()">Перевести в JSON</button>
 			</form>
 		    <textarea id="newsadder-result" type="textarea">
