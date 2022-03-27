@@ -1,0 +1,144 @@
+/* ------------------------ Accordion ------------------------------ */
+#tab-regulars > .tab-uppersection {
+  padding: 0vh 2vh;
+  padding-bottom: 5vh;
+  min-height: calc(var(--tab-min-height)*0.7);
+}
+
+.regulars-accordion {
+  display: none;
+  width: 85%;
+  margin: auto;
+  font-size: 1.1em;
+}
+
+.regulars-accordion ul {
+/*  list-style-type: none;
+*//*  list-style-image: url("../images/dot.png");*/
+ list-style-type: circle;
+ font-size: inherit;
+}
+
+.regulars-accordion ul li {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 2vh;
+  font-size: inherit;
+/*  background-image: url("../images/dot.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 1vh;*/
+}
+
+.accordion-program-title {
+  /*transition: 0.4s;*/
+  width: 100%;
+  outline: none;
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  font-size: inherit;
+  text-align: left; 
+}
+
+.regulars-accordion-active > span {
+  transition: 0.4s;
+  font-weight: bold;
+}
+
+.accordion-program-content {
+  display: none;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+  padding: 1vh 2vw;
+  padding-bottom: 2vh;
+  background-color: white;  
+  color: #444;
+  font-size: inherit;
+}
+
+.prog_tablinks {
+  float: left;
+  border: 1px solid lightgrey;
+  /*background-color: #fff;*/
+  width: 16%;
+  min-height: 52vh;
+}
+
+#prog_tablinks-left {
+  padding-left: 8vh;
+  padding-top: 4vh;
+  padding-right: 1vh;
+  background-image: linear-gradient(90deg, transparent 7.9vh, #e63946 7.8vh, #9a031e 8.1vh, transparent 8.1vh),
+  linear-gradient(#AAAAB1 .01em, transparent .04em);
+  background-size: 100% 1.2em;
+}
+
+#prog_tablinks-right {
+  padding-right: 8.5vh;
+  padding-top: 4vh;
+  padding-left: 1vh;
+  background-image: linear-gradient(90deg, transparent 23.3vh, #e63946 23.3vh, #9a031e 23.5vh, transparent 23.5vh),
+  linear-gradient(#AAAAB1 .01em, transparent .04em);
+  background-size: 100% 1.2em;
+}
+
+
+.prog_tablinks button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 18px 15px;
+  width: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  text-transform: lowercase;
+}
+
+.prog_tablinks button:hover,
+.prog_tablinks button:focus, 
+.prog_tablinks button.active {
+  /*background-color: #ddd;*/
+  font-weight: bold;
+  border:none;
+}
+
+#prog_tablinks-left > button {
+  text-align: left;
+}
+#prog_tablinks-right > button {
+  text-align: right;
+}
+
+#prog_tabpages {
+    min-height: 500px;
+    float: left;
+    width: 54%;
+    padding: 0vh 0vh;
+}
+
+#regulars-tabpage-defaultOpen {
+  display: block;
+}
+
+.tab-program-content {
+  display: none;
+  padding: 8vh 7vh;
+  height: 500px;
+  border: none;
+}
+
+
+@media(hover: hover) and (pointer: fine) {
+  .accordion-program-title:hover > span {
+  /*transition: 0.4s;*/
+  /*background-color: pink;*/
+  font-weight: bold;
+  }
+}
+
+
+

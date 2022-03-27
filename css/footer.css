@@ -1,0 +1,188 @@
+
+.tab-bottomsection-info {
+  width: 90%; 
+  margin: auto;
+  padding-bottom: 5vh;
+  text-align: center;
+}
+
+.tab-bottomsection-buttons {
+  /*width: 70%;*/
+  width: 45%;
+  margin: auto;
+}
+
+.footer-modal_btn {
+  display: inline-block;
+  margin-top: 2vh;
+  min-width: calc(var(--menu-width) * 0.4);
+  /*height: 8.4vh;*/
+  height: 10.4vh;
+  padding: 0vh 1vw;
+  border: none;
+  border-radius: 5vh;
+  background-color: #ffffff;
+  cursor: pointer;  
+  font-size: inherit;
+  text-align: center;
+  text-decoration: none;
+  color: grey; /*for alt text*/  
+}
+
+.footer-modal_btn:nth-child(1) {
+  background-image: url(https://www.onlygfx.com/wp-content/uploads/2017/04/grunge-brush-stroke-banner-2-3-1024x289.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.footer-modal_btn:nth-child(2) {
+  margin-top: 0vh;
+}
+
+.footer-modal_btn:nth-child(2):hover {
+  background-color: #ffffff;
+}
+
+.footer-modal_btn:nth-child(1) > img {
+	/*width: 38%;*/
+  width: 200px;
+	margin: auto;
+}
+
+.footer-modal_btn:nth-child(2) > img {
+  width: 270px;
+  margin: auto;
+}
+
+
+.footer-modal_btn-img-active,
+.footer-modal_btn:hover > .footer-modal_btn-img,
+.footer-active-btn > .footer-modal_btn-img {
+	display: none;
+}
+
+.footer-modal_btn:hover > .footer-modal_btn-img-active,
+.footer-active-btn > .footer-modal_btn-img-active {
+	display: block;	
+}
+
+.footer-modal_btn:hover, 
+.footer-modal_btn:focus,
+.footer-modal_btn:active  {
+	border: none;
+  outline: none;
+}
+
+.footer-modal {
+  position: fixed;
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  display: none; /* Hidden by default */
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  padding-top: 4.5vh;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.7);
+  /*font: normal 105% arial, sans-serif;*/
+  text-align: left;
+}
+
+
+.footer-modal-content {
+  position: relative;
+  overflow: auto;
+  margin: auto;
+  width: 55%;
+  /*border: 2px solid black;*/
+  border-radius: 0vh;  
+  /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6),0 6px 20px 0 rgba(0,0,0,0.59);*/
+  padding: 0;
+  background-color: #fefefe;
+}
+
+.footer-modal-content::-webkit-scrollbar {
+  display: none;
+}
+
+.footer-modal-content {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.footer-modal-close {
+  position: absolute;
+  top: 1.5vh;
+  right: 1.5vh;
+  font-size: 4vh;
+  font-weight: bold;
+  color: black;
+}
+
+.footer-modal-close:hover,
+.footer-modal-close:focus {
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+}
+
+.footer-modal-header {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  padding-top: 3vh;
+/*  border-bottom: 2px dotted black;
+  background-color: lightblue;*/
+  /*background-color: rgb(0,0,0);
+  color: #ffffff;*/
+}
+
+.footer-modal-header h2{
+  font-weight: bold;
+  text-align: center;
+  /*color: #ffffff;*/
+  color: black;
+}
+
+.footer-modal-body {
+  margin: auto;
+  height: 70vh;
+  min-height: 40vh;
+  padding: 5vh 8vw 8vh 8vw;
+  text-align: justify;
+}
+
+
+.footer-modal-body > ul {
+	list-style: disc;
+	padding-bottom: 6vh;
+	padding-inline-start: 20px;
+}
+
+.footer-modal-body > ul > li {
+  padding-top: 3vh;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+
+.footer-modal-header-image {
+  /*width: 40%;*/
+  height: 4.6vh;
+ /* padding: 4vh 30% 0vh;*/
+}
+
+.footer-button {
+	text-align: center;
+	margin-top: 6vh;
+  margin-bottom: 6vh;
+}

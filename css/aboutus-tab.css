@@ -1,0 +1,160 @@
+#tab-aboutus > .tab-uppersection {
+	height: calc(var(--tab-min-height) * 1.45);
+}
+
+.aboutus-manifest {
+/*	font-size: 1.1em;
+*/
+	text-align: justify;
+	padding: 10vh 13vw 0vh 13vw;
+
+}
+
+/* ------------- Face Images -------------- */
+.aboutus-faces {
+  /*position: absolute;*/
+  position: static;
+  overflow: hidden;
+  /*padding: 0vh 4.2vh;*/
+}
+
+.aboutus-faces-line {
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flexbox; /* NEW - Chrome */
+  display: -webkit-flex; /* NEW - Chrome */
+  display: flex;
+
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 4vh;
+}
+
+.aboutus-face {
+  position: relative;
+  /*transition: 0.4s;*/
+  margin: 1vh 1vw;
+  /*height: 280px;*/
+  height: 30vh;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.aboutus-face:hover {
+	opacity: 0.7;
+}
+
+/* ------------- Face Modals -------------- */
+
+.close {
+  position: absolute;
+  top: 1.5vh;
+  right: 1.5vh;
+  font-size: 4vh;
+  font-weight: bold; 
+  color: black;
+}
+
+.close:hover,
+.close:focus {
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;    
+}
+
+.aboutus-face-modal {
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.7);
+  display: none; /* Hidden by default */
+  overflow: auto;
+  position: fixed;
+  z-index: 2; /* Sit on top */
+  padding-top: 45px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.aboutus-face-modal-content {
+  background-color: #fefefe;
+  /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4),0 6px 20px 0 rgba(0,0,0,0.39);*/
+  margin: auto;
+  padding: 0;
+  position: relative;
+  min-height: 50%;
+  max-height: 50%;
+  top: 20%;
+  width: calc(var(--menu-width) / 1.5);
+
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.3s;
+  animation-name: zoom;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flexbox; /* NEW - Chrome */
+  display: -webkit-flex; /* NEW - Chrome */
+  display: flex;
+  overflow: hidden;
+}
+
+.aboutus-face-large {
+	height: 52vh;
+    position: relative;
+/*    left: 2vw;
+    top: 4vh;*/
+}
+
+#stesh-face-modal > .aboutus-face-modal-content > img {
+	height: 54vh;
+	transform: translate(-20px, -25px);
+}
+#egor-face-modal  > .aboutus-face-modal-content > img {
+	height: 50vh;
+	transform: translate(-18px, -15px);
+}
+#anya-face-modal > .aboutus-face-modal-content > img {
+	transform: translate(-25px, -45px) rotate(-3deg);
+}
+#olya-face-modal > .aboutus-face-modal-content > img {
+  height: 51vh;
+	transform: translate(-37px, -30px) rotate(-4deg);
+}
+#fed-face-modal > .aboutus-face-modal-content > img {
+	transform: translate(-12px, -42px);
+}
+#seva-face-modal > .aboutus-face-modal-content > img {
+	transform: translate(-18px, -7px);
+}
+#motya-face-modal > .aboutus-face-modal-content > img {
+	transform: translate(-28px, 9px) rotate(2deg);
+}
+
+.aboutus-face-modal-description {
+  position: relative;
+  margin: auto;
+  overflow-wrap: break-word;
+  width: 42%;
+  padding-right: 3vh;
+  font-size: 0.76em;
+}
+
+@-webkit-keyframes zoom {
+  0% {
+		transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+  }
+	100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}

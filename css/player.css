@@ -1,0 +1,108 @@
+.player-main {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  max-height: 100%;
+  max-width: 100%;
+  position: relative;
+  height: 5000px;
+  width: 5000px;
+}
+
+.player-image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  top: 5vh;
+  left: 0;
+}
+
+#player-play-button {
+  position: absolute;
+  top: 67%;
+  left: 47%;
+  height: 19%;
+}
+
+#player-stop-button {
+  position: absolute;
+  top: 66%;
+  left: 68%;
+  height: 19%;
+}
+
+#player-stop-button:hover {
+  position: absolute;
+  top: 64.5%;
+  left: 66.5%;
+  height: 21%;
+}
+
+#player-play-button:hover {
+  position: absolute;
+  top: 65.5%;
+  left: 45.5%;
+  height: 21%;
+}
+
+#player-volume-control {
+  position: absolute;
+  top: 92%;
+  left: 45%;
+  width: 40%;
+  height: 5%;
+}
+
+#player-volume-line {
+  position: absolute;
+  top: 26%;
+  left: 0%;
+  height: 40%;
+  width: 100%;
+}
+
+#player-volume-dot {
+  position: absolute;
+  top: -4%;
+  left: 90%;
+  height: 100%;
+}
+
+#player-sound {
+  display: none;
+}
+
+@media only screen and (max-aspect-ratio: 3/2) {
+  #player-volume-control{
+    display: none;
+  }
+
+  #player-play-button {
+    position: absolute;
+    top: 68%;
+    left: 44%;
+    height: 22%;
+  }
+
+  #player-stop-button {
+    position: absolute;
+    top: 67%;
+    left: 66%;
+    height: 22%;
+  }
+
+  #player-stop-button:hover {
+    position: absolute;
+    top: 67%;
+    left: 66%;
+    height: 22%;
+  }
+
+  #player-play-button:hover {
+    position: absolute;
+    top: 68%;
+    left: 44%;
+    height: 22%;
+  }
+}

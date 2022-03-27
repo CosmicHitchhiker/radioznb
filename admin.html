@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Редактор</title>
+		<link rel="icon" type="image/png" href="images/favicons/favicon-16x16.png" sizes="16x16" />
+		<link rel="icon" type="image/png" href="images/favicons/favicon-32x32.png" sizes="32x32" />
+ 		<link rel="stylesheet" href="css/home-tab.css">
+		<script>
+		// загрузка новостного json-файла с сервера 
+		function load_newsfile() {
+			fetch('data/newslist.json?v=<?php echo rand(1000,10000)?>')
+				.then(response => response.text())
+				.then(items => document.getElementById("current_news").value = items);
+		}
+
+		// показывает отображение новостей на сайте 
+		function show_updated_news() {
+			var newslist = JSON.parse(document.getElementById("current_news").value);
+			var newsfeed = document.getElementById('home-newsfeed');
+
+			// очистка контейнера
+			if (newsfeed.innerHTML != '') {newsfeed.innerHTML = ''};
+
+			// запись новостей в контейнер	
+			for (i = 0; i < newslist.length; i++) {
+				var title = newslist[i].title;
+				var content = newslist[i].content.replace(/\n/g, "<br/>"); 
+				var date = newslist[i].date;
+				newsfeed.innerHTML += `<li>
+										<div class='home-newsfeed-title-text'>
+										  <label>` + title + `</label>
+										</div>
+										<div class='home-newsfeed-content-text'>
+										  <p>` + content + `</p>
+										  <span class='home-newsfeed-date sub-text'>` + date + `</span>
+										</div>
+									  </li>`;
+			}
+		}
+
+		// сбрасывает отображение новостей 
+		function reset_updated_news() {
+			var newsfeed = document.getElementById('home-newsfeed');
+			newsfeed.innerHTML = ""
+		}
+		</script>
+		<script>
+		// загрузка расписания с сервера 
+		function load_schedfile() {
+			fetch('data/schedule.txt?v=<?php echo rand(1000,10000)?>')
+				.then(response => response.text())
+				.then(data => document.getElementById("current_schedule").value = data);
+		}
+
+		</script>
+		<style>
+			.editor-accordion {
+			  background-color: #555464;
+			  color: #ffffff;
+			  cursor: pointer;
+			  padding: 50px;
+			  width: 100%;
+			  border: none;
+			  text-align: center;
+			  outline: none;
+			  font-size: 1.1em;
+			  transition: 0.4s;
+			  border: none;
+			  border-radius: 5px;
+			  margin-top: 1vh;
+			}
+			.active, .editor-accordion:hover {
+			  background-color: #403F4C; 
+			}
+			.editor-panel {
+			  padding: 2vh 5vh;
+			  display: none;
+			  overflow: hidden;
+			}
+
+			.newsform-add,
+			.news_editor_form {
+				width: 50%;
+			}
+			.newsform-add {
+				padding-right: 5vh;
+			}
+			textarea {
+				background-color: #ffffff;
+			}
+			button, input {
+				font-family: Roboto, Noto Sans, Arial, sans-serif;
+
+			}
+			.button {
+				padding: 10px; 
+				background-color: #E0E0E0;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+			}
+			.button:hover,
+			.button:focus {
+				border: none;
+				border-radius: 5px;
+				padding: 10px; 
+				background-color: #D6D6D6;
+			}
+			.button-fin {
+				padding: 10px; 
+				background-color: #FDB849;				
+				border: none;
+				border-radius: 4px;				
+				cursor: pointer;
+			}
+			.button-fin:hover,
+			.button-fin:focus {							
+				border: none;
+				border-radius: 4px;	
+				background-color: #FCA311;
+			}			
+			
+			#current_news {/*
+			  max-width: 50%;*/
+			  height: 70vh;
+			}
+			#current_schedule {
+			  width: 100%;
+		}
+			.home-content {
+			  font: 100% Roboto, Noto Sans, Arial, sans-serif;
+			  /*position:absolute;
+			  top: 16vh;
+			  left:50%;*/
+			  width:86.5vh;
+			}
+
+			.home-news-section {
+			  min-width:100%;
+			  height:70vh;
+			  padding-left: 3vw;
+			}
+
+			.home-newsfeed {
+			  height:70vh;
+			  border:1px solid grey;
+			  background-color: white;
+			  border-radius: 5px;
+			}
+			.news_adder {
+
+			}
+			#newsadder-result {
+				color: black;
+			}
+			#newsform-title {
+				padding: 2vh;
+				font: 0.9em Roboto, Noto Sans, Arial, sans-serif;
+			}
+			#newsform-content {
+				padding: 2vh;
+				font: 0.9em Roboto, Noto Sans, Arial, sans-serif;
+			}
+			p {
+				font: 100% Roboto, Noto Sans, Arial, sans-serif;
+			}
+			.schedule_editor-instructions {
+				padding: 3vh 7vh;
+				width: 50%;
+			}
+
+		</style>
+	</head>
+	<body onload="load_newsfile(); load_schedfile()">
+		<button class="editor-accordion">Сформировать новость</button>
+		<div class="news_adder editor-panel">
+			<form  id="newsform-add" class="newsform-add" method="post">
+				<input id="newsform-title" class="newsform-title" type="text" placeholder="Заголовок" required>
+				<textarea id="newsform-content" type="textarea" name="newsform-content"  rows="7" placeholder="Текст новости" required></textarea>
+				<button type="button" class="button"  onclick="form_newsitem()">Перевести в JSON</button>
+			</form>
+		    <textarea id="newsadder-result" type="textarea">
+		    </textarea>
+		</div>
+
+		<button class="editor-accordion">Редактировать новости</button>
+		<div class="news_editor editor-panel">
+			<form class="news_editor_form" method="post" action="update_news.php">
+				<div>
+				  	<textarea id="current_news" name="current_news" type="textarea" spellcheck="true"></textarea>
+				   	<br>		    
+					<button type="button" class="button" id="show_page" onclick="show_updated_news()">Показать обновленную версию</button>
+					<button type="button" class="button" id="hide_page" onclick="reset_updated_news()">Скрыть</button>
+					<input type="submit" class="button-fin" value="Подтвердить изменения">
+				</div>
+			</form>
+			<div class="home-content">
+				<div class="home-news-section">
+					<div id="home-newsbox" class="home-newsbox">
+						<ul id="home-newsfeed" class="home-newsfeed"></ul>
+					</div>
+				</div>
+		   	</div>
+    	</div>
+    	<button class="editor-accordion">Расписание на день</button>
+    	<div class="schedule_editor editor-panel">
+    		<form method="post" action="update_schedule.php">
+				<textarea id="current_schedule" name="current_schedule" type="textarea" rows="30" cols="80" spellcheck="true"></textarea>
+				<br>
+			    <input type="submit" class="button-fin" value="Подтвердить изменения">
+	    	</form>
+	    	<div class="schedule_editor-instructions">
+	    		<p><b>Чтобы в расписании ничего не поехало:</b></p>
+	    		<ul style="padding-inline-start:20px;">
+	    			<li><p>любой предваряющий текст (заголовок расписания) должен быть отделен от самого расписания двумя или больше переносами строки.</p></li>
+	    			<li><p>если предваряющего текста нет, всё равно нужно поставить два переноса строки перед раписанием (иначе первая передача станет этим предваряющим текстом).</p></li>
+	    			<li><p>любые строки после двух переносов, если они не содержат указание на время, не отображаются в расписании (то есть, номер карты и призывы заплатить можно не удалять).</p></li>
+	    			<li><p>время указывается в формате HH:MM.</p></li>
+	    			<li><p>время отделяется от описания передачи при помощи " - " (пробел дефис пробел).</p></li>
+	    			<li><p>передачи могут быть разделены любым количеством переносов строки.</p></li>
+	    		<ul>
+	   		</div>
+    	</div>
+
+	</body>
+	<script>
+		var acc = document.getElementsByClassName("editor-accordion");
+	    var pans = document.getElementsByClassName("editor-panel");
+		for (i = 0; i < acc.length; i++) {
+		  acc[i].addEventListener("click", function() {
+		    this.classList.toggle("active");
+		    var panel = this.nextElementSibling;
+		    if (panel.style.display == "flex") {
+		      panel.style.display = "none";
+		    } else {
+		      for ( j = 0; j < pans.length; j++) {
+		      	pans[j].style.display = "none";
+		      }
+		      panel.style.display = "flex";
+		    }
+		  });
+		}
+	 </script>
+	 <script>
+	 	function form_newsitem() {
+		 	var ntitle = document.getElementById("newsform-title").value;
+		 	var ncontent = document.getElementById("newsform-content").value;
+		 	var d = new Date();
+		 	var months = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября" , "декабря"];
+		 	var current_date = [d.getDate(), months[d.getMonth()], d.getFullYear()].join(" ")
+			var nitem = {"title": ntitle, "content": ncontent, "date": current_date};
+			var nitem_result = document.getElementById("newsadder-result")
+			nitem_result.innerHTML = JSON.stringify(nitem) + ",";	 
+	 	}
+	 </script>
+</html>

@@ -1,0 +1,58 @@
+
+.contacts-demobutts {
+  width: calc(var(--menu-width)*0.8);
+  margin: auto;
+  padding: 10vh 0vw;
+}
+
+.contacts-demobutts-button {
+  width: calc((var( --menu-width) * 0.8) / 8);
+}
+
+.contacts-demobutts-long {
+  width: calc((var( --menu-width) * 0.8) / 2);
+}
+
+.contacts-demobutts-button:hover, 
+.contacts-demobutts-button:focus {
+  opacity: 0.4;
+  transition: 0.3s;
+}
+
+
+.contacts-demobutts-top table {
+  border-collapse: collapse;
+}
+.contacts-demobutts-top table tr {
+  height: 14vh;
+}
+
+.contacts-demobutts-tglink {
+  width: 30vh;
+}
+
+.contacts-demobutts-tglink img {
+  width: 195px;
+  /*height: 10vh;*/
+}
+
+.contacts-demobutts-tglink-description {
+  width: 70vh;
+}
+
+.contacts-demobutts-bottom table {
+  border-collapse: collapse;
+  width: 50%;
+  margin-left: 33%;
+  margin-top: 8vh;
+}
+
+.contacts-demobutts-soclink {
+  padding:  25px 40px;
+}
+
+.contacts-demobutts-soclink img {
+  height: calc(var(--menu-height)*0.64);
+  float: right;
+  margin-right: 15px;
+}

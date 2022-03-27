@@ -1,0 +1,40 @@
+/*#tab-archive .tab-uppersection {
+	height: calc(var(--tab-min-height) *0.6);
+}*/
+
+#tab-archive {
+	height: var(--tab-min-height);
+}
+
+.soon {
+	position: relative;
+	width: 60%;
+	left: 20%;
+	top: 5vh;
+}
+
+.archtable {
+	padding: 10vh 5vw;
+}
+
+.archtable td {
+	margin: auto;
+	width: 33%;
+}
+
+.archlink {
+	text-decoration: none;
+	color: black;
+}
+
+.archlink_pad {
+	color: black;
+	text-transform: lowercase;
+	text-align: center;
+	padding: 3vh;
+	font-size: 105%;
+}
+
+.archlink_pad:hover {
+	text-decoration: line-through;
+}

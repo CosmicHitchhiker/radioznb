@@ -1,0 +1,59 @@
+:root {
+  --tab-min-height: 85vh;
+}
+
+div {
+  /*font: normal 100% Open Sans, sans-serif;*/
+  /*font: 103% Comic Sans MS, cursive,sans-serif;*/
+  font: 103% helvetica, arial, sans-serif;
+}
+p {
+  line-height: 1.4;
+}
+.tab {
+  position: absolute;
+  top: 100%;
+  left: calc((100% - var(--menu-width)) / 2);
+  display: none;
+  overflow: visible;
+  width: var(--menu-width);
+  min-height: var(--tab-min-height);
+  /*height: calc(100% - var(--menu-height));*/
+  margin: auto;
+  /*margin-bottom: 20px;*/
+  margin-bottom: 2.5vh;
+  padding: 0vh;
+  /*font: normal 105% arial, sans-serif;*/
+  text-align: left;
+  color: rgba(0, 0, 0, 1);  
+}
+
+.tab-uppersection {
+  overflow: hidden;
+  min-height: calc(var(--tab-min-height)*0.65);
+  /*padding: 10vh 5vw;*/
+  border-top: none;
+  border-bottom: none;
+
+   /*padding: 100px 70px;
+  padding-top: var(--menu-height);
+  border: 2px solid black;*/
+}
+
+
+.tab-bottomsection {
+  position: absolute;
+  width: var(--menu-width); 
+  margin-bottom: 3vh;
+  border: none;
+  border-top: 4px solid transparent;
+  border-image: url('../images/border-sm.png') 100 round round;
+}
+
+.tab-anchor {
+  position: absolute;
+  top: calc(100% - var(--menu-height));
+  visibility: hidden;  
+}
+
+

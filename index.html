@@ -1,0 +1,516 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>радио зимы не будет</title>
+    <meta name="description" content="зе бест рэдио ин зе ворлд">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css?modified=<? filemtime('css/style.css')>">
+    <link rel="stylesheet" href="css/player.css?modified=<? filemtime('css/player.css')">
+    <link rel="stylesheet" href="css/player-waves.css?modified=<? filemtime('css/player-waves.css')">    
+    <link rel="stylesheet" href="css/demobutts.css?modified=<? filemtime('css/demobutts.css')">
+    <link rel="stylesheet" href="css/menu.css?modified=<? filemtime('css/menu.css')">
+    <link rel="stylesheet" href="css/tabs.css?modified=<? filemtime('css/tabs.css')">
+    <link rel="stylesheet" href="css/footer.css?modified=<? filemtime('css/footer.css')">
+
+    <link rel="stylesheet" href="css/archive-tab.css?modified=<? filemtime('css/archive-tab.css')">
+    <link rel="stylesheet" href="css/regulars-tab.css?modified=<? filemtime('css/regulars-tab.css')">
+    <link rel="stylesheet" href="css/home-tab.css?modified=<? filemtime('css/home-tab.css')">
+    <link rel="stylesheet" href="css/aboutus-tab.css?modified=<? filemtime('css/aboutus-tab.css')">
+
+    <!-- favicons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="images/favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/favicons/android-chrome-512x512.png">
+
+    <script>document.getElementsByTagName("html")[0].className += " js";</script>
+
+  </head>
+
+  <body onload="load_schedule();load_news();setInterval(updateClock, 1000);">
+      <div class="waves" id="waves">
+        <div class="lwaves">
+          <div class="lwave-one">
+            <span><img class="lwave-one-1" src="images/waves/lwave-11.png?v=1.1"></img></span>
+            <span><img class="lwave-two-1" src="images/waves/lwave-12.png?v=1.1"></img></span>
+            <span><img class="lwave-three-1" src="images/waves/lwave-13.png?v=1.1"></img></span>
+          </div>
+          <div class="lwave-two">
+            <span><img class="lwave-one-2" src="images/waves/lwave-21.png?v=1.1"></img></span>
+            <span><img class="lwave-two-2" src="images/waves/lwave-22.png?v=1.1"></img></span>
+            <span><img class="lwave-three-2" src="images/waves/lwave-23.png?v=1.1"></img></span>
+          </div>
+          <div class="lwave-three">
+            <span><img class="lwave-one-3" src="images/waves/lwave-31.png?v=1.1"></img></span>
+            <span><img class="lwave-two-3" src="images/waves/lwave-32.png?v=1.1"></img></span>
+            <span><img class="lwave-three-3" src="images/waves/lwave-33.png?v=1.1"></img></span>
+          </div>
+        </div>
+        <div class="rwaves">
+          <div class="rwave-one">
+            <span><img class="rwave-three-1" src="images/waves/rwave-13.png?v=1.1"></img></span>
+            <span><img class="rwave-two-1" src="images/waves/rwave-12.png?v=1.1"></img></span>
+            <span><img class="rwave-one-1" src="images/waves/rwave-11.png?v=1.1"></img></span>
+          </div>
+          <div class="rwave-two">
+              <span><img class="rwave-three-2" src="images/waves/rwave-23.png?v=1.1"></img></span>
+              <span><img class="rwave-two-2" src="images/waves/rwave-22.png?v=1.1"></img></span>
+              <span><img class="rwave-one-2" src="images/waves/rwave-21.png?v=1.1"></img></span>
+          </div>
+          <div class="rwave-three">
+              <span><img class="rwave-three-3" src="images/waves/rwave-33.png?v=1.1"></img></span>
+              <span><img class="rwave-two-3" src="images/waves/rwave-32.png?v=1.1"></img></span>
+              <span><img class="rwave-one-3" src="images/waves/rwave-31.png?v=1.1"></img></span>
+          </div>
+        </div>
+      </div>
+      <div class="player">
+        <div class="player-main">
+          <img src="images/RADIOsyt.jpg?v=1.1" alt="радио" class="player-image">
+          <img src="images/play-sm.jpg?v=1.1" alt="радио" id="player-play-button">
+          <img src="images/stop-sm.jpg?v=1.1" alt="радио" id="player-stop-button">
+          <div id="player-volume-control">
+            <img src="images/scale.jpg?v=1.1" id="player-volume-line">
+            <img src="images/pointer.png?v=1.1" id="player-volume-dot">
+          </div>
+        </div>
+      </div>
+  <div id="menu" class="menu">
+    <!-- меню: архив передач -->
+    <a class="tablink" id="tablink-archive" href="#archive" onclick="openPage(event, 'tab-archive')">
+      <img class="tablink-img" id="tablink-archive-img" src="images/tab-archive.jpg?v=1.1">
+      <img class="tablink-img-active" id="tablink-archive-img-active" src="images/tab-archive-bold.jpg?v=1.1">
+    </a>
+
+    <!-- меню: регулярные передачи. описание -->
+    <a class="tablink" id="tablink-regulars" href="#regulars"  onclick="openPage(event, 'tab-regulars')">
+      <img class="tablink-img" id="tablink-regulars-img" src="images/tab-programs2.jpg?v=1.1">
+      <img class="tablink-img-active" id="tablink-regulars-img-active" src="images/tab-programs-bold.jpg?v=1.1">
+    </a>
+
+    <!-- меню: домашняя страница, текущее расписание и анонсы -->
+    <a class="tablink" id="tablink-home" href="#home" onclick="openPage(event, 'tab-home')">
+      <img class="tablink-img" id="tablink-home-img" src="images/tab-home.jpg?v=1.1">
+      <img class="tablink-img-active" id="tablink-home-img-active" src="images/tab-home-folks.jpg?v=1.1">
+    </a>
+
+    <!-- меню: о нас -->
+    <a class="tablink" id="tablink-aboutus" href="#aboutus" onclick="openPage(event, 'tab-aboutus')">
+      <img class="tablink-img" id="tablink-aboutus-img" src="images/tab-who2.jpg?v=1.1">
+      <img class="tablink-img-active" id="tablink-aboutus-img-active" src="images/tab-who-bold.jpg?v=1.1">
+    </a>
+
+    <!-- меню: ссылки на соцсети и скачивание -->
+    <a  class="tablink" id="tablink-contacts" href="#contacts" onclick="openPage(event, 'tab-contacts')">
+      <img class="tablink-img" id="tablink-contacts-img" src="images/tab-where2.jpg?v=1.1">
+      <img class="tablink-img-active" id="tablink-contacts-img-active" src="images/tab-where-bold.jpg?v=1.1">
+    </a>
+  </div>
+
+    <!-- страница: арxив передач -->
+    <div id="archive" class="tab-anchor">x</div>
+    <div id="tab-archive" class="tab">
+      <div class="tab-uppersection">
+        <!-- <img class="soon" src="images/soon.png?v=1.1">  -->
+        <table class="archtable">
+        	<tr>
+        		<td><a class="archlink" href="https://drive.google.com/drive/folders/1IhtkBX5TISvHkTLRFOL1QeF0hNK_UZY5?usp=sharing" target="_blank"><div class="archlink_pad">Антреприза</div></a></td>
+        		<td><a class="archlink" href="https://drive.google.com/drive/folders/1XYJk5yCh65AlPBf1TVmYzFW1j89jFaGz?usp=sharing" target="_blank"><div class="archlink_pad">Вульгарный футбол</div></a></td>
+        		<td><a class="archlink" href="https://drive.google.com/drive/folders/1W2YipXXwQeUiVwJGYnQynAd7fjNXqk7h?usp=sharing" target="_blank"><div class="archlink_pad">Демагог / Редакторская курилка</div></a></td>
+        	</tr>
+        	<tr>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/18WxcGDmD-27fh_uHsE8S6SOzgUXpFbVb?usp=sharing" target="_blank"><div class="archlink_pad">За 101-ый километр</div></a></td>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/1xmrO6G7G-1c4UudNBIeQv7doX2JNmoOx?usp=sharing" target="_blank"><div class="archlink_pad">Заплыв</div></a></td>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/1ACy7gUp_jj4nqLbsstPxOYimlNRGV6uz?usp=sharing" target="_blank"><div class="archlink_pad">Звёздный час</div></a></td>
+        	</tr>
+          <tr>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/1oLVs8Sbwbk7XmtwpJoym3gwdvZKjrLks?usp=sharing" target="_blank"><div class="archlink_pad">Зимы не будет</div></a></td>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/1GMqJc173APTwSFQaElwdJpTBbSkFO-vi?usp=sharing" target="_blank"><div class="archlink_pad">Кино с киновским</div></a></td>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/1oAwODFUW8uSmtyk-LXVbcdkBr9nHp8xe?usp=sharing" target="_blank"><div class="archlink_pad">Классический Егор</div></a></td>
+          </tr>
+        	<tr>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/1vs049JWPrTo6OF6zz7HnP4DqZ7NI_v05?usp=sharing" target="_blank"><div class="archlink_pad">Коврига</div></a></td>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/1cbOdXJ-67toOXmoBvFZhW3t6hHGnIhMa?usp=sharing" target="_blank"><div class="archlink_pad">Корни звука</div></a></td>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/1La4z0Awt7VRPnhtojyE5RNkL4MV3I0ah?usp=sharing" target="_blank"><div class="archlink_pad">Крок мадам</div></a></td>
+        	</tr>
+          <tr>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/1bYDFRtRtGRtMShasK8PtKWCsqcxs4t1o?usp=sharing" target="_blank"><div class="archlink_pad">Лайв трансмишн</div></a></td>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/1q0UweQZczJFQz-jV18WkrvUvRDEO5Ava?usp=sharing" target="_blank"><div class="archlink_pad">Лапша в уши</div></a></td>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/1yUIX9Pr4VNSR8wL_zugrysVsPnVi6jBY?usp=sharing" target="_blank"><div class="archlink_pad">Радио-лекторий</div></a></td>
+          </tr>
+          <tr>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/1_JAoWlk-CHpA2U6NzpQAKLblJj9mN41I?usp=sharing" target="_blank"><div class="archlink_pad">Медицина по верхам</div></a></td>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/1eFFmJSYy1yKtqkgLGdvh1k9clq8g5EdI?usp=sharing" target="_blank"><div class="archlink_pad">Если мем, то только смешной</div></a></td>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/1Or7tX6dftZPFLl-AkdBm-ym4Ltcijjb6?usp=sharing" target="_blank"><div class="archlink_pad">Музыкальная кухня</div></a></td>
+          </tr>
+          <tr>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/1rZJf07AYpjVvzHyt2SiDfMmvADJpYx90?usp=sharing" target="_blank"><div class="archlink_pad">О! Боги!</div></a></td>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/1ZEnQS1AKQpbnpOKJ_cSY5CGdinM5jnaL?usp=sharing" target="_blank"><div class="archlink_pad">Передай другому</div></a></td>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/1nEqgvmdO3xslCWrgKNRT3IUm0r_fr_Cb?usp=sharing" target="_blank"><div class="archlink_pad">Передача про битлз</div></a></td>
+          </tr>
+          <tr>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/1PzdK6oVeGz5VfG45kmSabVTn6KGcZijO?usp=sharing" target="_blank"><div class="archlink_pad">Пип, покойся с миром</div></a></td>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/1D_oFY4Es0mQBfRhGPYeDKb8NFWGqyDxT?usp=sharing" target="_blank"><div class="archlink_pad">Поэзия в изоляции</div></a></td>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/1FU7q1ndizBHJxUU9aym7rjEmhfNbaCa-?usp=sharing" target="_blank"><div class="archlink_pad">Приглашонный диджей</div></a></td>
+          </tr>
+          <tr>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/1mXllaA2SVpV8SjFCQOfWvHm3nnvtcumk?usp=sharing" target="_blank"><div class="archlink_pad">Работает Шамон</div></a></td>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/14RTUlQYILmy48-tA0SyXDBH0zzZ-vsE6?usp=sharing" target="_blank"><div class="archlink_pad">Радио саша</div></a></td>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/1mncPAATOwklmcT4ddkVLdhJuxSI48CHW?usp=sharing" target="_blank"><div class="archlink_pad">Разговор с интересным человеком</div></a></td>
+          </tr>
+
+          <tr>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/1-CZBGl8C6HtUVoy9Ejwdhkv1x3-s4J5T?usp=sharing" target="_blank"><div class="archlink_pad">Сочные беспозвоночные</div></a></td>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/1fy8kStEMPmCnxq3kuz4Ekwni3KpqTGUF?usp=sharing" target="_blank"><div class="archlink_pad">Сэмпломания</div></a></td>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/120TJtpMNLO9yCwhUHcDGPd-6ZRsk4c2H?usp=sharing" target="_blank"><div class="archlink_pad">Техническая встреча</div></a></td>
+          </tr>
+
+          <tr>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/1wUNHPBtH6jHRR6c8gSELCQibP7PwDlhB?usp=sharing" target="_blank"><div class="archlink_pad">Трансфер</div></a></td>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/1NlPlOeOa8jU375xtyC21KyXcrfsBMHZ7?usp=sharing" target="_blank"><div class="archlink_pad">Фрустайл</div></a></td>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/1j_GLemaciAixICavCxhl-DB51e3VQFRp?usp=sharing" target="_blank"><div class="archlink_pad">Хороший год - хороший день</div></a></td>
+          </tr>
+          <tr>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/1llWXMC4KhF9xHtKM_V670lErpbYD-Wgm?usp=sharing" target="_blank"><div class="archlink_pad">Что-нибудь о путешествиях</div></a></td>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/1slLM4gdNDDcKr5jkRoZyVXqIOLfs2Xte?usp=sharing" target="_blank"><div class="archlink_pad">Elektriµni orgazam</div></a></td>
+            <td><a class="archlink" href="https://drive.google.com/drive/folders/1TLFiAv_hBNey1aIjZwUnHi08DEtNWQMe?usp=sharing" target="_blank"><div class="archlink_pad">Элементарное слушание музыки</div></a></td>
+          </tr>
+        </table>
+      </div>
+      <div class="tab-bottomsection">
+        <script src="js/content/tab-footer.js?modified=<? filemtime('js/content/tab-footer.js')"></script>
+      </div>
+    </div>
+
+
+      <!-- страница: передачи -->
+    <div id="regulars" class="tab-anchor">x</div>
+    <div id="tab-regulars" class="tab">
+      <div class="tab-uppersection">
+
+        <div id="prog_tabs">
+
+          <div id="prog_tablinks-left" class="prog_tablinks">
+          </div>
+          <div id="prog_tabpages">
+            <div class="tab-program-content" id="regulars-tabpage-defaultOpen">
+              <h2>здесь передачи</h2>
+              <p>на радио много передач много о чём, <br />под них (и вместе с ними) можно делать много что.</p> <p>а здесь некоторые из регулярных.</p>
+            </div>
+          </div> 
+          <div id="prog_tablinks-right" class="prog_tablinks">
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!-- аккордеон с текущими передачами -->
+        <div class="regulars-accordion">
+          <ul id="regulars-accordion-current-list">
+            <!-- сюда скиптом вставляются передачи. -->
+
+          </ul>
+        </div>
+
+<!--         <hr style="height:2px;width:60%;margin:auto;background-color:black;">
+ -->
+        <!-- прошедщие передачи -->
+        <div class="regulars-accordion">
+          <ul id="regulars-accordion-past-list"></ul>
+        </div>
+
+       
+
+      </div>
+      <div class="tab-bottomsection">
+        <script src="js/content/tab-footer.js?modified=<? filemtime('js/content/tab-footer.js')"></script>
+      </div>
+    </div>
+
+
+    <!-- страница: домашняя -->
+    <div id="home" class="tab-anchor">x</div>
+    <div id="tab-home" class="tab">
+      <div class="tab-uppersection">
+          <div class="home-content">
+            <div class="home-timeline-section">
+              <div class="home-schedule" id="home-schedule">
+                <div id="home-schedulde-pretext"></div>
+                <!-- <span id="curr_time"></span> -->
+                <table>
+                  <tbody id="home-schedule-table">
+                  </tbody>
+                </table>           
+              </div>
+            </div>
+            <div class="home-news-section">
+                  <div id="home-newsbox" class="home-newsbox">
+                      <div id="home-newsform"></div>
+                      <ul id="home-newsfeed" class="home-newsfeed"></ul>
+                  </div>
+                </div>
+            </div>
+      </div>
+      <div class="tab-bottomsection">
+        <script src="js/content/tab-footer.js?modified=<? filemtime('js/content/tab-footer.js')"></script>
+      </div>
+    </div>
+
+    <!-- страница: о нас -->
+    <div id="aboutus" class="tab-anchor">x</div>
+    <div id="tab-aboutus" class="tab">
+      <div class="tab-uppersection">
+        <!-- <h1>заголовок если нужно</h1> -->
+        <div class="aboutus-manifest">
+          <p>Манифест Манифест. Манифистирую манифест. Мани мани мани. Манифест Манифест. Манифистирую манифест. Мани мани мани.  Манифистирую манифест. Манифест Манифест. Забываю прислать манифест. Ставлю чашку с чаем на недописанный манифест. Остаются кольца-отметины на недописаном манифесте. Это манифест. Смазываются буквы. Манифеста. Манифест мой манифест. Манифест Манифест. Манифистирую манифест. Мани мани мани. Манифест Манифест. Манифистирую манифест. Мани мани мани.  Манифистирую манифест. Манифест Манифест. Забываю прислать манифест. Ставлю чашку с чаем на недописанный манифест. Остаются кольца-отметины на недописаном манифесте. Это манифест. Смазываются буквы. Манифеста. Манифест мой манифест.</p>
+        </div>
+        <div class="aboutus-faces">
+
+          <div class="aboutus-faces-line">    
+	          <img src="images/faces/Ol-sm.jpg" class="aboutus-face" alt="Оля" id="olya">
+	          <div id="olya-face-modal" class="aboutus-face-modal">
+	            <div class="aboutus-face-modal-content">
+	              <img class="aboutus-face-large">
+	              <div class="aboutus-face-modal-description">
+	                <p>это я, я оля котрелёва.<br>
+	                в целом мне все нравится и ко всему я отношусь с осторожностью</p>
+	                <p>ничего такого уж, всё как у всех, в семь утра мне хочется спать, а в шесть утра иногда ноги заплетаются и я не могу дойти до дома.</p><p>люблю ходить пешком, дорогу, идёшь-идёшь и чётче становится. музыку люблю ещё, особенно, когда она сама рождается</p>
+	              </div>
+	              <span class="close"><img src="images/close.jpg"></span> 
+	            </div>
+	          </div>
+
+	          <img src="images/faces/Egor-sm.jpg" class="aboutus-face" alt="Егор" id="egor">
+	          <div id="egor-face-modal" class="aboutus-face-modal">
+	            <div class="aboutus-face-modal-content">
+	              <img class="aboutus-face-large">
+	              <div class="aboutus-face-modal-description">
+	                <p>ЕГОР ЗАЛОГИН</p>
+	                <p>Отучился на биолога, специализируюсь на муравьях, форсирую естественнонаучный блок передач на радио.</p>
+	              </div>
+	              <span class="close"><img src="images/close.jpg"></span> 
+	            </div>
+	          </div>
+
+	          <img src="images/faces/Fed-sm.jpg" class="aboutus-face" alt="Федя" id="fedya">
+	          <div id="fed-face-modal" class="aboutus-face-modal">
+	            <div class="aboutus-face-modal-content">
+	              <img class="aboutus-face-large"> 
+	              <div class="aboutus-face-modal-description">
+                  <p>Люблю есть еду и пить пиво, слушать джаззз, кумбиа и дабстеп, смотреть фильм " строгий юноша".</p> <p>
+Ещё люблю Броза Тито и советскую сатиру.<br>
+Не люблю Вертинского и кабачки.<br>
+Очень болтливый и всё время должен денег.<br>
+Группа "девушка с мотыгой" - по-прежнему музыка будущего.<br></p>
+<p>Главное, чего сейчас нам всем не хватает, это гимнастическая пирамида (типа делай раз). Будьте здоровы.</p>
+<p style="text-align:right; padding-right:15px;"><i>ІІІ Федя Фокин</i></p>
+	              </div>
+	              <span class="close"><img src="images/close.jpg"></span>
+	            </div>
+	          </div>
+
+	          <img src="images/faces/Seva-sm.jpg" class="aboutus-face" alt="Сева" id="seva">
+	          <div id="seva-face-modal" class="aboutus-face-modal">
+	            <div class="aboutus-face-modal-content">
+	              <img class="aboutus-face-large">
+	              <div class="aboutus-face-modal-description">
+	                <p>Привет. Я Сева и я астроном.</p>
+                  <p>Я люблю горы и музыку, свою дачу и болтать с людьми.</p>
+                  <p>Половину жизни я стараюсь проводить в путешествиях, ещё одну половину - программирую на благо
+                  отечественной науки и ещё одну половину что-то кому-то рассказваю (астрономию школьникам, кулстори 
+                  друзьям, а иногда наоборот и по-другому)</p>
+                  <p>Мечтаю полететь в космос и чтобы все были счастливы. </p>
+	              </div>
+	              <span class="close"><img src="images/close.jpg"></span> 
+	            </div>
+	          </div>
+      	  </div>
+          <br>
+          <div class="aboutus-faces-line"> 
+	          <img src="images/faces/Stesh-sm.jpg" class="aboutus-face" alt="Стеша" id="stesha">
+	          <div id="stesh-face-modal" class="aboutus-face-modal">
+	            <div class="aboutus-face-modal-content">
+	              <img class="aboutus-face-large">
+	              <div class="aboutus-face-modal-description">
+	                <p>это стеша острова.</p>
+	              </div>
+	              <span class="close"><img src="images/close.jpg"></span> 
+	            </div>
+	          </div>
+
+	          <img src="images/faces/An-sm.jpg" class="aboutus-face" alt="Аня" id="anya">
+	          <div id="anya-face-modal" class="aboutus-face-modal">
+	            <div class="aboutus-face-modal-content">
+	              <img class="aboutus-face-large">
+	              <div class="aboutus-face-modal-description">
+	                <p>меня зовут аня.</p>
+	                <p>я родилась в москве. но мечтаю пожить где нибудь ещё. и ещё где нибудь.</p>
+	<p>мне очень много всего интересно. так много иногда что это мешает мне разобраться что мне нравится а что нет. поэтому чаще всего мне нравится все. всё и все.</p>
+	<p>возможно нужно добавить, что я хочу быть художником и поэтому мне доверили делать все визуальное для радио. теперь я хожу и рисую приёмник на стенах.</p>
+	              </div>
+	              <span class="close"><img src="images/close.jpg"></span> 
+	            </div>
+	          </div>
+
+	          <img src="images/faces/Mot-sm.jpg" class="aboutus-face" alt="Мотя" id="motya">
+	          <div id="motya-face-modal" class="aboutus-face-modal">
+	            <div class="aboutus-face-modal-content">
+	              <img class="aboutus-face-large"> 
+	              <div class="aboutus-face-modal-description">
+	                <p>меня зовут матвей ильич соколовский и я много чего делаю. например это радио. ещё играю на виолончели. вообще я, в общем, музыкант, только до сих пор фальшиво играю. ну это ладно, пройдёт.</p>
+	                <p>а ещё я лингвистику люблю, но заниматься ей не получилось. так что просто применяю лингвистическое знание в быту, языком играю.</p>
+	            	<p>короче, на самом деле, куда ни посмотри, везде интересно. и эту идею радио в целом должно отражать. вот</p>
+	              </div>
+	              <span class="close"><img src="images/close.jpg"></span>
+	            </div>
+	          </div>
+	        </div>        
+        </div>
+      </div>
+      <br>
+      <div class="tab-bottomsection">
+        <script src="js/content/tab-footer.js?modified=<? filemtime('js/content/tab-footer.js')"></script>
+      </div>
+    </div>
+
+    <!-- страница: ссылки на соцсети и скачивание -->
+    <div id="contacts" class="tab-anchor">x</div>
+    <div id="tab-contacts" class="tab">
+      <div class="tab-uppersection">
+        <div class="contacts-demobutts">
+          <div class="contacts-demobutts-top">
+            <table>
+              <tr>
+                <td class="contacts-demobutts-tglink">
+                  <a href="https://teleg.run/radiochata" target="_blank" class="contacts-demobutts-button contacts-demobutts-long">
+                    <img border="0" alt="TG_chat" src="images/btn-tgchat.jpg"></a>
+                </td>
+                <td class="contacts-demobutts-tglink-description"><p><b>телеграм-чат</b> это наша основная точка сбора, которая возникла сразу вместе с радио. там можно обсуждать эфир, благодарить ведущих, делать им замечания, задавать вопросы по ходу эфира и так далее. кстати сообщения из телеграмм-канала туда тоже попадают.</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="contacts-demobutts-tglink"><a href="https://teleg.run/radi0ZnB" target="_blank" class="contacts-demobutts-button contacts-demobutts-long">
+                    <img border="0" alt="TG" src="images/btn-tg.jpg"></a>
+                </td>
+                <td class="contacts-demobutts-tglink-description"><p><b>телеграм-канал</b> это тоже основное. на него обязательно подписаться, чтобы точно не пропустить что-то интересное в эфире. в нём публикуется расписание на день и потом предупреждения о начале каждой передачи.</p></td>
+              </tr>
+              <tr>
+                <td class="contacts-demobutts-soclink">
+                  <a href="https://vk.com/znb_radio" target="_blank" class="contacts-demobutts-button contacts-demobutts-round"><img border="0" alt="VK" src="images/vk.jpg">
+                    </a>
+                  <a href="https://www.tiktok.com/@radioznb" target="_blank" class="contacts-demobutts-button contacts-demobutts-round">
+                    <img border="0" alt="TikTok" src="images/tiktok.jpg"></a>
+                </td>
+                <td class="contacts-demobutts-tglink-description"><p>в этих местах тоже появляемся</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- <div class="contacts-demobutts-bottom">
+            <table>
+              <tr>
+                <td class="contacts-demobutts-soclink">
+                  <a href="https://vk.com/znb_radio" target="_blank" class="contacts-demobutts-button contacts-demobutts-round"><img border="0" alt="VK" src="images/vk.jpg">
+                    </a>
+                </td>
+                <td class="contacts-demobutts-soclink">
+                  
+                </td>
+                <td class="contacts-demobutts-soclink">мы бываем здесь – в контакте и в тиктоке
+                </td>
+              </tr>
+              <tr>
+                <td class="contacts-demobutts-soclink">
+                </td>
+                
+              </tr>
+            </table>            
+          </div> -->
+        </div>
+
+      </div>
+      <div class="tab-bottomsection">
+        <script src="js/content/tab-footer.js?modified=<? filemtime('js/content/tab-footer.js')"></script>
+      </div>
+    </div>
+
+    <!-- Footer Modals Content --> 
+    <!-- First Modal Content -->
+    <div class="footer-modal" id="footer-first_modal">
+      <div class="footer-modal-content">
+        <div class="footer-modal-header">
+          <img class="footer-modal-header-image">
+          <!-- <h2>Помочь радио</h2> -->
+          <span class="footer-modal-close"><img src="images/close.jpg"></span>
+        </div>
+        <div class="footer-modal-body"> 
+          	<p>привет! спасибо! мы занимаемcя радио в свободное от всего остального время, и нам очень важна любая поддержка - и денежная, и деятельная.</p><p>вот как можно помочь:</p>
+         <ul>
+          <li>перечислить деньги разово</li>
+          <br>
+          	<iframe src="https://promo-money.ru/quickpay/shop-widget?writer=seller&targets=%D0%BD%D0%B0%20%D0%BC%D1%83%D0%B7%D1%8B%D0%BA%D1%83%20%D0%B8%20%D1%80%D0%B0%D0%B7%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%D1%8B&targets-hint=&default-sum=250&button-text=14&payment-type-choice=on&hint=&successURL=&quickpay=shop&account=4100115819637267" width="70%" height="222" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+<!--           <li>подписаться на регулярные пожертвования на патреоне</li>
+ -->          <li>перевести на карту</li>
+      	  <p>если почему-то удобнее просто перевести на карту, то вот номер: 2202 2001 2912 6684</p>
+          <li>помочь радио делом</li>
+          <p>задач много, а нас, занимающихся радио, сильно меньше. если хотите как-нибудь помочь (и особенно, если знаете, как именно), напишите о своем желании на почту <a href="mailto:radioznb@gmail.com">radioznb@gmail.com</a>. мы всё покажем.</p>
+          <p>ещё раз спасибо!</p>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Modal Content-->
+    <div class="footer-modal" id="footer-second_modal">
+      <div class="footer-modal-content">
+        <div class="footer-modal-header">
+          <img class="footer-modal-header-image">
+          <!-- <h2>Слушать не на сайте</h2> -->
+          <span class="footer-modal-close"><img src="images/close.jpg"></span>
+        </div>
+        <div class="footer-modal-body">
+         <h4>как можно слушать радио?</h4>
+           <p>помимо кнопки в радиоприёмнике есть ещё варианты с m3u плейлистом:</p>
+          <ul style="padding-inline-start: 20px;">
+          <li>m3u НА КОМПЬЮТЕРЕ</li>
+          	<p> m3u - это файл определённого формата. на компьютерах работает как простой mp3. у вас скачивается файл и его можно открыть в любом проигрывателе: iTunes, VLC, windows player и так далее. если его, к примеру, открыть через айтюнс, то он добавится в плейлист internet songs, и дальше можно его всегда там найти и подключиться.</p>
+      	  <li>m3u НА ТЕЛЕФОНЕ</li>
+      	  	<p>на телефонах не всё так просто. вам нужен плеер. удобнее всего скачать мобильный VLC:  <a href="https://apps.apple.com/us/app/vlc-for-mobile/id650377962">апстор</a>, <a href="https://play.google.com/store/apps/details?id=org.videolan.vlc&hl">гугл плей</a>. вы копируете ссылку на m3u-файл (вот она: <a href="http://c2.radioboss.fm/playlist/242/stream.m3u">http://c2.radioboss.fm/playlist/242/stream.m3u</a>), заходите во вкладку <i>network</i> в плеере и вставляет ссылку туда. дальше у вас этот файл откроется после чего его можно переименовать как угодно и слушать радио с выключенным экраном.</p><p>зачем этот m3u нужен? ну по идее так радио стабильнее. но практика пока не подтверждала. плюс, на маках удобно слушать через айтюнс, потому что он реагирует на клавишу плей/пауза. но это мелочи. кому как удобно.</p>
+            <p class="footer-button">кнопка, чтобы скачать m3u-файл<br><a href="http://c2.radioboss.fm/playlist/242/stream.m3u"> <img src='images/m3u-sm.jpg' style="width: 70px; padding-top: 2vh"></a></p>
+      	  </ul>
+      	 </div>
+      </div>
+    </div>
+
+  <audio src="http://c2.radioboss.fm:8242/stream" id="player-sound" preload="none" controls></audio>
+  
+  <!-- partial -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
+
+  <script src="js/smoothscroll.js?modified=<? filemtime('js/smoothscroll.js')"></script>
+
+  <script src="js/general-open_tabs.js?modified=<? filemtime('js/general-open_tabs.js')"></script>
+  <script src="js/general-player.js?modified=<? filemtime('js/general-player.js')"></script>
+  <script src="js/general-sticky_menu.js?modified=<? filemtime('js/general-sticky_menu.js')"></script> 
+  <script src="js/general-footer-open_modal.js?modified=<? filemtime('js/general-footer-open_modal.js')"></script>
+
+
+  <script src="js/content/tab-regulars-content.js?modified=<? filemtime('js/content/tab-regulars-content.js')"></script>
+  <script src="js/home-schedule.js?modified=<? filemtime('js/home-schedule.js')"></script> 
+  <script src="js/home-news.js?modified=<? filemtime('js/home-news.js')"></script> 
+  <script src="js/home-open_newsform.js?modified=<? filemtime('js/home-open_newsform.js')"></script>
+
+  <script src="js/aboutus-open_face_modal.js?modified=<? filemtime('js/aboutus-open_face_modal.js')"></script>
+  <script src="js/regulars.js?modified=<? filemtime('js/regulars.js')"></script>
+
+</body>
