@@ -159,7 +159,8 @@
   margin-top: 0;
   padding-right: 4vw;
   list-style: none;
-  max-height: 210vh;
+  /*max-height: 210vh;*/
+  max-height: 90vh;
 }
 
 .home-newsfeed > li:first-child {

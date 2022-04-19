@@ -33,10 +33,10 @@ face_img[5].onclick = function() {
     face_modal[5].style.display = "block";
     face_img_large[5].src = face_img[5].src;
 }
-face_img[6].onclick = function() {
-    face_modal[6].style.display = "block";
-    face_img_large[6].src = face_img[6].src;
-}
+// face_img[6].onclick = function() {
+//     face_modal[6].style.display = "block";
+//     face_img_large[6].src = face_img[6].src;
+// }
 
 
 // When the user clicks on <span> (x), close the modal
@@ -58,9 +58,9 @@ span[4].onclick = function() {
 span[5].onclick = function() {
     face_modal[5].style.display = "none";
 }
-span[6].onclick = function() {
-    face_modal[6].style.display = "none";
-}
+// span[6].onclick = function() {
+//     face_modal[6].style.display = "none";
+// }
 
 
 window.onclick = function(event) {

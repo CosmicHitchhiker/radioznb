@@ -1,12 +1,11 @@
 #tab-aboutus > .tab-uppersection {
-	height: calc(var(--tab-min-height) * 1.45);
+	height: calc(var(--tab-min-height) * 1.5);
 }
 
 .aboutus-manifest {
-/*	font-size: 1.1em;
-*/
+  font-size: 1.1em;
 	text-align: justify;
-	padding: 10vh 13vw 0vh 13vw;
+	padding: 8vh 13vw 2vh 13vw;
 
 }
 
@@ -145,7 +144,7 @@
   overflow-wrap: break-word;
   width: 42%;
   padding-right: 3vh;
-  font-size: 0.76em;
+  font-size: 0.83em;
 }
 
 @-webkit-keyframes zoom {
