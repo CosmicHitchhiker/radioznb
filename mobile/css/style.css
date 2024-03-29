@@ -1,0 +1,61 @@
+html{
+  -ms-text-size-adjust:100%;
+  -webkit-text-size-adjust:100%;
+  text-align: center;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
+:root {
+  --wide-player-height: 75vh;
+  --tablet-player-height: 63vh;
+  --mobile-player-height: 50vh;
+  --current-player-height: var(--wide-player-height);
+  --buttons-height: 15vh;
+  --all-buttons-height: var(--buttons-height);
+  --buttons-top: calc(97vh - var(--all-buttons-height));
+  --buttons-width: calc(9 * var(--buttons-height));
+}
+
+.player {
+  position: absolute;
+  top: 0%;
+  left: calc((100% - var(--current-player-height)) / 2);
+  width: var(--current-player-height);
+  height: var(--current-player-height);
+  margin: auto;
+}
+
+.demobutts {
+  position: absolute;
+  top: var(--buttons-top);
+  left: calc((100% - var(--buttons-width)) / 2);
+  width: var(--buttons-width);
+  height: var(--all-buttons-height);
+}
+
+.waves {
+  visibility: hidden;
+  /* display: none; */
+  width: 100%;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  height: var(--current-player-height);
+}
+
+@media only screen and (max-aspect-ratio: 4/5) {
+  :root {
+    --current-player-height: var(--mobile-player-height);
+    --all-buttons-height: calc(3 * var(--buttons-height));
+    --buttons-width: calc(3.6 * var(--buttons-height));
+  }
+}
+
+@media only screen and (max-aspect-ratio: 3/2) and (min-aspect-ratio: 4/5){
+  :root {
+    --current-player-height: var(--tablet-player-height);
+    --all-buttons-height: calc(2 * var(--buttons-height));
+    --buttons-width: calc(5 * var(--buttons-height));
+  }
+}

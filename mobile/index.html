@@ -1,0 +1,104 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>радио зимы не будет</title>
+    <meta name="description" content="зе бест рэдио ин зе ворлд">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/player.css">
+    <link rel="stylesheet" href="css/player-waves.css">
+    <link rel="stylesheet" href="css/demobutts.css">
+
+    <!-- favicons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="images/favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/favicons/android-chrome-512x512.png">
+
+    <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  </head>
+
+  <body>
+      <div class="waves" id="waves">
+        <div class="lwaves">
+          <div class="lwave-one">
+            <span><img class="lwave-one-1" src="images/waves/lwave-11.png"></img></span>
+            <span><img class="lwave-two-1" src="images/waves/lwave-12.png"></img></span>
+            <span><img class="lwave-three-1" src="images/waves/lwave-13.png"></img></span>
+          </div>
+          <div class="lwave-two">
+            <span><img class="lwave-one-2" src="images/waves/lwave-21.png"></img></span>
+            <span><img class="lwave-two-2" src="images/waves/lwave-22.png"></img></span>
+            <span><img class="lwave-three-2" src="images/waves/lwave-23.png"></img></span>
+          </div>
+          <div class="lwave-three">
+            <span><img class="lwave-one-3" src="images/waves/lwave-31.png"></img></span>
+            <span><img class="lwave-two-3" src="images/waves/lwave-32.png"></img></span>
+            <span><img class="lwave-three-3" src="images/waves/lwave-33.png"></img></span>
+          </div>
+        </div>
+        <div class="rwaves">
+          <div class="rwave-one">
+            <span><img class="rwave-three-1" src="images/waves/rwave-13.png"></img></span>
+            <span><img class="rwave-two-1" src="images/waves/rwave-12.png"></img></span>
+            <span><img class="rwave-one-1" src="images/waves/rwave-11.png"></img></span>
+          </div>
+          <div class="rwave-two">
+              <span><img class="rwave-three-2" src="images/waves/rwave-23.png"></img></span>
+              <span><img class="rwave-two-2" src="images/waves/rwave-22.png"></img></span>
+              <span><img class="rwave-one-2" src="images/waves/rwave-21.png"></img></span>
+          </div>
+          <div class="rwave-three">
+              <span><img class="rwave-three-3" src="images/waves/rwave-33.png"></img></span>
+              <span><img class="rwave-two-3" src="images/waves/rwave-32.png"></img></span>
+              <span><img class="rwave-one-3" src="images/waves/rwave-31.png"></img></span>
+          </div>
+        </div>
+      </div>
+      <div class="player">
+        <div class="player-main">
+          <img src="images/RADIOsyt.jpg" alt="радио" class="player-image">
+          <img src="images/play.png?raw=true" alt="радио" id="player-play-button">
+          <img src="images/stop.png?raw=true" alt="радио" id="player-stop-button">
+          <div id="player-volume-control">
+            <img src=images/scale.png id="player-volume-line">
+            <img src=images/pointer.png id="player-volume-dot">
+          </div>
+        </div>
+      </div>
+
+    <div class="demobutts">
+      <div class="demobutts-submenu">
+        <a href="https://vk.com/znb_radio" target="_blank" class="demobutts-button demobutts-round">
+          <img border="0" alt="VK" src="images/vk.png">
+        </a>
+        <a href="https://www.facebook.com/100780934922627/" target="_blank" class="demobutts-button demobutts-round">
+          <img border="0" alt="FB" src="images/fb.png">
+        </a>
+      </div>
+
+      <div class="demobutts-submenu">
+        <a href="https://teleg.run/radi0ZnB" target="_blank" class="demobutts-button demobutts-round">
+          <img border="0" alt="TG" src="images/tg.png" border="0">
+        </a>
+        <a href="http://c18.radioboss.fm/playlist/158/stream.m3u" target="_blank" class="demobutts-button demobutts-round">
+          <img alt="M3U_player" src="images/m3u.png" border="0">
+        </a>
+      </div>
+
+      <a href="https://teleg.run/radiochata" target="_blank" class="demobutts-button demobutts-long">
+        <img border="0" alt="TG_chat" src="images/chat.png">
+      </a>
+
+    </div>
+
+    <audio src="http://c22.radioboss.fm:8033/stream" id="player-sound" preload="none" controls>
+    </audio>
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src="js/player.js"></script>
+
+  </body>
